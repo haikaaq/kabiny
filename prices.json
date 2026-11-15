@@ -1,0 +1,7362 @@
+{
+ "title": "Сравнительная таблица цен",
+ "updated_at": "2026-11-15T10:52:58.236Z",
+ "classes": [
+  {
+   "id": "1",
+   "name": "Одноместная"
+  },
+  {
+   "id": "1+",
+   "name": "Одноместная просторная"
+  },
+  {
+   "id": "2",
+   "name": "Двухместная"
+  },
+  {
+   "id": "4",
+   "name": "3–4‑местная"
+  },
+  {
+   "id": "6",
+   "name": "5–6‑местная"
+  },
+  {
+   "id": "8",
+   "name": "8‑местная и больше"
+  },
+  {
+   "id": "open",
+   "name": "Открытые / мягкие"
+  },
+  {
+   "id": "atm",
+   "name": "Атмосферные (London, Tardis)"
+  }
+ ],
+ "bench": {
+  "1": "inflow-1",
+  "2": "inflow-9",
+  "4": "inflow-13",
+  "6": "inflow-17",
+  "8": "inflow-21",
+  "1+": "inflow-5",
+  "open": "inflow-25",
+  "atm": "inflow-28"
+ },
+ "bench_introvert": {
+  "1": "introvert-1",
+  "2": "introvert-11",
+  "4": "introvert-15",
+  "6": "introvert-18",
+  "1+": "introvert-5",
+  "atm": "introvert-9"
+ },
+ "competitors": [
+  {
+   "id": "inflow",
+   "name": "Inflow Office",
+   "site": "https://inflow-office.ru/",
+   "city": "Москва (Химки)",
+   "kind": "бренд группы Inflow",
+   "own": true,
+   "note": "Кабины выше (2350 мм), закалённое стекло. Базовая точка сравнения."
+  },
+  {
+   "id": "introvert",
+   "name": "INTROVERT",
+   "site": "https://inflowcabines.ru/",
+   "city": "Москва (Химки)",
+   "kind": "бренд группы Inflow",
+   "own": true,
+   "note": "Базовая линейка производства, высота 2240 мм."
+  },
+  {
+   "id": "quitebox",
+   "name": "QuiteBox",
+   "site": "https://quitebox.ru/",
+   "city": "Москва (Химки)",
+   "kind": "бренд группы Inflow",
+   "own": true,
+   "note": "Верхний ценовой уровень группы, то же производство."
+  },
+  {
+   "id": "str",
+   "name": "STR Group",
+   "site": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/",
+   "city": "Москва",
+   "kind": "производитель",
+   "note": "Самый широкий каталог: лёгкие ЛДСП-кабины PROMO от ~100 тыс., капсулы SMART/LYX, кабины для сна. Есть аренда."
+  },
+  {
+   "id": "quietstore",
+   "name": "Quiet Store",
+   "site": "https://qs-store.ru/",
+   "city": "Москва",
+   "kind": "производитель",
+   "note": "Серии Simple / Focus / Reload / Merlin / Oblivion, размерный ряд One…Six, цены «от». На сайте цены без НДС, в таблице к ним прибавлено 22%. Reload — «знакомая форма LWOP». Выручка 2025 — 273 млн ₽.",
+   "vat_excl": true
+  },
+  {
+   "id": "lwop",
+   "name": "LWOP",
+   "site": "https://lwop.ru/cabines",
+   "city": "Москва (Дмитровский р-н)",
+   "kind": "производитель",
+   "note": "Продаёт через дилеров со скидкой 20–40%, комплектация «всё включено», НДС 22%. Цены с официального сайта и у дилеров."
+  },
+  {
+   "id": "qubius",
+   "name": "Qubius",
+   "site": "https://qubius.com/ru",
+   "city": "Барнаул / Москва",
+   "kind": "производитель",
+   "note": "Премиум. На сайте цены без НДС, в таблице к ним прибавлено 22%. Клиенты: ВК, Газпромбанк, Росбанк.",
+   "vat_excl": true
+  },
+  {
+   "id": "mutemark",
+   "name": "MuteMark",
+   "site": "https://mutemark.ru/katalog/",
+   "city": "Москва",
+   "kind": "производитель",
+   "note": "На своём сайте цен нет — цены у дилера tuttiho.ru. Шоурум на Варшавском ш., 95 (рядом с Moodular)."
+  },
+  {
+   "id": "moodular",
+   "name": "Moodular",
+   "site": "https://moodular.ru/",
+   "city": "Москва",
+   "kind": "производитель",
+   "note": "«Более 2000 проектов», гарантия 5 лет. На своём сайте цен нет — цены у дилера tuttiho.ru. По контактам связан с группой izoproof (Hidebox, TihoPod, IzoRoom)."
+  },
+  {
+   "id": "cube",
+   "name": "CUBE (Acoustic Group)",
+   "site": "https://www.acoustic.ru/productions/kabiny/office_kabiny/",
+   "city": "Москва, 9 городов",
+   "kind": "производитель",
+   "note": "Линейка CUBE Office. Цены у дилера acousticmos.ru."
+  },
+  {
+   "id": "echoton",
+   "name": "Echoton (Эхо Дизайн)",
+   "site": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/",
+   "city": "Санкт-Петербург",
+   "kind": "производитель",
+   "note": "ЛДСП, гарантия 2 года, есть модели для РСО."
+  },
+  {
+   "id": "imperial",
+   "name": "Imperial Wood",
+   "site": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/",
+   "city": "Москва",
+   "kind": "производитель",
+   "note": "Мебельная фабрика, кабины из МДФ на заказ, цены «общая цена» за конкретный проект."
+  },
+  {
+   "id": "acucab",
+   "name": "Акукаб (Acucab)",
+   "site": "https://acucab.ru/",
+   "city": "Санкт-Петербург",
+   "kind": "производитель",
+   "note": "Офисные, РСО и аудиометрические кабины; активен в госзакупках."
+  },
+  {
+   "id": "cubiroom",
+   "name": "Cubiroom",
+   "site": "https://tuttiho.ru/category/kabiny/",
+   "city": "—",
+   "kind": "производитель",
+   "note": "Цены у дилера tuttiho.ru."
+  },
+  {
+   "id": "alex",
+   "name": "Alex Acoustics",
+   "site": "https://alex-acoustics.ru/",
+   "city": "Москва",
+   "kind": "производитель",
+   "note": "Производитель акустических панелей; кабины MeetPod — дорогой сегмент."
+  },
+  {
+   "id": "framery",
+   "name": "Framery (Финляндия)",
+   "site": "https://www.lamercanti.ru/brand/framery",
+   "city": "импорт",
+   "kind": "импорт / дилер",
+   "note": "Мировой лидер, сам Framery из России ушёл. Продаёт итальянская La Mercanti с доставкой в Россию, цены в рублях."
+  },
+  {
+   "id": "talkspace",
+   "name": "Talk Space",
+   "site": "https://talkspace.su/",
+   "city": "Люберцы",
+   "kind": "производитель",
+   "note": "Фанера, ткань Trevira CS, HPL. На сайте одна цена «от»."
+  },
+  {
+   "id": "bazis",
+   "name": "Базис (Новосибирск)",
+   "site": "https://officepro54.ru/collection/akusticheskie-kabiny",
+   "city": "Новосибирск",
+   "kind": "дилер",
+   "note": "Кабина у мебельного дилера OfficePro54."
+  }
+ ],
+ "no_price": [
+  {
+   "name": "HushStation",
+   "url": "https://hushstation.ru/catalog/ofisnye_kabiny/",
+   "note": "Модели One / One Plus / Two / Four / Six, цены по запросу. Группа izoproof."
+  },
+  {
+   "name": "TihoPod",
+   "url": "https://tihopod.com/",
+   "note": "Аренда и продажа, цены по запросу. Группа izoproof."
+  },
+  {
+   "name": "Hidebox",
+   "url": "https://www.hidebox.ru/",
+   "note": "Аренда на мероприятия; сайт 15.11.2026 отдавал ошибку 503."
+  },
+  {
+   "name": "Capsula",
+   "url": "https://workincapsula.ru/",
+   "note": "Москва-Сити, аренда и продажа, цены скрыты."
+  },
+  {
+   "name": "Telebooth",
+   "url": "https://telebooth.ru/",
+   "note": "Цены по запросу, тест-драйв."
+  },
+  {
+   "name": "K-Box",
+   "url": "https://k-box.pro/",
+   "note": "420–990 тыс. ₽ по прошлому исследованию; 15.11.2026 сайт не открылся."
+  },
+  {
+   "name": "Nayada",
+   "url": "https://nayada.ru/",
+   "note": "Перегородки и кабины, цены по запросу."
+  },
+  {
+   "name": "ISKU Vetrospace / Plenty Pod",
+   "url": "https://scandicum.ru/catalog/mebel-dlya-ofisa/akusticheskie-resheniya-dlya-ofisa/akusticheskie-peregovornye/",
+   "note": "Финские кабины у Scandicum, вместо цены «1 руб.» — по запросу."
+  },
+  {
+   "name": "Soundbox / MusePoD / LOCTEK",
+   "url": "https://smart-av.ru/akusticheskie-kabiny-i-paneli",
+   "note": "Китайские кабины у Smart-AV, «Запросить цену»."
+  },
+  {
+   "name": "GL Group",
+   "url": "https://glgrup.ru/akusticheskie-kabiny/",
+   "note": "Стационарные кабины из перегородок, от 15 000 ₽/м²."
+  }
+ ],
+ "items": [
+  {
+   "id": "inflow-1",
+   "c": "inflow",
+   "model": "Inflow One (глухая, прямая)",
+   "cls": "1",
+   "dims": "1100×1100×2350",
+   "price": 325000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow One 1100х1100х2350"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-2",
+   "c": "inflow",
+   "model": "Inflow One (глухая, скруглённая)",
+   "cls": "1",
+   "dims": "1100×1100×2350",
+   "price": 343000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow One 1100х1100х2350",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-3",
+   "c": "inflow",
+   "model": "Inflow One (стекло, прямая)",
+   "cls": "1",
+   "dims": "1100×1100×2350",
+   "price": 384000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow One 1100х1100х2350",
+    "nth": 3
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-4",
+   "c": "inflow",
+   "model": "Inflow One (стекло, скруглённая)",
+   "cls": "1",
+   "dims": "1100×1100×2350",
+   "price": 407000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow One 1100х1100х2350",
+    "nth": 4
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-5",
+   "c": "inflow",
+   "model": "Inflow One+ (глухая, прямая)",
+   "cls": "1+",
+   "dims": "1500×1100×2350",
+   "price": 405000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow One+ 1500х1100х2350"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-6",
+   "c": "inflow",
+   "model": "Inflow One+ (глухая, скруглённая)",
+   "cls": "1+",
+   "dims": "1500×1100×2350",
+   "price": 420000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow One+ 1500х1100х2350",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-7",
+   "c": "inflow",
+   "model": "Inflow One+ (стекло, прямая)",
+   "cls": "1+",
+   "dims": "1500×1100×2350",
+   "price": 453000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow One+ 1500х1100х2350",
+    "nth": 3
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-8",
+   "c": "inflow",
+   "model": "Inflow One+ (стекло, скруглённая)",
+   "cls": "1+",
+   "dims": "1500×1100×2350",
+   "price": 467000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow One+ 1500х1100х2350",
+    "nth": 4
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-9",
+   "c": "inflow",
+   "model": "Inflow Two (глухая, прямая)",
+   "cls": "2",
+   "dims": "2200×1100×2350",
+   "price": 482000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Two 2200х1100х2350"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-10",
+   "c": "inflow",
+   "model": "Inflow Two (глухая, скруглённая)",
+   "cls": "2",
+   "dims": "2200×1100×2350",
+   "price": 518000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Two 2200х1100х2350",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-11",
+   "c": "inflow",
+   "model": "Inflow Two (стекло, прямая)",
+   "cls": "2",
+   "dims": "2200×1100×2350",
+   "price": 541000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Two 2200х1100х2350",
+    "nth": 3
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-12",
+   "c": "inflow",
+   "model": "Inflow Two (стекло, скруглённая)",
+   "cls": "2",
+   "dims": "2200×1100×2350",
+   "price": 577000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Two 2200х1100х2350",
+    "nth": 4
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-13",
+   "c": "inflow",
+   "model": "Inflow Four (глухая, прямая)",
+   "cls": "4",
+   "dims": "2200×1400×2350",
+   "price": 585000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Four 2200х1400х2350"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-14",
+   "c": "inflow",
+   "model": "Inflow Four (глухая, скруглённая)",
+   "cls": "4",
+   "dims": "2200×1400×2350",
+   "price": 619000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Four 2200х1400х2350",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-15",
+   "c": "inflow",
+   "model": "Inflow Four (стекло, прямая)",
+   "cls": "4",
+   "dims": "2200×1400×2350",
+   "price": 595000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Four 2200х1400х2350",
+    "nth": 3
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-16",
+   "c": "inflow",
+   "model": "Inflow Four (стекло, скруглённая)",
+   "cls": "4",
+   "dims": "2200×1400×2350",
+   "price": 635000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Four 2200х1400х2350",
+    "nth": 4
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-17",
+   "c": "inflow",
+   "model": "Inflow Six (глухая, прямая)",
+   "cls": "6",
+   "dims": "2200×2000×2350",
+   "price": 640000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Six 2200х2000х2350"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-18",
+   "c": "inflow",
+   "model": "Inflow Six (глухая, скруглённая)",
+   "cls": "6",
+   "dims": "2200×2000×2350",
+   "price": 673000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Six 2200х2000х2350",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-19",
+   "c": "inflow",
+   "model": "Inflow Six (стекло, прямая)",
+   "cls": "6",
+   "dims": "2200×2000×2350",
+   "price": 714000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Six 2200х2000х2350",
+    "nth": 3
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-20",
+   "c": "inflow",
+   "model": "Inflow Six (стекло, скруглённая)",
+   "cls": "6",
+   "dims": "2200×2000×2350",
+   "price": 747000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Six 2200х2000х2350",
+    "nth": 4
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-21",
+   "c": "inflow",
+   "model": "Inflow Octo (глухая, прямая)",
+   "cls": "8",
+   "dims": "2200×2400×2350",
+   "price": 699000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Octo 2200х2400х2350"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-22",
+   "c": "inflow",
+   "model": "Inflow Octo (глухая, скруглённая)",
+   "cls": "8",
+   "dims": "2200×2400×2350",
+   "price": 741000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Octo 2200х2400х2350",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-23",
+   "c": "inflow",
+   "model": "Inflow Octo (стекло, прямая)",
+   "cls": "8",
+   "dims": "2200×2400×2350",
+   "price": 781000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Octo 2200х2400х2350",
+    "nth": 3
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-24",
+   "c": "inflow",
+   "model": "Inflow Octo (стекло, скруглённая)",
+   "cls": "8",
+   "dims": "2200×2400×2350",
+   "price": 823000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "кабина Inflow Octo 2200х2400х2350",
+    "nth": 4
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-25",
+   "c": "inflow",
+   "model": "Mobi (открытая, домик)",
+   "cls": "open",
+   "dims": "1800×900×1750",
+   "price": 293000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Mobi 1800х900х1750"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-26",
+   "c": "inflow",
+   "model": "Home (открытая)",
+   "cls": "open",
+   "dims": "2000×900×2000",
+   "price": 497000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Home 2000х900х2000"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-27",
+   "c": "inflow",
+   "model": "Tardis",
+   "cls": "atm",
+   "dims": "1200×1100×2300",
+   "price": 290000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Tardis 1200х1100х2300"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "inflow-28",
+   "c": "inflow",
+   "model": "London",
+   "cls": "atm",
+   "dims": "1000×1000×2400",
+   "price": 281000,
+   "url": "https://inflow-office.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "London от 1000х1000х2400"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-1",
+   "c": "introvert",
+   "model": "Base One",
+   "cls": "1",
+   "dims": "1100×1100×2240",
+   "price": 295000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Base One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-2",
+   "c": "introvert",
+   "model": "Circle One",
+   "cls": "1",
+   "dims": "1100×1100×2240",
+   "price": 312000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Circle One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-3",
+   "c": "introvert",
+   "model": "Glass One",
+   "cls": "1",
+   "dims": "1100×1100×2240",
+   "price": 349000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Glass One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-4",
+   "c": "introvert",
+   "model": "Slim One",
+   "cls": "1",
+   "dims": "940×1100×2240",
+   "price": 230000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Slim One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-5",
+   "c": "introvert",
+   "model": "Work Base One",
+   "cls": "1+",
+   "dims": "1500×1100×2240",
+   "price": 368000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Work Base One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-6",
+   "c": "introvert",
+   "model": "Work Circle One",
+   "cls": "1+",
+   "dims": "1500×1100×2240",
+   "price": 382000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Work Circle One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-7",
+   "c": "introvert",
+   "model": "Work Glass One",
+   "cls": "1+",
+   "dims": "1500×1100×2240",
+   "price": 412000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Work Glass One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-8",
+   "c": "introvert",
+   "model": "Work Slim One",
+   "cls": "1+",
+   "dims": "1500×1100×2240",
+   "price": 295000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Work Slim One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-9",
+   "c": "introvert",
+   "model": "London Base One",
+   "cls": "atm",
+   "dims": "1000×1000×2340",
+   "price": 323000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "London Base One 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-10",
+   "c": "introvert",
+   "model": "London Tardis",
+   "cls": "atm",
+   "dims": "1400×1400×2400",
+   "price": 318000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "London Tardis 1 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-11",
+   "c": "introvert",
+   "model": "Base Two",
+   "cls": "2",
+   "dims": "2200×1100×2240",
+   "price": 443000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Base Two 2 человека"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-12",
+   "c": "introvert",
+   "model": "Circle Two",
+   "cls": "2",
+   "dims": "2200×1100×2240",
+   "price": 482000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Circle Two 2 человека"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-13",
+   "c": "introvert",
+   "model": "Glass Two",
+   "cls": "2",
+   "dims": "2200×1100×2240",
+   "price": 526000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Glass Two 2 человека"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-14",
+   "c": "introvert",
+   "model": "Slim Two",
+   "cls": "2",
+   "price": 365000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Slim Two 2 человека"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-15",
+   "c": "introvert",
+   "model": "Base Four",
+   "cls": "4",
+   "dims": "2200×1400×2240",
+   "price": 532000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Base Four 4 человека"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-16",
+   "c": "introvert",
+   "model": "Circle Four",
+   "cls": "4",
+   "dims": "2200×1400×2240",
+   "price": 563000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Circle Four 4 человека"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-17",
+   "c": "introvert",
+   "model": "Glass Four",
+   "cls": "4",
+   "dims": "2200×1400×2240",
+   "price": 585000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Glass Four 4 человека"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-18",
+   "c": "introvert",
+   "model": "Base Six",
+   "cls": "6",
+   "dims": "2200×2000×2240",
+   "price": 582000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Base Six 6 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-19",
+   "c": "introvert",
+   "model": "Circle Six",
+   "cls": "6",
+   "dims": "2200×2000×2240",
+   "price": 612000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Circle Six 6 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "introvert-20",
+   "c": "introvert",
+   "model": "Glass Six",
+   "cls": "6",
+   "dims": "2200×2000×2240",
+   "price": 649000,
+   "frm": true,
+   "url": "https://inflowcabines.ru/catalog",
+   "ext": {
+    "mode": "near",
+    "anchor": "Glass Six 6 человек"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-1",
+   "c": "quitebox",
+   "model": "QuiteBox ONE Cube (прямоугольная)",
+   "cls": "1",
+   "dims": "1100×1100×2340",
+   "price": 360000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "ONE Cube (прямоугольная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-2",
+   "c": "quitebox",
+   "model": "QuiteBox ONE Round (скругленная)",
+   "cls": "1",
+   "dims": "1100×1100×2340",
+   "price": 395000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "ONE Round (скругленная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-3",
+   "c": "quitebox",
+   "model": "QuiteBox ONE Glass (заднее стекло)",
+   "cls": "1",
+   "dims": "1100×1100×2340",
+   "price": 439000,
+   "frm": true,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "ONE Glass (заднее стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-4",
+   "c": "quitebox",
+   "model": "QuiteBox TWO Cube (прямоугольная)",
+   "cls": "2",
+   "dims": "2200×1100×2340",
+   "price": 550000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "TWO Cube (прямоугольная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-5",
+   "c": "quitebox",
+   "model": "QuiteBox TWO Round (скругленная)",
+   "cls": "2",
+   "dims": "2200×1100×2340",
+   "price": 612000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "TWO Round (скругленная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-6",
+   "c": "quitebox",
+   "model": "QuiteBox TWO Glass (заднее стекло)",
+   "cls": "2",
+   "dims": "2200×1100×2340",
+   "price": 660000,
+   "frm": true,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "TWO Glass (заднее стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-7",
+   "c": "quitebox",
+   "model": "QuiteBox FOUR Cube (прямоугольная)",
+   "cls": "4",
+   "dims": "2200×1400×2340",
+   "price": 672000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "FOUR Cube (прямоугольная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-8",
+   "c": "quitebox",
+   "model": "QuiteBox FOUR Round (скругленная)",
+   "cls": "4",
+   "dims": "2200×1400×2340",
+   "price": 712000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "FOUR Round (скругленная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-9",
+   "c": "quitebox",
+   "model": "QuiteBox FOUR Glass (заднее стекло)",
+   "cls": "4",
+   "dims": "2200×1400×2340",
+   "price": 775000,
+   "frm": true,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "FOUR Glass (заднее стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-10",
+   "c": "quitebox",
+   "model": "QuiteBox SIX Cube (прямоугольная)",
+   "cls": "6",
+   "dims": "2200×2000×2340",
+   "price": 746000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "SIX Cube (прямоугольная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-11",
+   "c": "quitebox",
+   "model": "QuiteBox SIX Round (скругленная)",
+   "cls": "6",
+   "dims": "2200×2000×2340",
+   "price": 775000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "SIX Round (скругленная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-12",
+   "c": "quitebox",
+   "model": "QuiteBox SIX Glass (заднее стекло)",
+   "cls": "6",
+   "dims": "2200×2000×2340",
+   "price": 829000,
+   "frm": true,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "SIX Glass (заднее стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-13",
+   "c": "quitebox",
+   "model": "QuiteBox COMFORT Cube (прямоугольная)",
+   "cls": "1+",
+   "dims": "1500×1100×2340",
+   "price": 460000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "COMFORT Cube (прямоугольная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-14",
+   "c": "quitebox",
+   "model": "QuiteBox COMFORT Round (скругленная)",
+   "cls": "1+",
+   "dims": "1500×1100×2340",
+   "price": 486000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "COMFORT Round (скругленная)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-15",
+   "c": "quitebox",
+   "model": "QuiteBox LIGHT One",
+   "cls": "1",
+   "dims": "960×1100×2150",
+   "price": 299000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "LIGHT One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quitebox-16",
+   "c": "quitebox",
+   "model": "QuiteBox LIGHT Two",
+   "cls": "2",
+   "price": 459000,
+   "url": "https://quitebox.ru/one",
+   "ext": {
+    "mode": "near",
+    "anchor": "LIGHT Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-1",
+   "c": "str",
+   "model": "Мобильная кабина GOS",
+   "cls": "1",
+   "dims": "1160×1100×2360",
+   "price": 345000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_kabina_gos/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-2",
+   "c": "str",
+   "model": "Кабина для руководителей",
+   "cls": "2",
+   "dims": "1100×1800×2360",
+   "price": 443900,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_dlya_rukovoditeley/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-3",
+   "c": "str",
+   "model": "Мобильная шумоизоляционая кабина для переговоров",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 115000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_shumoizolyatsionaya_kabina_dlya_peregovorov/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-4",
+   "c": "str",
+   "model": "Мобильная переговорная кабина",
+   "cls": "1",
+   "price": 219000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_peregovornaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-5",
+   "c": "str",
+   "model": "Шумоизоляционная кабина ХРОМ",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 140000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_khrom/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-7",
+   "c": "str",
+   "model": "Двухместная звукоизоляционная кабина DUO BLACK",
+   "cls": "2",
+   "dims": "1800×1100×2360",
+   "price": 425000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_zvukoizolyatsionnaya_kabina_duo_black/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-8",
+   "c": "str",
+   "model": "Звукоизоляционная кабина Speaker PR",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 228000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_speaker_pr/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-9",
+   "c": "str",
+   "model": "Акустическая кабина SPIKER",
+   "cls": "1",
+   "dims": "1000×950×2100",
+   "price": 109000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kabina_spiker/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-10",
+   "c": "str",
+   "model": "Офисная телефонная кабина GREY",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 112000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/ofisnaya_telefonnaya_kabina_grey/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-11",
+   "c": "str",
+   "model": "Шумоизоляционная кабина SMART",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 315000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_smart/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-12",
+   "c": "str",
+   "model": "Звукоизоляционная переговорная капсула",
+   "cls": "1",
+   "dims": "1160×1100×2380",
+   "price": 305000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_peregovornaya_kapsula/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-14",
+   "c": "str",
+   "model": "Мобильная переговорная кабина MOS",
+   "cls": "1",
+   "price": 459000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_peregovornaya_kabina_mos/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-15",
+   "c": "str",
+   "model": "Кабина для руководителей Z",
+   "cls": "2",
+   "dims": "1100×1800×2220",
+   "price": 440000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_dlya_rukovoditeley_z/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-16",
+   "c": "str",
+   "model": "Мобильная переговорная кабина GOS",
+   "cls": "2",
+   "dims": "1100×1800×2360",
+   "price": 439000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_peregovornaya_kabina_gos/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-17",
+   "c": "str",
+   "model": "Одноместная звукоизоляционная капсула",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 295000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/odnomestnaya_zvukoizolyatsionnaya_kapsula/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-18",
+   "c": "str",
+   "model": "Переговорная кабина Bisness LX",
+   "cls": "2",
+   "dims": "1100×1800×2360",
+   "price": 395000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_bisness_lx/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-19",
+   "c": "str",
+   "model": "Мобильная переговорная кабина DUO",
+   "cls": "2",
+   "price": 395000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_peregovornaya_kabina_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-23",
+   "c": "str",
+   "model": "Телефонная кабина БЛЭК",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 145000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/telefonnaya_kabina_blek/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-24",
+   "c": "str",
+   "model": "Шумоизоляционная кабина ПРОМО+",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 145000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_promo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-25",
+   "c": "str",
+   "model": "Переговорные кабины 1+1",
+   "cls": "2",
+   "dims": "1000×1000×2100",
+   "price": 259000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornye_kabiny_1_1/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-26",
+   "c": "str",
+   "model": "Звукоизоляционная кабина одноместная БИЗНЕС КОСМОС",
+   "cls": "1+",
+   "dims": "1100×1800×2360",
+   "price": 425000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_odnomestnaya_biznes_kosmos/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-27",
+   "c": "str",
+   "model": "Кабина шумоизоляционная LYX",
+   "cls": "1",
+   "dims": "1100×1000×2200",
+   "price": 345000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_shumoizolyatsionnaya_lyx/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-29",
+   "c": "str",
+   "model": "Двухместная переговорная кабина PR2",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 230000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_peregovornaya_kabina_pr2/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-30",
+   "c": "str",
+   "model": "Шумоизоляционная звукоизоляционная кабина",
+   "cls": "1",
+   "dims": "1150×1100×2200",
+   "price": 279000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_zvukoizolyatsionnaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-32",
+   "c": "str",
+   "model": "Шумоизоляционная одноместная капсула PINK BOX",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 330000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_odnomestnaya_kapsula_pink_box/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-33",
+   "c": "str",
+   "model": "Шумоизоляционная кабина One Box Graffit",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 319000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_one_bokh_graffit/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-34",
+   "c": "str",
+   "model": "Двухместная звукоизоляционная кабина DUO SMART",
+   "cls": "2",
+   "price": 420000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_zvukoizolyatsionnaya_kabina_duo_smart/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-35",
+   "c": "str",
+   "model": "Шумоизоляционная одноместная капсула",
+   "cls": "1",
+   "dims": "1160×1100×2400",
+   "price": 290000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_odnomestnaya_kapsula_/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-36",
+   "c": "str",
+   "model": "Кабина переговорная для руководителей GOS",
+   "cls": "2",
+   "dims": "1100×1800×2360",
+   "price": 459000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_peregovornaya_dlya_rukovoditeley_gos/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-37",
+   "c": "str",
+   "model": "Звукоизолирующая капсула Bisiness Duo",
+   "cls": "2",
+   "dims": "1800×1100×2360",
+   "price": 439000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizoliruyushchaya_kapsula_bisiness_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-38",
+   "c": "str",
+   "model": "Мобильная кабина CUBE",
+   "cls": "1",
+   "price": 349000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_kabina_cube/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-39",
+   "c": "str",
+   "model": "Шумоизоляционная кабина FREE",
+   "cls": "1",
+   "price": 319000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_free/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-40",
+   "c": "str",
+   "model": "Звукоизоляционная кабина двухместная Мокко",
+   "cls": "2",
+   "dims": "1100×1800×2360",
+   "price": 429000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_dvukhmestnaya_mokko/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-41",
+   "c": "str",
+   "model": "Шумоизоляционная кабина ПРОМО + (вариант)",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 145000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_promo_/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-42",
+   "c": "str",
+   "model": "Двухместная переговорная кабина WAY",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 239000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvumestnaya_peregovornaya_kabina_way/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-43",
+   "c": "str",
+   "model": "Кабина офисная PR",
+   "cls": "1",
+   "price": 145000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_ofisnaya_pr/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-44",
+   "c": "str",
+   "model": "Шумоизоляционная кабина Chrome",
+   "cls": "2",
+   "dims": "1100×1800×2360",
+   "price": 430000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_chrome/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-45",
+   "c": "str",
+   "model": "Шумоизоляционная двухместная кабина XL",
+   "cls": "2",
+   "dims": "1100×1800×2360",
+   "price": 420000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_dvukhmestnaya_kabina_xl/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-46",
+   "c": "str",
+   "model": "Шумоизоляционная кабина PR ECO2",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 245000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_pr_eco2/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-47",
+   "c": "str",
+   "model": "Звукоизоляционная кабина SPEAKER MOKKO",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 228000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_speaker_mokko/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-48",
+   "c": "str",
+   "model": "Шумоизоляционная капсула DUO ORANGE",
+   "cls": "2",
+   "price": 420000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kapsula_duo_orange/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-49",
+   "c": "str",
+   "model": "Кабина для переговоров WOOD",
+   "cls": "1",
+   "price": 185000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_dlya_peregovorov_wood/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-50",
+   "c": "str",
+   "model": "Переговорная кабина PR_One",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 139900,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_pr_one/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-51",
+   "c": "str",
+   "model": "Переговорная кабина SMART DUO",
+   "cls": "2",
+   "dims": "1200×1600×2360",
+   "price": 420000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_smart_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-52",
+   "c": "str",
+   "model": "Переговорная кабина двухместная GLASS DUO",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 285000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_dvukhmestnaya_glass_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-53",
+   "c": "str",
+   "model": "Переговорная кабина LUX Graffit",
+   "cls": "1",
+   "dims": "1160×1100×2220",
+   "price": 360000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_lux_graffit/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-54",
+   "c": "str",
+   "model": "Переговорная кабина двухместная LIGHT",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 195000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_dvukhmestnaya_light/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-55",
+   "c": "str",
+   "model": "Переговорная кабина двухместная COMBO",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 220000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_dvukhmestnaya_combo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-56",
+   "c": "str",
+   "model": "Акустическая капсула PRO MAX",
+   "cls": "4",
+   "dims": "2200×1600×2400",
+   "price": 680000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kapsula_pro_max/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-57",
+   "c": "str",
+   "model": "Шумоизоляционная кабина CUBE-1",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 275000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_cube_1/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-58",
+   "c": "str",
+   "model": "Шумоизоляционная кабина FOUR Seaters",
+   "cls": "4",
+   "dims": "1800×1500×2400",
+   "price": 485000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_four_seaters/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-59",
+   "c": "str",
+   "model": "Звукоизоляционная кабина PROMO",
+   "cls": "1",
+   "price": 112000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_promo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-60",
+   "c": "str",
+   "model": "Мобильная звукоизоляционная кабина FOUR SMART",
+   "cls": "4",
+   "dims": "2200×1200×2400",
+   "price": 580000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_zvukoizolyatsionnaya_kabina_four_smart/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-61",
+   "c": "str",
+   "model": "Двухместная шумоизоляционная кабина DUO SMART (240)",
+   "cls": "2",
+   "dims": "1600×1100×2400",
+   "price": 420000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_shumoizolyaitsonnaya_kabina_duo_smart/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-62",
+   "c": "str",
+   "model": "Шумоизоляционная кабина ONE",
+   "cls": "1",
+   "price": 280000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_one_/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-63",
+   "c": "str",
+   "model": "Шумоизоляционная кабина CHROM (металлик)",
+   "cls": "1",
+   "price": 280000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_chrom_metallik/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-64",
+   "c": "str",
+   "model": "Одноместная переговорная кабина",
+   "cls": "1",
+   "price": 280000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/odnomestnaya_peregovornaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-65",
+   "c": "str",
+   "model": "Акустическая кабина PROMO BLACK",
+   "cls": "1",
+   "price": 112000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kabina_promo_black/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-66",
+   "c": "str",
+   "model": "Шумоизоляционная кабина одноместная ONE BOX",
+   "cls": "1",
+   "dims": "1000×1160×2400",
+   "price": 270000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_odnomestnaya_one_box/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-67",
+   "c": "str",
+   "model": "Шумоизоляционная кабина SILENT BOX",
+   "cls": "1",
+   "dims": "1160×1000×2400",
+   "price": 245000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_silent_box/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-68",
+   "c": "str",
+   "model": "Акустическая кабина SilentBox",
+   "cls": "1",
+   "price": 369000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kabina_silentbox/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-69",
+   "c": "str",
+   "model": "Акустическая будка STR FOUR-SEATER",
+   "cls": "4",
+   "dims": "2200×1200×2400",
+   "price": 590000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_budka_str_four_seater_chetyrekhmestnaya/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-70",
+   "c": "str",
+   "model": "Звукоизоляционная кабина одноместная BLACK",
+   "cls": "1",
+   "dims": "1000×1000×2000",
+   "price": 115000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_odnomestnaya_black/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-71",
+   "c": "str",
+   "model": "Переговорная двухместная кабина SILENT BOX DUO",
+   "cls": "2",
+   "price": 435000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_dvukhmestnaya_kabina_silent_box_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-72",
+   "c": "str",
+   "model": "Звукоизоляционная кабина CAPSULA",
+   "cls": "1",
+   "price": 385000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_sapsula/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-73",
+   "c": "str",
+   "model": "Кабина для онлайн переговоров Bisness L",
+   "cls": "1",
+   "dims": "1100×1050×2260",
+   "price": 329000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_dlya_onlayn_peregovorov_bisness_l/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-74",
+   "c": "str",
+   "model": "Zoom кабина для онлайн работы",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 134900,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zoom_kabina_dlya_onlayn_raboty/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-75",
+   "c": "str",
+   "model": "Переговорная кабина Промо DUO",
+   "cls": "2",
+   "price": 249000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_promo_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-76",
+   "c": "str",
+   "model": "Шумоизоляционная кабина SILENT",
+   "cls": "1",
+   "dims": "1150×1100×2200",
+   "price": 265800,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_silent/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-77",
+   "c": "str",
+   "model": "Двухместная звукоизоляционная кабина DUO SMART2",
+   "cls": "2",
+   "dims": "1800×1120×2400",
+   "price": 420000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_zvukoizolyatsionnaya_kabina_duo_smart2/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-78",
+   "c": "str",
+   "model": "Шумоизоляционная одноместная капсула ONE BOX",
+   "cls": "1",
+   "dims": "1160×1000×2400",
+   "price": 290000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_odnomestnaya_kapsula_one_box/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-79",
+   "c": "str",
+   "model": "Телефонная шумоизоляционная кабина BOX ONE",
+   "cls": "1",
+   "price": 270000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/telefonnaya_shumoizolyatsionnaya_kabina_box_one/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-80",
+   "c": "str",
+   "model": "Офисная телефонная кабина LIME",
+   "cls": "1+",
+   "dims": "1600×1100×2400",
+   "price": 297000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/ofisnaya_telefonnaya_kabina_lime/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-82",
+   "c": "str",
+   "model": "Звукоизоляционная кабина для бизнес зала",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 295000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_dlya_biznes_zala/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-83",
+   "c": "str",
+   "model": "Мобильная капсула ZOOM",
+   "cls": "1",
+   "price": 290000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_kapsula_zoom/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-84",
+   "c": "str",
+   "model": "Шумоизоляционные кабины для бизнеса LT",
+   "cls": "1",
+   "price": 295000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnye_kabiny_dlya_biznesa_lt/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-86",
+   "c": "str",
+   "model": "Звукоизоляционная кабина одноместная LYX",
+   "cls": "1+",
+   "dims": "1500×1200×2360",
+   "price": 375000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_odnomestnaya_lyx/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-87",
+   "c": "str",
+   "model": "Офисная переговорная кабина",
+   "cls": "1",
+   "dims": "1100×1050×2260",
+   "price": 297000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/ofisnaya_peregovornaya_kabina_/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-88",
+   "c": "str",
+   "model": "Шумоизоляционная кабина SMART FOUR",
+   "cls": "4",
+   "price": 590000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabiny_smart_four/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-89",
+   "c": "str",
+   "model": "Переговорная четырехместная кабина",
+   "cls": "4",
+   "dims": "1800×1600×2360",
+   "price": 680000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_chetyrekhmestnaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-90",
+   "c": "str",
+   "model": "Переговорная мобильная кабина BREND",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 115000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_mobilnaya_kabina_brend/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-91",
+   "c": "str",
+   "model": "Звукоизолирующая кабина LYX 1.5",
+   "cls": "1+",
+   "dims": "1500×1500×2400",
+   "price": 450000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizoliruyushchaya_kabina_lyx_1_5/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-92",
+   "c": "str",
+   "model": "Двухместная переговорная кабина PR",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 225000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_peregovornaya_kabina_pr/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-93",
+   "c": "str",
+   "model": "Звукоизоляционная переговорная капсула SMART",
+   "cls": "1",
+   "price": 105000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_peregovornaya_kapsula_smart/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-94",
+   "c": "str",
+   "model": "Шумоизоляционная кабина WOOD",
+   "cls": "1",
+   "price": 450000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_wood/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-95",
+   "c": "str",
+   "model": "Открытая шумоизоляционная кабина",
+   "cls": "open",
+   "dims": "1800×1200×2380",
+   "price": 430000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/otkrytaya_shumoizolyatsionnaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-96",
+   "c": "str",
+   "model": "Шумоизоляционная кабина DUET",
+   "cls": "2",
+   "dims": "1100×1500×2360",
+   "price": 395000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_duet/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-97",
+   "c": "str",
+   "model": "Телефонная будка HOUSE",
+   "cls": "1",
+   "dims": "1100×1000×2400",
+   "price": 375000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/telefonnaya_budka_house/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-98",
+   "c": "str",
+   "model": "Шумоизоляционная кабина ONE (236)",
+   "cls": "1",
+   "dims": "1160×1100×2360",
+   "price": 280000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_one/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-99",
+   "c": "str",
+   "model": "Переговорная мягкая кабина ВВ2",
+   "cls": "open",
+   "dims": "1200×1100×2200",
+   "price": 215000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_myagkaya_kabina_vv2/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-100",
+   "c": "str",
+   "model": "Звукоизоляционная кабина Антишум",
+   "cls": "1",
+   "price": 95000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_antishum/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-101",
+   "c": "str",
+   "model": "Акустическая кабина Promo",
+   "cls": "1",
+   "price": 112000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kabina_promo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-102",
+   "c": "str",
+   "model": "Шумоизоляционная кабина XXL",
+   "cls": "1",
+   "price": 475000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_xxl/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-103",
+   "c": "str",
+   "model": "Шумоизоляционные модульные кабины для офиса",
+   "cls": "6",
+   "dims": "4000×1200×2360",
+   "price": 1119000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnye_modulnye_kabiny_dlya_ofisa_i_biznes/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-104",
+   "c": "str",
+   "model": "Двухместная кабина WOOD DUO",
+   "cls": "2",
+   "dims": "1600×1200×2400",
+   "price": 395000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_kabina_wood_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-105",
+   "c": "str",
+   "model": "Шумоизоляционная кабина PROMO GRAFIT",
+   "cls": "1",
+   "dims": "1000×1000×2000",
+   "price": 102000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_promo_grafit/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-106",
+   "c": "str",
+   "model": "Звукоизоляционная кабина Speaker",
+   "cls": "1",
+   "dims": "1000×1000×2000",
+   "price": 129000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_speaker/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-107",
+   "c": "str",
+   "model": "Переговорная кабина OPTIMA WOOD",
+   "cls": "1+",
+   "dims": "1000×1600×2400",
+   "price": 369000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_optima_wood/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-108",
+   "c": "str",
+   "model": "Акустическая капсула четырехместная",
+   "cls": "4",
+   "dims": "2200×1500×2400",
+   "price": 649000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kapsula_chetyrekhmestnaya/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-109",
+   "c": "str",
+   "model": "Шумоизоляционная кабина Four Black",
+   "cls": "4",
+   "price": 590000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_four_black/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-110",
+   "c": "str",
+   "model": "Капсула тишины GREEN",
+   "cls": "1",
+   "dims": "1100×1000×2200",
+   "price": 580000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kapsula_tishiny_green/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-111",
+   "c": "str",
+   "model": "Шумоизоляционная кабина двухместная",
+   "cls": "2",
+   "dims": "1100×1800×2360",
+   "price": 390000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_dvukhmestnaya/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-112",
+   "c": "str",
+   "model": "Мобильная шумоизоляционная кабина для переговоров",
+   "cls": "1",
+   "price": 490000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_shumoizolyatsionnaya_kabina_dlya_peregovorov/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-113",
+   "c": "str",
+   "model": "Переговорная мобильная кабина LX",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 315000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_mobilnaya_kabina_lx/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-114",
+   "c": "str",
+   "model": "Шумоизоляционная капсула LYX ONE",
+   "cls": "1",
+   "price": 650000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kapsula_lyx_one/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-115",
+   "c": "str",
+   "model": "Шумоизоляционная кабина WOOD ONE",
+   "cls": "1",
+   "dims": "1100×1160×2400",
+   "price": 268000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_wood_one/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-116",
+   "c": "str",
+   "model": "Шумоизоляционная капсула 1.5 SKY",
+   "cls": "1+",
+   "price": 420000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kapsula_1_5_sky/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-117",
+   "c": "str",
+   "model": "Капсула офисная шумоизоляционная MODULAR",
+   "cls": "1",
+   "dims": "1100×1050×2200",
+   "price": 585000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kapsula_ofisnaya_shumoizolyatsionnaya_modular/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-118",
+   "c": "str",
+   "model": "Звукоизоляционная кабина ONE одноместная",
+   "cls": "1",
+   "price": 270000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_one_odnomestnaya/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-119",
+   "c": "str",
+   "model": "Мобильная переговорная кабина PREMIUM",
+   "cls": "1",
+   "price": 290000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_peregovornaya_kabina_premium/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-120",
+   "c": "str",
+   "model": "Шумоизоляционная кабина WOOD DUO",
+   "cls": "2",
+   "dims": "1100×1800×2200",
+   "price": 360000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_wood_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-122",
+   "c": "str",
+   "model": "Мобильный кабинет для переговоров",
+   "cls": "2",
+   "price": 875000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnyy_kabinet_dlya_peregovorov/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-123",
+   "c": "str",
+   "model": "Телефонная будка для переговоров",
+   "cls": "1",
+   "dims": "1100×1000×2360",
+   "price": 245000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/telefonnaya_budka_dlya_peregovorov/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-124",
+   "c": "str",
+   "model": "Concept K-glass",
+   "cls": "1",
+   "price": 850000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kontsept/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-125",
+   "c": "str",
+   "model": "Двухместная капсула для переговоров",
+   "cls": "2",
+   "dims": "1100×1800×2260",
+   "price": 325000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_kapsula_dlya_peregovorov/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-127",
+   "c": "str",
+   "model": "Телефонная будка звукоизоляционная WOOD",
+   "cls": "1",
+   "price": 458000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/telefonnaya_budka_zvukoizolyatsionnaya_wood/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-128",
+   "c": "str",
+   "model": "Мобильные шумоизоляционные кабины для переговоров",
+   "cls": "1",
+   "price": 395000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnye_shumoizolyatsionnye_kabiny_dlya_peregovorov/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-134",
+   "c": "str",
+   "model": "Мобильная кабина для переговоров",
+   "cls": "1",
+   "price": 145000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_kabina_dlya_peregovorov/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-135",
+   "c": "str",
+   "model": "Шумоизоляционная кабина двухместная ДУЭТ",
+   "cls": "2",
+   "dims": "1200×1200×2360",
+   "price": 385000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_dvukhmestnaya_duet/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-136",
+   "c": "str",
+   "model": "Телефонная кабина PR",
+   "cls": "1",
+   "dims": "1000×1000×2100",
+   "price": 145000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/telefonnaya_kabina_pr_/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-137",
+   "c": "str",
+   "model": "Шумоизоляционная кабина ALUM",
+   "cls": "1",
+   "dims": "1160×1100×2360",
+   "price": 450000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_alum/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-139",
+   "c": "str",
+   "model": "Звукоизолирующая кабина ALUM",
+   "cls": "1",
+   "dims": "1160×1100×2360",
+   "price": 458000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizoliruyushchaya_kabina_alum/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-141",
+   "c": "str",
+   "model": "Шумоизоляционная кабина SMART GLASS",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 330000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_smart_glass/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-142",
+   "c": "str",
+   "model": "Шумоизоляционная кабина Black R",
+   "cls": "1",
+   "dims": "1160×1100×2360",
+   "price": 305000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_black_r/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-143",
+   "c": "str",
+   "model": "ZOOM кабина для переговоров",
+   "cls": "1",
+   "price": 332500,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zoom_kabina_dlya_peregovorov_/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-145",
+   "c": "str",
+   "model": "Звукоизоляционная кабина SMART (160)",
+   "cls": "2",
+   "dims": "1200×1600×2360",
+   "price": 455000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_smart/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-146",
+   "c": "str",
+   "model": "Звукоизоляционная кабина 1.5Х",
+   "cls": "1+",
+   "dims": "1100×1600×2200",
+   "price": 390000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_1_5kh/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-147",
+   "c": "str",
+   "model": "Звукоизоляционная кабина BLUE ICE",
+   "cls": "1",
+   "dims": "1150×1100×2360",
+   "price": 299000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_blue_ice/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-148",
+   "c": "str",
+   "model": "Кабина для переговоров",
+   "cls": "1",
+   "dims": "1200×1160×2400",
+   "price": 320000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_dlya_peregovorov_/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-149",
+   "c": "str",
+   "model": "Звукоизолирующая кабина 1.3 XL",
+   "cls": "1+",
+   "dims": "1100×1200×2200",
+   "price": 395000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizoliruyushchaya_kabina_1_3_xl/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-153",
+   "c": "str",
+   "model": "Переговорная кабина LUX WHITE",
+   "cls": "1",
+   "dims": "1160×1100×2360",
+   "price": 336000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_lux_white/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-154",
+   "c": "str",
+   "model": "Шумоизоляционная кабина LYX ONE",
+   "cls": "1",
+   "dims": "1150×1100×2200",
+   "price": 349000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_lyx_one/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-156",
+   "c": "str",
+   "model": "Шумоизоляционная кабина Grey 1.5X",
+   "cls": "1+",
+   "dims": "1300×1160×2360",
+   "price": 348000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_grey_1_5x/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-157",
+   "c": "str",
+   "model": "Шумоизоляционная кабина Smart 1.5Х",
+   "cls": "1+",
+   "price": 340000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_smart_1_5kh/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-158",
+   "c": "str",
+   "model": "Шумоизоляционная кабина 1.5Х (236)",
+   "cls": "1+",
+   "dims": "1300×1160×2360",
+   "price": 350000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_1_5kh/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-160",
+   "c": "str",
+   "model": "Переговорные капсулы BISSNES",
+   "cls": "1",
+   "price": 285000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornye_kapsuly_bissnes/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-163",
+   "c": "str",
+   "model": "ZOOM кабина WHITE L-PREMIUM",
+   "cls": "1",
+   "dims": "1160×1100×2200",
+   "price": 325000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zoom_kabina_white_l_premium/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-164",
+   "c": "str",
+   "model": "Шумоизоляционные кабины (210×150)",
+   "cls": "2",
+   "dims": "1500×1000×2100",
+   "price": 219000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnye_kabiny/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-165",
+   "c": "str",
+   "model": "Двухместная звукоизоляционная кабина PROMO",
+   "cls": "2",
+   "price": 205000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/dvukhmestnaya_zvukoizolyatsionnaya_kabina_promo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-166",
+   "c": "str",
+   "model": "Кабинет для переговоров PRO MAX_4",
+   "cls": "4",
+   "dims": "2200×1500×2400",
+   "price": 490000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabinet_dlya_peregovorov_pro_max_4/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-167",
+   "c": "str",
+   "model": "Акустическая кабина WOOD_ONE",
+   "cls": "1",
+   "dims": "1160×1000×2400",
+   "price": 325000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kabina_wood_one/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-168",
+   "c": "str",
+   "model": "Переговорная капсула FOUR",
+   "cls": "4",
+   "dims": "1600×1200×2360",
+   "price": 480000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kapsula_four/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-169",
+   "c": "str",
+   "model": "Телефонная кабина двухместная FELT",
+   "cls": "2",
+   "price": 685000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/telefonnaya_kabina_dvukhmestnaya_felt/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-170",
+   "c": "str",
+   "model": "Шумоизоляционная кабина (1160×1000)",
+   "cls": "1",
+   "dims": "1160×1000×2400",
+   "price": 285000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-171",
+   "c": "str",
+   "model": "Кабина для переговоров OPEN",
+   "cls": "open",
+   "price": 135900,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kabina_dlya_peregovorov_open/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-172",
+   "c": "str",
+   "model": "Акустическая кабина GHAZ",
+   "cls": "1",
+   "dims": "1000×1000×2000",
+   "price": 109000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kabina_ghaz/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-173",
+   "c": "str",
+   "model": "Переговорная кабина встроенная",
+   "cls": "open",
+   "price": 548000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_vstroennaya/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-174",
+   "c": "str",
+   "model": "Акустическая кабина Wind",
+   "cls": "1",
+   "dims": "1000×1000×2000",
+   "price": 398500,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kabina_wind/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-175",
+   "c": "str",
+   "model": "Приставная встроенная переговорная кабина",
+   "cls": "open",
+   "dims": "3000×1980×1450",
+   "price": 195000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/pristavnaya_vstroennaya_peregovornaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-176",
+   "c": "str",
+   "model": "Встроенная переговорная LIGHT",
+   "cls": "open",
+   "dims": "2400×2000×1500",
+   "price": 340000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/vstroennaya_peregovornaya_light/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-177",
+   "c": "str",
+   "model": "Переговорная кабина открытого типа",
+   "cls": "open",
+   "dims": "2400×2000×1200",
+   "price": 354000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_otkrytogo_tipa/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-178",
+   "c": "str",
+   "model": "Круглая встроенная переговорная кабина",
+   "cls": "open",
+   "dims": "2200×2000×1000",
+   "price": 385000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/kruglaya_vstroennaya_peregovornaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-179",
+   "c": "str",
+   "model": "Шумоизоляционная кабина SilentBox Duo",
+   "cls": "2",
+   "price": 690000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/shumoizolyatsionnaya_kabina_silentbox_duo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-180",
+   "c": "str",
+   "model": "Переговорная мягкая кабина LIME2",
+   "cls": "open",
+   "dims": "2200×2000×1000",
+   "price": 382000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_myagkaya_kabina_lime2/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-181",
+   "c": "str",
+   "model": "Акустическая кабина STRONG",
+   "cls": "1",
+   "price": 298000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/akusticheskaya_kabina_strong/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-182",
+   "c": "str",
+   "model": "Переговорная мягкая кабина BB4",
+   "cls": "open",
+   "dims": "3000×1980×1200",
+   "price": 198500,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_myagkaya_kabina/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-183",
+   "c": "str",
+   "model": "Переговорная кабина открытая MINI",
+   "cls": "open",
+   "price": 398550,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_otkrytaya_mini/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-184",
+   "c": "str",
+   "model": "Звукоизоляционная кабина GEO",
+   "cls": "1",
+   "price": 395000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/zvukoizolyatsionnaya_kabina_geo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-185",
+   "c": "str",
+   "model": "Переговорная кабина двойная",
+   "cls": "2",
+   "price": 620000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_dvoynaya/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-186",
+   "c": "str",
+   "model": "Переговорная кабина WOOD",
+   "cls": "1",
+   "price": 315800,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_wood/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "str-187",
+   "c": "str",
+   "model": "Переговорная кабина SHOW",
+   "cls": "1",
+   "price": 315000,
+   "url": "https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/peregovornaya_kabina_show/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": false,
+    "reason": "http_503",
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-1",
+   "c": "quietstore",
+   "model": "Simple Air One",
+   "cls": "1",
+   "dims": "1040×1000×2250",
+   "price": 355500,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-air/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple Air One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-2",
+   "c": "quietstore",
+   "model": "Simple Air Two",
+   "cls": "2",
+   "dims": "2000×1000×2250",
+   "price": 533700,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-air/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple Air Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-3",
+   "c": "quietstore",
+   "model": "Simple Air Two Plus",
+   "cls": "2",
+   "dims": "2000×1200×2250",
+   "price": 568800,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-air/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple Air Two Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-4",
+   "c": "quietstore",
+   "model": "Simple One",
+   "cls": "1",
+   "price": 395000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-5",
+   "c": "quietstore",
+   "model": "Simple One Plus",
+   "cls": "1+",
+   "dims": "1190×1100×2250",
+   "price": 443000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple One Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-6",
+   "c": "quietstore",
+   "model": "Simple One Work",
+   "cls": "1+",
+   "price": 474000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple One Work"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-7",
+   "c": "quietstore",
+   "model": "Simple Two",
+   "cls": "2",
+   "dims": "2000×1000×2250",
+   "price": 593000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-8",
+   "c": "quietstore",
+   "model": "Simple Two Plus",
+   "cls": "2",
+   "price": 632000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple Two Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-9",
+   "c": "quietstore",
+   "model": "Simple Four",
+   "cls": "4",
+   "price": 731000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple Four"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-10",
+   "c": "quietstore",
+   "model": "Simple R One",
+   "cls": "1",
+   "dims": "1190×1000×2250",
+   "price": 450000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple R One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-11",
+   "c": "quietstore",
+   "model": "Simple R One Plus",
+   "cls": "1+",
+   "dims": "1340×1100×2250",
+   "price": 504000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple R One Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-12",
+   "c": "quietstore",
+   "model": "Simple R One Work",
+   "cls": "1+",
+   "price": 540000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple R One Work"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-13",
+   "c": "quietstore",
+   "model": "Simple R Two",
+   "cls": "2",
+   "dims": "2150×1000×2250",
+   "price": 675000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple R Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-14",
+   "c": "quietstore",
+   "model": "Simple R Two Plus",
+   "cls": "2",
+   "dims": "2150×1200×2250",
+   "price": 720000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple R Two Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-15",
+   "c": "quietstore",
+   "model": "Simple R Four",
+   "cls": "4",
+   "price": 833000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/simple-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Simple R Four"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-16",
+   "c": "quietstore",
+   "model": "Focus One",
+   "cls": "1",
+   "price": 610000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-17",
+   "c": "quietstore",
+   "model": "Focus One Plus",
+   "cls": "1+",
+   "dims": "1150×1100×2210",
+   "price": 683000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus One Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-18",
+   "c": "quietstore",
+   "model": "Focus One Work",
+   "cls": "1+",
+   "dims": "1500×1000×2210",
+   "price": 732000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus One Work"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-19",
+   "c": "quietstore",
+   "model": "Focus Two",
+   "cls": "2",
+   "dims": "2000×1000×2210",
+   "price": 915000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-20",
+   "c": "quietstore",
+   "model": "Focus Two Plus",
+   "cls": "2",
+   "dims": "2000×1200×2210",
+   "price": 976000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus Two Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-21",
+   "c": "quietstore",
+   "model": "Focus Four",
+   "cls": "4",
+   "price": 1128500,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus Four"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-22",
+   "c": "quietstore",
+   "model": "Focus R One",
+   "cls": "1",
+   "price": 575000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus R One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-23",
+   "c": "quietstore",
+   "model": "Focus R One Plus",
+   "cls": "1+",
+   "dims": "1150×1100×2210",
+   "price": 644000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus R One Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-24",
+   "c": "quietstore",
+   "model": "Focus R One Work",
+   "cls": "1+",
+   "dims": "1500×1000×2210",
+   "price": 690000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus R One Work"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-25",
+   "c": "quietstore",
+   "model": "Focus R Two",
+   "cls": "2",
+   "dims": "2000×1000×2210",
+   "price": 862500,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus R Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-26",
+   "c": "quietstore",
+   "model": "Focus R Two Plus",
+   "cls": "2",
+   "dims": "2000×1200×2210",
+   "price": 920000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus R Two Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-27",
+   "c": "quietstore",
+   "model": "Focus R Four",
+   "cls": "4",
+   "price": 1063750,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-r/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus R Four"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-28",
+   "c": "quietstore",
+   "model": "Focus Pro One",
+   "cls": "1",
+   "dims": "1000×1000×2210",
+   "price": 732000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-pro/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus Pro One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-29",
+   "c": "quietstore",
+   "model": "Focus Pro Two",
+   "cls": "2",
+   "dims": "2000×1000×2210",
+   "price": 1098000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-pro/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus Pro Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-30",
+   "c": "quietstore",
+   "model": "Focus Pro Two Plus",
+   "cls": "2",
+   "dims": "2000×1200×2210",
+   "price": 1171200,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/focus-pro/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Focus Pro Two Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-31",
+   "c": "quietstore",
+   "model": "Reload Basic One",
+   "cls": "1",
+   "dims": "1190×1000×2250",
+   "price": 474000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/reload-basic/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Reload Basic One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-32",
+   "c": "quietstore",
+   "model": "Reload Basic Two",
+   "cls": "2",
+   "dims": "2150×1000×2250",
+   "price": 600000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/reload-basic/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Reload Basic Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-33",
+   "c": "quietstore",
+   "model": "Reload Basic Four",
+   "cls": "4",
+   "dims": "2150×1600×2250",
+   "price": 762000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/reload-basic/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Reload Basic Four"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-34",
+   "c": "quietstore",
+   "model": "Reload Basic Six",
+   "cls": "6",
+   "dims": "2150×2200×2250",
+   "price": 1114000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/reload-basic/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Reload Basic Six"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-35",
+   "c": "quietstore",
+   "model": "Reload Neo One",
+   "cls": "1",
+   "dims": "1190×1000×2250",
+   "price": 450300,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/reload-neo/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Reload Neo One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-36",
+   "c": "quietstore",
+   "model": "Reload Neo Two",
+   "cls": "2",
+   "dims": "2150×1000×2250",
+   "price": 570000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/reload-neo/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Reload Neo Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-37",
+   "c": "quietstore",
+   "model": "Reload Neo Four",
+   "cls": "4",
+   "dims": "2150×1600×2250",
+   "price": 723900,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/reload-neo/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Reload Neo Four"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-38",
+   "c": "quietstore",
+   "model": "Reload Neo Six",
+   "cls": "6",
+   "dims": "2150×2200×2250",
+   "price": 1058300,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/reload-neo/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Reload Neo Six"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-39",
+   "c": "quietstore",
+   "model": "Merlin One",
+   "cls": "1",
+   "price": 625000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/merlin/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Merlin One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-40",
+   "c": "quietstore",
+   "model": "Merlin One Plus",
+   "cls": "1+",
+   "dims": "1190×1180×2240",
+   "price": 700000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/merlin/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Merlin One Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-41",
+   "c": "quietstore",
+   "model": "Merlin One Work",
+   "cls": "1+",
+   "dims": "1540×1080×2240",
+   "price": 750000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/merlin/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Merlin One Work"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-42",
+   "c": "quietstore",
+   "model": "Merlin Two",
+   "cls": "2",
+   "dims": "2040×1080×2240",
+   "price": 937500,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/merlin/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Merlin Two"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-43",
+   "c": "quietstore",
+   "model": "Merlin Two Plus",
+   "cls": "2",
+   "dims": "2040×1280×2240",
+   "price": 1000000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/merlin/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Merlin Two Plus"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-44",
+   "c": "quietstore",
+   "model": "Merlin Four",
+   "cls": "4",
+   "price": 1156250,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/merlin/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Merlin Four"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-45",
+   "c": "quietstore",
+   "model": "Cocon One",
+   "cls": "1",
+   "price": 425000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/cocon/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Cocon One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-46",
+   "c": "quietstore",
+   "model": "Oblivion One",
+   "cls": "1",
+   "dims": "1220×1200×2300",
+   "price": 756000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/oblivion/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Oblivion One"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "quietstore-47",
+   "c": "quietstore",
+   "model": "Oblivion One Work",
+   "cls": "1+",
+   "price": 810000,
+   "frm": true,
+   "url": "https://qs-store.ru/catalog/series/oblivion/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Oblivion One Work"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-1",
+   "c": "lwop",
+   "model": "LWOP One (одноместная)",
+   "cls": "1",
+   "dims": "1120×1020×2350",
+   "price": 500000,
+   "frm": true,
+   "url": "https://lwop.ru/cabines",
+   "ext": {
+    "mode": "near",
+    "anchor": "Обеспечьте удобное рабочее место для самых эффективных сотрудников"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-2",
+   "c": "lwop",
+   "model": "LWOP One Sky (умная капсула)",
+   "cls": "1",
+   "price": 550000,
+   "frm": true,
+   "url": "https://lwop.ru/cabines",
+   "ext": {
+    "mode": "near",
+    "anchor": "Умная капсула для работы, мозговых штурмов и фокуса"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-3",
+   "c": "lwop",
+   "model": "LWOP SIX FELT (G) — Шестиместная акустическая кабина, внешняя отделка фетр (задняя стенка стекло)",
+   "cls": "6",
+   "price": 1472625,
+   "note": "цена дилера со скидкой 15%  по прайсу 1 732 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP SIX FELT (G) Шестиместная акустическая кабина, внешняя отделка фетр (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-4",
+   "c": "lwop",
+   "model": "LWOP SIX FELT — Шестиместная акустическая кабина, внешняя отделка фетр",
+   "cls": "6",
+   "price": 1360425,
+   "note": "цена дилера со скидкой 15%  по прайсу 1 600 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP SIX FELT Шестиместная акустическая кабина, внешняя отделка фетр"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-5",
+   "c": "lwop",
+   "model": "LWOP SIX (G) — Шестиместная акустическая кабина (задняя стенка стекло)",
+   "cls": "6",
+   "price": 1354815,
+   "note": "цена дилера со скидкой 15%  по прайсу 1 593 900 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP SIX (G) Шестиместная акустическая кабина (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-6",
+   "c": "lwop",
+   "model": "LWOP SIX — Шестиместная акустическая кабина",
+   "cls": "6",
+   "price": 1230375,
+   "note": "цена дилера со скидкой 15%  по прайсу 1 447 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP SIX Шестиместная акустическая кабина"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-7",
+   "c": "lwop",
+   "model": "LWOP FOUR FELT (G) — Четырехместная акустическая кабина, внешняя отделка фетр (задняя стенка стекло)",
+   "cls": "4",
+   "price": 1048050,
+   "note": "цена дилера со скидкой 15%  по прайсу 1 233 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP FOUR FELT (G) Четырехместная акустическая кабина, внешняя отделка фетр (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-8",
+   "c": "lwop",
+   "model": "LWOP FOUR FELT — Четырехместная акустическая кабина, внешняя отделка фетр",
+   "cls": "4",
+   "price": 946050,
+   "note": "цена дилера со скидкой 15%  по прайсу 1 113 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP FOUR FELT Четырехместная акустическая кабина, внешняя отделка фетр"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-9",
+   "c": "lwop",
+   "model": "LWOP FOUR (G) — Четырехместная акустическая кабина (задняя стенка стекло)",
+   "cls": "4",
+   "price": 953700,
+   "note": "цена дилера со скидкой 15%  по прайсу 1 122 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP FOUR (G) Четырехместная акустическая кабина (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-10",
+   "c": "lwop",
+   "model": "LWOP FOUR — Четырехместная акустическая кабина",
+   "cls": "4",
+   "price": 841500,
+   "note": "цена дилера со скидкой 15%  по прайсу 990 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP FOUR Четырехместная акустическая кабина"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-11",
+   "c": "lwop",
+   "model": "LWOP FOUR OPEN — Четырехместная открытая акустическая кабина",
+   "cls": "open",
+   "price": 601800,
+   "note": "цена дилера со скидкой 15%  по прайсу 708 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP FOUR OPEN Четырехместная открытая акустическая кабина"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-12",
+   "c": "lwop",
+   "model": "LWOP DOUBLE FELT (G) — Двухместная акустическая кабина, внешняя отделка фетр (задняя стенка стекло)",
+   "cls": "2",
+   "price": 835125,
+   "note": "цена дилера со скидкой 15%  по прайсу 982 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP DOUBLE FELT (G) Двухместная акустическая кабина, внешняя отделка фетр (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-13",
+   "c": "lwop",
+   "model": "LWOP DOUBLE FELT — Двухместная акустическая кабина, внешняя отделка фетр",
+   "cls": "2",
+   "price": 750975,
+   "note": "цена дилера со скидкой 15%  по прайсу 883 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP DOUBLE FELT Двухместная акустическая кабина, внешняя отделка фетр"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-14",
+   "c": "lwop",
+   "model": "LWOP DOUBLE (G) — Двухместная акустическая кабина (задняя стенка стекло)",
+   "cls": "2",
+   "price": 754800,
+   "note": "цена дилера со скидкой 15%  по прайсу 888 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP DOUBLE (G) Двухместная акустическая кабина (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-15",
+   "c": "lwop",
+   "model": "LWOP DOUBLE — Двухместная акустическая кабина",
+   "cls": "2",
+   "price": 663000,
+   "note": "цена дилера со скидкой 15%  по прайсу 780 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP DOUBLE Двухместная акустическая кабина"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-16",
+   "c": "lwop",
+   "model": "LWOP ONE WORK XL (G) — Одноместная акустическая кабина (задняя стенка стекло)",
+   "cls": "1+",
+   "price": 883575,
+   "note": "цена дилера со скидкой 15%  по прайсу 1 039 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE WORK XL (G) Одноместная акустическая кабина (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-17",
+   "c": "lwop",
+   "model": "LWOP ONE WORK XL — Одноместная акустическая кабина",
+   "cls": "1+",
+   "price": 771375,
+   "note": "цена дилера со скидкой 15%  по прайсу 907 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE WORK XL Одноместная акустическая кабина"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-18",
+   "c": "lwop",
+   "model": "LWOP ONE WORK FELT (G) — Одноместная акустическая кабина, отделка фетр (задняя стенка стекло)",
+   "cls": "1+",
+   "price": 742050,
+   "note": "цена дилера со скидкой 15%  по прайсу 873 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE WORK FELT (G) Одноместная акустическая кабина, отделка фетр (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-19",
+   "c": "lwop",
+   "model": "LWOP ONE WORK FELT — Одноместная акустическая кабина, отделка фетр",
+   "cls": "1+",
+   "price": 684675,
+   "note": "цена дилера со скидкой 15%  по прайсу 805 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE WORK FELT Одноместная акустическая кабина, отделка фетр"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-20",
+   "c": "lwop",
+   "model": "LWOP ONE WORK (G) — Одноместная акустическая кабина (задняя стенка стекло)",
+   "cls": "1+",
+   "price": 654075,
+   "note": "цена дилера со скидкой 15%  по прайсу 769 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE WORK (G) Одноместная акустическая кабина (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-21",
+   "c": "lwop",
+   "model": "LWOP ONE WORK — Одноместная акустическая кабина",
+   "cls": "1+",
+   "price": 591600,
+   "note": "цена дилера со скидкой 15%  по прайсу 696 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE WORK Одноместная акустическая кабина"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-22",
+   "c": "lwop",
+   "model": "LWOP ONE FELT — Одноместная акустическая кабина, внешняя отделка фетр",
+   "cls": "1",
+   "price": 632400,
+   "note": "цена дилера со скидкой 15%  по прайсу 744 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE FELT Одноместная акустическая кабина, внешняя отделка фетр"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-23",
+   "c": "lwop",
+   "model": "LWOP ONE (G) — Одноместная акустическая кабина (задняя стенка стекло)",
+   "cls": "1",
+   "price": 617100,
+   "note": "цена дилера со скидкой 15%  по прайсу 726 000 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE (G) Одноместная акустическая кабина (задняя стенка стекло)"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-24",
+   "c": "lwop",
+   "model": "LWOP ONE — Одноместная акустическая кабина",
+   "cls": "1",
+   "price": 524025,
+   "note": "цена дилера со скидкой 15%  по прайсу 616 500 ₽",
+   "url": "https://thedesk.ru/catalog/office/akusticheskie-resheniya/akusticheskie-kabiny-dlya-ofisa",
+   "src": "dealer",
+   "dealer": "The Desk (Казань)",
+   "ext": {
+    "mode": "near",
+    "anchor": "Арт. LWOP ONE Одноместная акустическая кабина"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "bazis-1",
+   "c": "bazis",
+   "model": "Акустическая кабина БАЗИС 950х1100х2260",
+   "cls": "1",
+   "dims": "950×1100×2260",
+   "price": 432000,
+   "url": "https://officepro54.ru/product/akusticheskaya-kabina-bazis-950h1100h2260",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-25",
+   "c": "lwop",
+   "model": "Одноместная акустическая кабина LWOP 1120x1020x2350",
+   "cls": "1",
+   "dims": "1120×1020×2350",
+   "price": 550000,
+   "frm": true,
+   "url": "https://officepro54.ru/product/odnomestnaya-akusticheskaya-kabina-lwop",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-26",
+   "c": "lwop",
+   "model": "Акустическая Кабина - кабинет LWOP 1520x1020x2370",
+   "cls": "1+",
+   "dims": "1520×1020×2370",
+   "price": 660000,
+   "frm": true,
+   "url": "https://officepro54.ru/product/kabina-kabinet-lwop",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-27",
+   "c": "lwop",
+   "model": "Двухместная акустическая кабина LWOP 1820х1020х2370",
+   "cls": "2",
+   "dims": "1820×1020×2370",
+   "price": 715000,
+   "frm": true,
+   "url": "https://officepro54.ru/product/dvuhmestnaya-akusticheskaya-kabina-lwop-1820h1020h2370",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-28",
+   "c": "lwop",
+   "model": "Двухместная открытая кабина LWOP 1820х1020х2370",
+   "cls": "open",
+   "dims": "1820×1020×2370",
+   "price": 536000,
+   "frm": true,
+   "url": "https://officepro54.ru/product/dvuhmestnaya-otkrytaya-kabina-lwop",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-29",
+   "c": "lwop",
+   "model": "Четырехместная акустическая кабина LWOP 2220х1220х2370",
+   "cls": "4",
+   "dims": "2220×1220×2370",
+   "price": 880000,
+   "frm": true,
+   "url": "https://officepro54.ru/product/chetyrehmestnaya-akusticheskaya-kabina-lwop",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-30",
+   "c": "lwop",
+   "model": "Шестиместная акустическая кабина LWOP 2220х1820х2370",
+   "cls": "6",
+   "dims": "2220×1820×2370",
+   "price": 1320000,
+   "frm": true,
+   "url": "https://officepro54.ru/product/shestimestnaya-akusticheskaya-kabina-lwop-2220h1820h2370",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-31",
+   "c": "lwop",
+   "model": "Четырехместная открытая кабина LWOP 2220х1220х2370",
+   "cls": "open",
+   "dims": "2220×1220×2370",
+   "price": 670000,
+   "frm": true,
+   "url": "https://officepro54.ru/product/chetyrehmestnaya-otkrytaya-kabina-lwop-2220h1220h2370",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "lwop-32",
+   "c": "lwop",
+   "model": "Шестиместная открытая кабина LWOP 2220х1820х2370",
+   "cls": "open",
+   "dims": "2220×1820×2370",
+   "price": 1070000,
+   "frm": true,
+   "url": "https://officepro54.ru/product/shestimestnaya-otkrytaya-kabina-lwop",
+   "src": "dealer",
+   "dealer": "OfficePro54 (Новосибирск)",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "mutemark-1",
+   "c": "mutemark",
+   "model": "MuteMark One",
+   "cls": "1",
+   "price": 690000,
+   "url": "https://tuttiho.ru/product/akusticheskaya-ofisnaya-kabina-izobox-office-solo-tsveta--chernyyzheltyy/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "mutemark-2",
+   "c": "mutemark",
+   "model": "MuteMark Team",
+   "cls": "4",
+   "price": 1782000,
+   "url": "https://tuttiho.ru/product/kabina-izoroom-lite/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "moodular-1",
+   "c": "moodular",
+   "model": "Moodular Uno",
+   "cls": "1",
+   "dims": "1100×2240×1100",
+   "price": 492000,
+   "url": "https://tuttiho.ru/product/moodular-uno/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "mutemark-3",
+   "c": "mutemark",
+   "model": "MuteMark One+",
+   "cls": "1+",
+   "price": 864000,
+   "url": "https://tuttiho.ru/product/zvukoizolyatsionnaya-kabina-ofisnaya-mutemark-one-tsveta-rozovyy-rozovyy_1/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "mutemark-4",
+   "c": "mutemark",
+   "model": "MuteMark TWO",
+   "cls": "2",
+   "price": 1050000,
+   "url": "https://tuttiho.ru/product/zvukoizolyatsionnaya-kabina-ofisnaya-mutemark-two-tsveta-rozovyy-rozovyy_1/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "mutemark-5",
+   "c": "mutemark",
+   "model": "MuteMark TWO Plus",
+   "cls": "2",
+   "price": 1338000,
+   "url": "https://tuttiho.ru/product/zvukoizolyatsionnaya-kabina-ofisnaya-mutemark-two-plus-tsveta-seryy-oranzhevyy_1/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "moodular-2",
+   "c": "moodular",
+   "model": "Moodular Duo",
+   "cls": "2",
+   "dims": "1100×2350×2240",
+   "price": 696000,
+   "url": "https://tuttiho.ru/product/zvukoizolyatsionnaya-kabina-moodular-duo/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cubiroom-1",
+   "c": "cubiroom",
+   "model": "Call от Cubiroom",
+   "cls": "1",
+   "dims": "1050×1000×2200",
+   "price": 336000,
+   "url": "https://tuttiho.ru/product/akusticheskaya-ofisnaya-kabina-call-ot-cubiroom_1/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cubiroom-2",
+   "c": "cubiroom",
+   "model": "Focus от Cubiroom",
+   "cls": "6",
+   "dims": "2700×2400×2200",
+   "price": 900000,
+   "url": "https://tuttiho.ru/product/akusticheskaya-ofisnaya-kabina-focus-ot-cubiroom/",
+   "src": "dealer",
+   "dealer": "tuttiho.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-1",
+   "c": "echoton",
+   "model": "Echoton Cab Диктор/ Speaker",
+   "cls": "1",
+   "dims": "1100×1300×2138",
+   "price": 350000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_speaker/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-4",
+   "c": "echoton",
+   "model": "Echoton Одноместная/ Cab Solo",
+   "cls": "1",
+   "dims": "900×900×2200",
+   "price": 295000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/akusticheskaya_zvukoizolyatsionnaya_kabina_echoton_cab_solo/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-5",
+   "c": "echoton",
+   "model": "Echoton Cab Конференция/ Conference",
+   "cls": "6",
+   "dims": "2000×2000×2132",
+   "price": 750000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_conference/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-6",
+   "c": "echoton",
+   "model": "Echoton Двухместная/ Cab Double",
+   "cls": "2",
+   "dims": "2200×1100×2164",
+   "price": 441000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_double/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-9",
+   "c": "echoton",
+   "model": "Echoton Cab Закругленная/ Rounded",
+   "cls": "1",
+   "dims": "1100×1100×2260",
+   "price": 450000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_rounded/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-10",
+   "c": "echoton",
+   "model": "Echoton Cab Закругленная/ Rounded 1+1",
+   "cls": "2",
+   "dims": "2200×1100×2260",
+   "price": 550000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_rounded_1_1/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-11",
+   "c": "echoton",
+   "model": "Echoton Cab Закругленная/ Rounded 2+2",
+   "cls": "4",
+   "dims": "2200×1300×2138",
+   "price": 740000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_rounded_2_2/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-12",
+   "c": "echoton",
+   "model": "Echoton Cab Закругленная/ Rounded 3+3",
+   "cls": "6",
+   "dims": "2000×2000×2138",
+   "price": 880000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_rounded_3_3/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-13",
+   "c": "echoton",
+   "model": "Echoton Cab Офис/ Office",
+   "cls": "1",
+   "dims": "1100×1100×2164",
+   "price": 480000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_office/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "echoton-14",
+   "c": "echoton",
+   "model": "Echoton Cab Офис/ Office 2",
+   "cls": "2",
+   "dims": "2100×1100×2164",
+   "price": 580000,
+   "url": "https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_office_2/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-2",
+   "c": "cube",
+   "model": "Cube Office Glass 1x (одностороннее остекление)",
+   "cls": "1",
+   "dims": "1000×900×2000",
+   "price": 331200,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-1x-odnostoronnee-osteklenie/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-4",
+   "c": "cube",
+   "model": "Cube Office Glass 1x (двухсторонее остекление)",
+   "cls": "1",
+   "dims": "976×900×2000",
+   "price": 400200,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-1x-dvuhstoronnee-osteklenie/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-5",
+   "c": "cube",
+   "model": "Cube Office Glass 2x (одностороннее остекление)",
+   "cls": "2",
+   "dims": "1900×1100×2000",
+   "price": 524400,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-2x-odnostoronnee-osteklenie/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-6",
+   "c": "cube",
+   "model": "Cube Office Glass 4x (одностороннее остекление)",
+   "cls": "4",
+   "dims": "2100×1300×2000",
+   "price": 593400,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-4x-odnostoronnee-osteklenie/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-7",
+   "c": "cube",
+   "model": "Cube Office Glass 2x (двухстороннее остекление)",
+   "cls": "2",
+   "dims": "1900×1076×2000",
+   "price": 745200,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-2x-dvuhstoronnee-osteklenie/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-8",
+   "c": "cube",
+   "model": "Cube Office Glass 4x (двухстороннее остекление)",
+   "cls": "4",
+   "dims": "2100×1276×2000",
+   "price": 883200,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-4x-dvuhstoronnee-osteklenie/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-11",
+   "c": "cube",
+   "model": "Cube Office Glass 1x Smooth",
+   "cls": "1",
+   "dims": "1150×1150×2210",
+   "price": 455400,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-glass-1x-smooth/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-12",
+   "c": "cube",
+   "model": "Cube Office Glass 2x Smooth",
+   "cls": "2",
+   "dims": "2000×1300×2210",
+   "price": 644000,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-glass-2x-smooth/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "cube-13",
+   "c": "cube",
+   "model": "Cube Office Glass 4x Smooth",
+   "cls": "4",
+   "dims": "2300×1400×2210",
+   "price": 770500,
+   "url": "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/akusticheskie-kabiny-dlya-peregovorov/cube-office-glass-4x-smooth/",
+   "src": "dealer",
+   "dealer": "acousticmos.ru",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-1",
+   "c": "imperial",
+   "model": "Одномесная акустическая кабина из МДФ",
+   "cls": "1",
+   "price": 474000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1099/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-2",
+   "c": "imperial",
+   "model": "Одномесная звукоизоляционная кабина",
+   "cls": "1",
+   "price": 559000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1100/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-3",
+   "c": "imperial",
+   "model": "Одномесная акустическая кабина с повышенным уровнем звукоизоляции",
+   "cls": "1",
+   "price": 500000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1101/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-4",
+   "c": "imperial",
+   "model": "Акустическая офисная кабина",
+   "cls": "1",
+   "price": 649000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1102/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-5",
+   "c": "imperial",
+   "model": "Одномесная акустическая кабинка для переговоров",
+   "cls": "1",
+   "price": 535000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1103/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-6",
+   "c": "imperial",
+   "model": "Акустическая звукоизоляционная кабина одноместная",
+   "cls": "1",
+   "price": 592000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1104/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-7",
+   "c": "imperial",
+   "model": "Одномесная кабина для современного офиса",
+   "cls": "1",
+   "price": 650000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1105/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-8",
+   "c": "imperial",
+   "model": "Одномесная звукоизаляционная кабина",
+   "cls": "1",
+   "price": 573000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1106/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-9",
+   "c": "imperial",
+   "model": "Одномесканя акустическая переговорная кабина",
+   "cls": "1",
+   "price": 474000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1107/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-10",
+   "c": "imperial",
+   "model": "Двухместная акустическая кабина из МДФ",
+   "cls": "2",
+   "price": 600000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1108/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-11",
+   "c": "imperial",
+   "model": "Акустические кабины для двоих",
+   "cls": "2",
+   "price": 680000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1110/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-12",
+   "c": "imperial",
+   "model": "Двухместная звукоизоляционная кабина",
+   "cls": "2",
+   "price": 686000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1109/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-13",
+   "c": "imperial",
+   "model": "Акустические кабины для двоих с деревянным кантом",
+   "cls": "2",
+   "dims": "1065×550×900",
+   "price": 762000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1113/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-14",
+   "c": "imperial",
+   "model": "Акустические кабинки на двоих",
+   "cls": "2",
+   "price": 678000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1111/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-15",
+   "c": "imperial",
+   "model": "Двухместная акустическая кабина IWDOUBLE с повышенным уровнем звукоизоляции",
+   "cls": "2",
+   "dims": "1800×1000×2400",
+   "price": 600000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/771/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-16",
+   "c": "imperial",
+   "model": "Акустическая кабина IWSIX для переговорных комнат",
+   "cls": "6",
+   "dims": "2800×1800×2400",
+   "price": 1114000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/769/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-17",
+   "c": "imperial",
+   "model": "Двухместная акусстическая кабина белая",
+   "cls": "2",
+   "price": 688000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1112/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-18",
+   "c": "imperial",
+   "model": "Звукоизоляционная кабина IWFOUR",
+   "cls": "4",
+   "dims": "2200×1200×2400",
+   "price": 762000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/770/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-19",
+   "c": "imperial",
+   "model": "Шумоизоляционная акустическая кабина IWSIX-1 для офиса",
+   "cls": "6",
+   "dims": "2800×1800×2400",
+   "price": 660000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/773/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-20",
+   "c": "imperial",
+   "model": "Акустическая кабина IW Wight holl",
+   "cls": "1+",
+   "dims": "1500×1070×2400",
+   "price": 762000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/775/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-21",
+   "c": "imperial",
+   "model": "Акустическая кабина IWBlue",
+   "cls": "1",
+   "dims": "1052×1000×2250",
+   "price": 760000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/777/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-22",
+   "c": "imperial",
+   "model": "Акустическая кабина IWColor Designer для офиса с открытым пространством",
+   "cls": "open",
+   "dims": "1000×2000×2100",
+   "price": 762000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/776/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-23",
+   "c": "imperial",
+   "model": "Акустическая кабина IW Wood St.",
+   "cls": "1",
+   "dims": "1060×1000×2230",
+   "price": 400000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/779/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-24",
+   "c": "imperial",
+   "model": "Акустические кабины IW standart lite",
+   "cls": "1",
+   "price": 850000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/780/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "imperial-25",
+   "c": "imperial",
+   "model": "Акустическая кабина IWSilent Offise для открытого офиса",
+   "cls": "open",
+   "price": 900000,
+   "url": "https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/781/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "qubius-1",
+   "c": "qubius",
+   "model": "Qubius One",
+   "cls": "1",
+   "price": 550000,
+   "frm": true,
+   "note": "сейчас скидка, обычная цена 848 000 ₽",
+   "url": "https://qubius.com/ru",
+   "ext": {
+    "mode": "near",
+    "anchor": "Для звонков, видеовстреч и сосредоточенной работы One",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "qubius-2",
+   "c": "qubius",
+   "model": "Qubius Two",
+   "cls": "2",
+   "price": 1050000,
+   "frm": true,
+   "note": "сейчас скидка, обычная цена 1 370 000 ₽",
+   "url": "https://qubius.com/ru",
+   "ext": {
+    "mode": "near",
+    "anchor": "Комфортное пространство для встреч и переговоров Two",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "qubius-3",
+   "c": "qubius",
+   "model": "Qubius Team (до 4)",
+   "cls": "4",
+   "price": 1250000,
+   "frm": true,
+   "note": "сейчас скидка, обычная цена 1 570 000 ₽",
+   "url": "https://qubius.com/ru",
+   "ext": {
+    "mode": "near",
+    "anchor": "Для переговоров, командной работы и видеоконференций Team",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "qubius-4",
+   "c": "qubius",
+   "model": "Qubius Team+ (до 8)",
+   "cls": "8",
+   "price": 2200000,
+   "frm": true,
+   "note": "сейчас скидка, обычная цена 2 500 000 ₽",
+   "url": "https://qubius.com/ru",
+   "ext": {
+    "mode": "near",
+    "anchor": "Пространство для командных встреч и совместной работы Team+",
+    "nth": 2
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "acucab-1",
+   "c": "acucab",
+   "model": "Акукаб 1 (офисная)",
+   "cls": "1",
+   "price": 460000,
+   "url": "https://acucab.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Офисная переговорная кабина Акукаб 1"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "acucab-2",
+   "c": "acucab",
+   "model": "Акукаб 2 (офисная)",
+   "cls": "2",
+   "price": 550000,
+   "url": "https://acucab.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Офисная переговорная кабина Акукаб 2"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "acucab-3",
+   "c": "acucab",
+   "model": "Акукаб ОФИС 1",
+   "cls": "1",
+   "price": 490000,
+   "url": "https://acucab.ru/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Офисная переговорная кабина Акукаб ОФИС 1"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "alex-1",
+   "c": "alex",
+   "model": "Alex Acoustics MeetPod (2400×1400×2300, на 4)",
+   "cls": "4",
+   "price": 1999000,
+   "url": "https://alex-acoustics.ru/product/akusticheskaja-peregovornaja-kapsula-alex-acoustics-meetpod-2400-1400-2300-mm/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "alex-2",
+   "c": "alex",
+   "model": "Alex Acoustics MeetPod Solo (1530×1530×2450)",
+   "cls": "1+",
+   "price": 999000,
+   "url": "https://alex-acoustics.ru/product/shumoizoljacionnaja-kabinka-dlja-peregovorov-alex-acoustics-meetpod-solo-1530-1530-2450/",
+   "ext": {
+    "mode": "auto"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "framery-1",
+   "c": "framery",
+   "model": "Framery One Compact",
+   "cls": "1",
+   "price": 1960000,
+   "url": "https://www.lamercanti.ru/brand/framery",
+   "src": "dealer",
+   "dealer": "Lamercanti",
+   "ext": {
+    "mode": "near",
+    "anchor": "Framery One Compact"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "framery-2",
+   "c": "framery",
+   "model": "Framery One",
+   "cls": "1",
+   "price": 2360000,
+   "url": "https://www.lamercanti.ru/brand/framery",
+   "src": "dealer",
+   "dealer": "Lamercanti",
+   "ext": {
+    "mode": "near",
+    "anchor": "Framery Framery One "
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "framery-3",
+   "c": "framery",
+   "model": "Framery One Work",
+   "cls": "1+",
+   "price": 4700000,
+   "url": "https://www.lamercanti.ru/brand/framery",
+   "src": "dealer",
+   "dealer": "Lamercanti",
+   "ext": {
+    "mode": "near",
+    "anchor": "Framery One Work"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "framery-4",
+   "c": "framery",
+   "model": "Framery Four",
+   "cls": "4",
+   "price": 4520000,
+   "url": "https://www.lamercanti.ru/brand/framery",
+   "src": "dealer",
+   "dealer": "Lamercanti",
+   "ext": {
+    "mode": "near",
+    "anchor": "Framery Framery Four"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "framery-5",
+   "c": "framery",
+   "model": "Framery Six",
+   "cls": "6",
+   "price": 6000000,
+   "url": "https://www.lamercanti.ru/brand/framery",
+   "src": "dealer",
+   "dealer": "Lamercanti",
+   "ext": {
+    "mode": "near",
+    "anchor": "Framery Framery Six"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  },
+  {
+   "id": "talkspace-1",
+   "c": "talkspace",
+   "model": "Talk Space — акустическая кабина одноместная",
+   "cls": "1",
+   "price": 479600,
+   "frm": true,
+   "url": "https://talkspace.su/",
+   "ext": {
+    "mode": "near",
+    "anchor": "Установка кабины занимает не более 60 минут"
+   },
+   "checked": "2026-11-15",
+   "auto": {
+    "ok": true,
+    "at": "2026-11-15T10:52:58.236Z",
+    "by": "GitHub Actions (ежедневно)"
+   }
+  }
+ ],
+ "changes": [],
+ "runs": [
+  {
+   "at": "2026-11-15T10:52:58.236Z",
+   "by": "GitHub Actions (ежедневно)",
+   "pages": 312,
+   "pagesOk": 193,
+   "items": 441,
+   "ok": 322,
+   "changed": 0,
+   "failed": 119,
+   "suspicious": 0
+  },
+  {
+   "at": "2026-11-15T10:12:36.587Z",
+   "by": "первичная проверка",
+   "pages": 312,
+   "pagesOk": 306,
+   "items": 441,
+   "ok": 435,
+   "changed": 0,
+   "failed": 6,
+   "suspicious": 0
+  }
+ ]
+}
