@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "price-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add prices.json
+          git add prices.json history.json history.csv
           if git diff --cached --quiet; then
             echo "Изменений нет"
           else
@@ -55,7 +55,7 @@ jobs:
         with:
           ref: main
       - name: Собрать сайт
-        run: mkdir _site && cp index.html prices.json _site/
+        run: mkdir _site && cp index.html prices.json history.json history.csv _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
