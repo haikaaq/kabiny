@@ -27,6 +27,12 @@ const today = now.toISOString().slice(0, 10);
 
 function extract(html, item) {
   const ext = item.ext || {};
+  if (ext.mode === 'regex') {
+    // цена из разметки страницы по шаблону (например, карточка товара или конфигуратор LWOP)
+    const m = html.match(new RegExp(ext.re));
+    const price = m ? Number(m[1].replace(/\D/g, '')) : 0;
+    return price > 10000 ? { ok: true, price, how: 'regex' } : { ok: false, reason: 'price_not_found' };
+  }
   if (ext.mode === 'auto') {
     const s = structuredPrice(html);
     if (s && s.price > 10000) return { ok: true, price: s.price, how: s.how };
@@ -56,7 +62,7 @@ const LIMIT = 6; // всего одновременно
 // на один сайт — по одной странице с паузой: при частых запросах сайты (STR) отвечают 503
 const PER_HOST = 1;
 const GAP_MS = 1500;
-const RETRY = ['fetch_failed', 'timeout', 'http_429', 'http_500', 'http_502', 'http_503', 'http_504'];
+const RETRY = ['fetch_failed', 'http_403', 'timeout', 'http_429', 'http_500', 'http_502', 'http_503', 'http_504'];
 const busy = {};
 const lastHit = {};
 const host = (u) => new URL(u).hostname;

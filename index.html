@@ -7,17 +7,17 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#EDF1EF; --surface:#FFFFFF; --ink:#16232A; --muted:#5B6A70; --line:#D5DDDA; --soft:#F5F8F7;
-  --inflow:#3F33C8; --introvert:#7A71E0; --quitebox:#A7A1EE;
+  --bg:#F3F5F6; --surface:#FFFFFF; --ink:#1F2B33; --muted:#5E6B73; --line:#DDE3E6; --soft:#F6F8F9;
+  --inflow:#315D7C; --inflow-dark:#24475F; --inflow-tint:#EAF0F4; --accent:#07D645;
+  --introvert:#629293; --quitebox:#A9C3C4;
   --cheap:#B4530A; --cheap-fill:#F7DFC2; --cheap-strong:#E9A15C;
-  --dear:#0D7A63; --dear-fill:#CBEBE0; --dear-strong:#5FBFA3;
-  --even:#E4E8E7;
-  --r-s:6px; --r-m:10px;
+  --dear:#2B6385; --dear-fill:#D9E7F0; --dear-strong:#8DB6D1;
+  --even:#E6EAEC;
+  --r-s:6px; --r-m:8px;
   --font:"Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --display:"Unbounded", "Golos Text", system-ui, sans-serif;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -27,28 +27,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[t
 .wrap{max-width:1280px;margin:0 auto;padding:0 20px}
 
 /* шапка */
-header.top{padding:28px 0 18px}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.2vw,34px);line-height:1.15;letter-spacing:-.01em;margin:0 0 10px;max-width:22ch}
+header.top{padding:22px 0 16px;background:var(--surface);border-top:4px solid var(--accent)}
+h1{font-weight:700;font-size:clamp(22px,2.6vw,28px);line-height:1.2;margin:0 0 6px;color:var(--inflow)}
 .meta:empty{display:none}
 .meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:14px}
 .meta b{color:var(--ink);font-weight:600}
 .meta .ok{color:var(--dear)}
 
 /* вкладки */
-nav.tabs{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
 nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 nav.tabs button{appearance:none;border:0;background:none;font:500 15px var(--font);color:var(--muted);padding:12px 12px 11px;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent}
-nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--inflow)}
+nav.tabs button[aria-selected="true"]{color:var(--inflow);border-bottom-color:var(--accent)}
 nav.tabs button:hover{color:var(--ink)}
 .switch{margin-left:auto;display:flex;align-items:center;gap:6px;padding-left:16px;font-size:13px;color:var(--muted);white-space:nowrap}
 .seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:2px}
 nav.tabs .seg button{border:0;background:none;font:500 13px var(--font);padding:5px 11px;border-radius:999px;color:var(--muted);cursor:pointer;border-bottom:0}
 nav.tabs .seg button[aria-pressed="true"]{background:var(--inflow);color:#fff}
 
-main{padding:22px 0 60px}
+main{padding:26px 0 60px}
 section[hidden]{display:none}
 .lead{color:var(--muted);max-width:75ch;margin:0 0 18px}
-h2{font-family:var(--display);font-weight:500;font-size:19px;margin:0 0 6px;letter-spacing:-.005em}
+h2{font-weight:600;font-size:19px;margin:0 0 6px}
 
 /* легенда */
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:13px;color:var(--muted);margin:0 0 14px}
@@ -81,7 +81,7 @@ svg.strip .own text{font:600 11px var(--font)}
 .filters input[type=search]{flex:1 1 260px;min-width:200px}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
 .chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 11px;font:500 13px var(--font);color:var(--ink);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip[aria-pressed="true"]{background:var(--inflow);border-color:var(--inflow);color:#fff}
 .chip .n{color:var(--muted);font-weight:400;margin-left:4px}
 .chip[aria-pressed="true"] .n{color:#c9d3d1}
 label.tog{display:inline-flex;gap:6px;align-items:center;font-size:14px;color:var(--muted);cursor:pointer}
@@ -94,8 +94,8 @@ thead th[data-sort]{cursor:pointer;user-select:none}
 thead th[data-sort]:hover{color:var(--ink)}
 thead th .arr{margin-left:3px}
 tbody tr:hover td{background:#FAFCFB}
-tr.own td{background:#F3F2FD}
-tr.own:hover td{background:#ECEAFC}
+tr.own td{background:var(--inflow-tint)}
+tr.own:hover td{background:#DFE8EE}
 td.num,th.num{text-align:right;white-space:nowrap}
 .comp a{font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
 .comp a:hover{border-bottom-color:currentColor}
@@ -120,7 +120,7 @@ td.num,th.num{text-align:right;white-space:nowrap}
 /* конкуренты */
 .clist{display:grid;gap:10px}
 .crow{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:14px 18px;display:grid;grid-template-columns:minmax(220px,1.1fr) 2fr auto;gap:18px;align-items:start}
-.crow.own{border-color:#C9C4F6;background:#FAF9FF}
+.crow.own{border-color:#BCCDD9;background:#F7FAFC}
 .crow h3{margin:0;font-size:17px;font-weight:600}
 .crow h3 a{text-decoration:none;border-bottom:1px solid var(--line)}
 .crow h3 a:hover{border-bottom-color:currentColor}
@@ -136,14 +136,14 @@ td.num,th.num{text-align:right;white-space:nowrap}
 /* матрица */
 .viewbar{margin:0 0 14px}
 .vseg button{appearance:none;border:0;background:none;font:500 14px var(--font);padding:6px 14px;border-radius:999px;color:var(--muted);cursor:pointer}
-.vseg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.vseg button[aria-pressed="true"]{background:var(--inflow);color:#fff}
 .matrix thead th{white-space:normal;min-width:84px;line-height:1.25;vertical-align:bottom}
 .matrix td,.matrix th{text-align:center;white-space:nowrap}
 .matrix td:first-child,.matrix th:first-child{text-align:left;position:sticky;left:0;background:var(--surface);z-index:1}
 .matrix thead th:first-child{background:var(--soft);z-index:3}
 .matrix td.cell{cursor:pointer;font-weight:600}
 .matrix td.cell small{display:block;font-weight:400;font-size:11px;opacity:.75}
-.matrix tr.own td{background:#F3F2FD}
+.matrix tr.own td{background:var(--inflow-tint)}
 
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r-m);padding:22px;color:var(--muted)}
 .notes{margin-top:34px;font-size:13px;color:var(--muted);max-width:90ch}
@@ -154,16 +154,16 @@ td.num,th.num{text-align:right;white-space:nowrap}
 .sechead h2{margin:0}
 .sechead .right{margin-left:auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .btn.primary{background:var(--inflow);border-color:var(--inflow);color:#fff}
-.btn.primary:hover{background:#2f25a8;border-color:#2f25a8}
+.btn.primary:hover{background:var(--inflow-dark);border-color:var(--inflow-dark)}
 .btn:disabled{opacity:.5;cursor:default}
 
 /* история */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:0 0 18px}
-.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:12px 14px}
+.kpi{background:var(--surface);border-radius:var(--r-m);padding:12px 14px}
 .kpi .v{font:600 24px/1.2 var(--font)}
 .kpi .l{font-size:13px;color:var(--muted)}
-.kpi .v.up{color:var(--dear)}.kpi .v.down{color:var(--cheap)}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:16px 18px;margin:0 0 18px}
+.kpi .v{color:var(--inflow)}.kpi .v.up{color:var(--dear)}.kpi .v.down{color:var(--cheap)}
+.panel{background:var(--surface);border-radius:var(--r-m);padding:16px 18px;margin:0 0 18px}
 .panel h3{margin:0 0 4px;font-size:16px;font-weight:600}
 .panel .sub{color:var(--muted);font-size:13px;margin:0 0 10px}
 .chartbox{overflow-x:auto}
@@ -301,7 +301,7 @@ dialog.mh::backdrop{background:rgba(22,35,42,.35)}
 
 <script>
 (() => {
-const S = { data: null, hist: null, period: 'all', hcls: '1', hcomp: '', hdir: '', hlimit: 30, base: 'inflow', tab: 'matrix', view: 'scale', sort: { key: 'rel', dir: 1 }, cls: '', comp: '' };
+const S = { data: null, hist: null, period: 'all', hcomp: '', hdir: '', hlimit: 30, base: 'inflow', tab: 'matrix', view: 'scale', sort: { key: 'rel', dir: 1 }, cls: '', comp: '' };
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const rub = (n) => n == null ? '—' : n.toLocaleString('ru-RU').replace(/ /g, ' ') + ' ₽';
@@ -646,20 +646,6 @@ function stepChart(series, from, to, opts = {}) {
   return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.label || 'График цен')}">${g}${body}<g class="end">${lab}</g></svg>`;
 }
 
-function classChart(cls, from, to) {
-  const recs = Object.values(S.hist.items).filter((r) => r.cls === cls);
-  const dates = chartDates(from, to, recs);
-  const band = [], med = [];
-  for (const d of dates) { const ps = classSnapshot(cls, d); band.push([d, quant(ps, 0.25), quant(ps, 0.75)]); med.push([d, median(ps)]); }
-  const series = [{ name: 'Медиана рынка', color: '#16232A', bandColor: '#E3E9E7', width: 2.5, pts: med, band }];
-  const add = (base, name, color, dash) => {
-    const id = benchId(cls, base), rec = id && S.hist.items[id];
-    if (rec) series.push({ name, color, width: 2.5, dash, pts: dates.map((d) => [d, view(rec.c, priceAt(rec, d))]) });
-  };
-  add('inflow', 'Inflow', '#3F33C8'); add('introvert', 'INTROVERT', '#7A71E0', true);
-  return { svg: stepChart(series, from, to, { label: 'Цены класса ' + clsName(cls) }), first: med[0][1], last: med[med.length - 1][1] };
-}
-
 function renderHistory() {
   const el = $('#hbody');
   if (S.hist === null) { el.innerHTML = '<div class="empty">Загружаю историю…</div>'; return; }
@@ -684,16 +670,6 @@ function renderHistory() {
     ${kpi(sgnPct(shiftMarket), 'средний сдвиг цен конкурентов')}
     ${kpi(sgnPct(shiftInflow), 'сдвиг цен Inflow за период')}
   </div>`;
-
-  // график по классу
-  const classes = S.data.classes.filter((c) => Object.values(S.hist.items).some((r) => r.cls === c.id && !isOwn(r.c)));
-  if (!classes.some((c) => c.id === S.hcls)) S.hcls = classes[0]?.id;
-  const cc = classChart(S.hcls, from, to);
-  const medShift = cc.first && cc.last ? cc.last / cc.first - 1 : null;
-  h += `<div class="panel"><h3>Цены класса: ${esc(clsName(S.hcls))}</h3>
-    <p class="sub">Линия — медианная цена конкурентов, заливка — средняя половина рынка (от 25-го до 75-го процентиля). Медиана за период: ${sgnPct(medShift)}.</p>
-    <div class="chips" id="hcls">${classes.map((c) => `<button class="chip" data-cls="${c.id}" aria-pressed="${c.id === S.hcls}">${esc(c.name)}</button>`).join('')}</div>
-    <div class="chartbox">${cc.svg}</div></div>`;
 
   // кто двигал цены
   const comps = S.data.competitors.filter((c) => Object.values(S.hist.items).some((r) => r.c === c.id && !r.removed));
@@ -724,7 +700,6 @@ function renderHistory() {
   </div>`;
   el.innerHTML = h;
 
-  el.querySelectorAll('#hcls .chip').forEach((b) => b.addEventListener('click', () => { S.hcls = b.dataset.cls; renderHistory(); }));
   $('#hcomp').addEventListener('input', (e) => { S.hcomp = e.target.value; S.hlimit = 30; renderHistory(); });
   $('#hdir').addEventListener('input', (e) => { S.hdir = e.target.value; S.hlimit = 30; renderHistory(); });
   $('#hmore')?.addEventListener('click', () => { S.hlimit += 100; renderHistory(); });
@@ -744,7 +719,7 @@ function openModel(id) {
     const pts = rec.p.map(([d, p]) => [d, view(rec.c, p)]);
     const series = [{ name: 'Цена', color: '#B4530A', width: 2.5, pts }];
     const bid = benchId(rec.cls, S.base), brec = bid && bid !== id && S.hist.items[bid];
-    if (brec) series.push({ name: S.base === 'inflow' ? 'Inflow' : 'INTROVERT', color: '#3F33C8', width: 2, dash: true, pts: chartDates(from, to, [rec, brec]).map((d) => [d, view(brec.c, priceAt(brec, d))]) });
+    if (brec) series.push({ name: S.base === 'inflow' ? 'Inflow' : 'INTROVERT', color: '#315D7C', width: 2, dash: true, pts: chartDates(from, to, [rec, brec]).map((d) => [d, view(brec.c, priceAt(brec, d))]) });
     const rows = [...pts].reverse().map(([d, p], i, a) => {
       const prev = a[i + 1] && a[i + 1][1];
       return `<tr><td>${dmy(d)}</td><td class="num">${rub(p)}</td><td class="num">${prev ? `<span class="pill ${p > prev ? 'up' : 'down'}">${sgnPct(p / prev - 1)}</span>` : '<span class="na">начало наблюдения</span>'}</td></tr>`;
