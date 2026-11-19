@@ -1,0 +1,36 @@
+name: диагностика
+
+on: workflow_dispatch
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: адрес раннера
+        run: curl -s --max-time 10 https://ipinfo.io/json | grep -E '"(ip|country|org)"' || true
+      - name: curl
+        run: |
+          for u in \
+            https://tuttiho.ru/product/kabina-izoroom-lite/ \
+            https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-glass-1x-smooth/ \
+            https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/ ; do
+            echo "== $u"
+            curl -sS -o /tmp/b -w "код %{http_code}, ip %{remote_ip}, %{time_total} с, %{size_download} байт\n" \
+              --max-time 25 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36" \
+              -H "Accept-Language: ru-RU,ru;q=0.9" "$u" || echo "curl код выхода $?"
+            head -c 300 /tmp/b 2>/dev/null | tr '\n' ' '; echo
+          done
+      - name: node fetch
+        run: |
+          node --input-type=module -e '
+          const urls = ["https://tuttiho.ru/product/kabina-izoroom-lite/", "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-glass-1x-smooth/"];
+          for (const u of urls) {
+            try { const r = await fetch(u, { signal: AbortSignal.timeout(25000) }); console.log(u, r.status); }
+            catch (e) { console.log(u, "ошибка", e.cause?.code || "", e.cause?.message || e.message); }
+          }'
+      - name: сертификаты
+        run: |
+          for h in tuttiho.ru acousticmos.ru; do
+            echo "== $h"
+            timeout 20 openssl s_client -connect $h:443 -servername $h </dev/null 2>&1 | grep -E "depth|verify|Verify return|CONNECTED|errno" | head -12 || true
+          done
