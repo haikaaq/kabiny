@@ -1,12 +1,19 @@
-// Ежедневное обновление цен: перечитывает страницы конкурентов и обновляет data/prices.json.
-//   node scripts/update.mjs            — обновить цены и записать изменения
-//   node scripts/update.mjs --check    — только проверить, ничего не записывать (отчёт в консоль)
-//   node scripts/update.mjs --only=str — только один конкурент
+// Ежедневное обновление цен: перечитывает страницы конкурентов, обновляет prices.json и ведёт историю цен.
+//   node update.mjs            — обновить цены, записать изменения и историю
+//   node update.mjs --check    — только проверить, ничего не записывать (отчёт в консоль)
+//   node update.mjs --only=str — только один конкурент
 // Модель обновляется, только если страница открылась И цена нашлась. Иначе остаётся прежняя цена
 // с отметкой, что автопроверка не прошла (и причиной). Резкие скачки (больше чем вдвое) не применяются
 // автоматически, а помечаются «на проверку» — чаще всего это значит, что на странице поменялась вёрстка.
+//
+// История цен:
+//   history.json — по каждой модели список точек [дата, цена]: первая точка — с какого дня модель в таблице,
+//                  дальше — только дни, когда цена поменялась. Модели, убранные из таблицы, остаются с датой removed.
+//                  checks — сколько моделей удалось проверить в каждый день.
+//   history.csv  — тот же журнал изменений одной таблицей (открывается в Excel).
 import fs from 'node:fs';
 import { fetchText, findPrice, htmlToText, norm, structuredPrice } from './lib.mjs';
+import { updateHistory } from './history.mjs';
 
 const FILE = new URL('./prices.json', import.meta.url);
 const args = process.argv.slice(2);
@@ -45,30 +52,46 @@ for (const it of data.items) {
 
 const urls = [...byUrl.keys()];
 const pages = new Map();
-const LIMIT = 8; // всего одновременно
-const PER_HOST = 2; // на один сайт одновременно — чтобы не получить бан
+const LIMIT = 6; // всего одновременно
+// на один сайт — по одной странице с паузой: при частых запросах сайты (STR) отвечают 503
+const PER_HOST = 1;
+const GAP_MS = 1500;
+const RETRY = ['fetch_failed', 'timeout', 'http_429', 'http_500', 'http_502', 'http_503', 'http_504'];
 const busy = {};
+const lastHit = {};
 const host = (u) => new URL(u).hostname;
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
-const queue = [...urls];
-async function worker() {
-  while (queue.length) {
-    const i = queue.findIndex((u) => (busy[host(u)] || 0) < PER_HOST);
-    if (i < 0) { await sleep(200); continue; }
-    const u = queue.splice(i, 1)[0];
-    const h = host(u);
-    busy[h] = (busy[h] || 0) + 1;
-    let r;
-    for (let attempt = 0; attempt < 3; attempt++) {
-      r = await fetchText(u, { raw: true });
-      if (r.ok || !['fetch_failed', 'http_429', 'http_502', 'http_503'].includes(r.reason)) break;
-      await sleep(2500 * (attempt + 1));
+async function crawl(list, gap) {
+  const queue = [...list];
+  async function worker() {
+    while (queue.length) {
+      const now = Date.now();
+      const i = queue.findIndex((u) => (busy[host(u)] || 0) < PER_HOST && now - (lastHit[host(u)] || 0) >= gap);
+      if (i < 0) { await sleep(200); continue; }
+      const u = queue.splice(i, 1)[0];
+      const h = host(u);
+      busy[h] = (busy[h] || 0) + 1;
+      let r;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        r = await fetchText(u, { raw: true });
+        if (r.ok || !RETRY.includes(r.reason)) break;
+        await sleep(5000 * (attempt + 1));
+      }
+      lastHit[h] = Date.now();
+      busy[h]--;
+      pages.set(u, r);
     }
-    busy[h]--;
-    pages.set(u, r);
   }
+  await Promise.all(Array.from({ length: LIMIT }, worker));
 }
-await Promise.all(Array.from({ length: LIMIT }, worker));
+await crawl(urls, GAP_MS);
+// второй заход по страницам, которые не открылись: через минуту и медленнее
+const again = urls.filter((u) => !pages.get(u).ok && RETRY.includes(pages.get(u).reason));
+if (again.length) {
+  console.log(`Повторная попытка: ${again.length} страниц`);
+  await sleep(60000);
+  await crawl(again, 4000);
+}
 
 const stats = { pages: urls.length, pagesOk: 0, items: 0, ok: 0, changed: 0, failed: 0, suspicious: 0 };
 const changes = [];
@@ -110,7 +133,6 @@ for (const [u, items] of byUrl) {
       changes.push({ date: today, id: it.id, c: it.c, model: it.model, from: old, to: r.price });
       it.price = r.price;
       it.changed = today;
-      it.hist = [...(it.hist || []), [today, r.price]].slice(-24);
       if (CHECK) console.log(`  ↻ ${it.id} ${it.model}: ${old} → ${r.price}`);
     }
   }
@@ -121,9 +143,11 @@ for (const [c, s] of Object.entries(perComp)) console.log(`  ${c.padEnd(11)} ok 
 
 if (!CHECK) {
   data.updated_at = now.toISOString();
-  data.changes = [...changes, ...(data.changes || [])].slice(0, 500);
+  delete data.changes;
+  for (const it of data.items) delete it.hist;
   data.runs = [{ at: now.toISOString(), by: RUNNER, ...stats }, ...(data.runs || [])].slice(0, 60);
   fs.writeFileSync(FILE, JSON.stringify(data, null, 1) + '\n');
+  updateHistory(data, today, ONLY ? null : stats);
   if (process.env.GITHUB_STEP_SUMMARY) {
     const lines = [`### Обновление цен ${today}`, `Проверено моделей: ${stats.ok} из ${stats.items}. Изменилось: ${stats.changed}.`, ''];
     for (const ch of changes) lines.push(`- ${ch.model}: ${ch.from.toLocaleString('ru')} → ${ch.to.toLocaleString('ru')} ₽`);

@@ -149,6 +149,43 @@ td.num,th.num{text-align:right;white-space:nowrap}
 .notes{margin-top:34px;font-size:13px;color:var(--muted);max-width:90ch}
 .notes h2{font-size:15px;color:var(--ink)}
 .notes li{margin:3px 0}
+/* заголовок раздела */
+.sechead{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 14px}
+.sechead h2{margin:0}
+.sechead .right{margin-left:auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn.primary{background:var(--inflow);border-color:var(--inflow);color:#fff}
+.btn.primary:hover{background:#2f25a8;border-color:#2f25a8}
+.btn:disabled{opacity:.5;cursor:default}
+
+/* история */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:0 0 18px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:12px 14px}
+.kpi .v{font:600 24px/1.2 var(--font)}
+.kpi .l{font-size:13px;color:var(--muted)}
+.kpi .v.up{color:var(--dear)}.kpi .v.down{color:var(--cheap)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:16px 18px;margin:0 0 18px}
+.panel h3{margin:0 0 4px;font-size:16px;font-weight:600}
+.panel .sub{color:var(--muted);font-size:13px;margin:0 0 10px}
+.chartbox{overflow-x:auto}
+svg.chart{display:block;width:100%;min-width:600px;height:auto}
+svg.chart text{font:12px var(--font);fill:var(--muted)}
+svg.chart .grid line{stroke:#E6ECEA}
+svg.chart .end text{font-weight:600}
+.hint{font-size:13px;color:var(--muted);margin:8px 0 0}
+.up{color:var(--dear)}.down{color:var(--cheap)}
+td .pill{display:inline-block;font-size:12px;font-weight:600;padding:1px 6px;border-radius:5px}
+.pill.up{background:var(--dear-fill)}.pill.down{background:var(--cheap-fill)}
+button.mlink{appearance:none;border:0;background:none;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer;border-bottom:1px dashed #9AA6A4}
+button.mlink:hover{border-bottom-color:var(--ink)}
+dialog.mh{border:0;border-radius:var(--r-m);padding:0;width:min(760px,94vw);box-shadow:0 20px 60px rgba(22,35,42,.25)}
+dialog.mh::backdrop{background:rgba(22,35,42,.35)}
+.mh .in{padding:18px 20px 20px}
+.mh header{display:flex;gap:12px;align-items:flex-start}
+.mh header h3{margin:0;font-size:18px}
+.mh header .sub{color:var(--muted);font-size:13px}
+.mh .x{margin-left:auto;font-size:20px;line-height:1;border:0;background:none;cursor:pointer;color:var(--muted);padding:4px 8px}
+.mh table{margin-top:12px}
+
 .err{background:#FFF3E8;border:1px solid var(--cheap-fill);padding:14px;border-radius:var(--r-m)}
 
 @media (max-width:900px){
@@ -156,6 +193,7 @@ td.num,th.num{text-align:right;white-space:nowrap}
   .axisrow .sp{display:none}
   .crow{grid-template-columns:1fr}
   .switch{display:none}
+  .sechead .right{margin-left:0}
 }
 @media (prefers-reduced-motion:no-preference){
   svg.strip .tick{transition:opacity .15s}
@@ -169,9 +207,10 @@ td.num,th.num{text-align:right;white-space:nowrap}
 </div></header>
 
 <nav class="tabs" aria-label="Разделы"><div class="wrap" role="tablist">
-  <button role="tab" data-tab="matrix" aria-selected="true">Матрица</button>
+  <button role="tab" data-tab="matrix" aria-selected="true">Обзор рынка</button>
   <button role="tab" data-tab="all" aria-selected="false">Все модели</button>
-  <button role="tab" data-tab="comps" aria-selected="false">По конкурентам</button>
+  <button role="tab" data-tab="comps" aria-selected="false">Конкуренты</button>
+  <button role="tab" data-tab="history" aria-selected="false">История цен</button>
   <button role="tab" data-tab="noprice" aria-selected="false">Без цен</button>
   <div class="switch">Сравнивать с
     <span class="seg" role="group" aria-label="База сравнения">
@@ -183,6 +222,7 @@ td.num,th.num{text-align:right;white-space:nowrap}
 
 <main class="wrap">
   <section id="tab-all" hidden>
+    <div class="sechead"><h2>Все модели</h2></div>
     <div class="filters">
       <input type="search" id="q" placeholder="Поиск: модель, конкурент, размер…" aria-label="Поиск по моделям">
       <select id="fcomp" aria-label="Конкурент"><option value="">Все конкуренты</option></select>
@@ -212,21 +252,23 @@ td.num,th.num{text-align:right;white-space:nowrap}
   </section>
 
   <section id="tab-comps" hidden>
+    <div class="sechead"><h2>Конкуренты</h2></div>
     <p class="lead">Диапазон цен в каждом классе, под ценой — сколько моделей. Цвет — средняя цена класса относительно Inflow или INTROVERT. Название открывает сайт конкурента, кнопка — все его модели в таблице.</p>
     <div class="legend" id="legend-comps"></div>
     <div class="clist" id="clist"></div>
   </section>
 
   <section id="tab-matrix">
-    <div class="viewbar"><span class="seg vseg" role="group" aria-label="Вид матрицы">
-      <button type="button" data-view="table" aria-pressed="true">Таблица</button>
-      <button type="button" data-view="scale" aria-pressed="false">Шкала</button>
-    </span></div>
-    <div id="mx-table">
+    <div class="sechead"><h2>Цены по классам</h2>
+      <span class="seg vseg" role="group" aria-label="Вид">
+        <button type="button" data-view="scale" aria-pressed="true">Шкала</button>
+        <button type="button" data-view="table" aria-pressed="false">Таблица</button>
+      </span></div>
+    <div id="mx-table" hidden>
       <div class="legend" id="legend-matrix"></div>
       <div class="tbl-wrap"><table class="matrix" id="matrix"></table></div>
     </div>
-    <div id="mx-scale" hidden>
+    <div id="mx-scale">
       <p class="lead">Шкала логарифмическая.</p>
       <div class="legend" id="legend-ladder"></div>
       <div class="ladder" id="ladder"></div>
@@ -234,16 +276,32 @@ td.num,th.num{text-align:right;white-space:nowrap}
     </div>
   </section>
 
+  <section id="tab-history" hidden>
+    <div class="sechead"><h2>История цен</h2>
+      <div class="right">
+        <span class="seg vseg" role="group" aria-label="Период" id="hperiod">
+          <button type="button" data-period="30" aria-pressed="false">30 дней</button>
+          <button type="button" data-period="90" aria-pressed="false">3 месяца</button>
+          <button type="button" data-period="365" aria-pressed="false">Год</button>
+          <button type="button" data-period="all" aria-pressed="true">Всё время</button>
+        </span>
+        <button type="button" class="btn primary" id="xlsx">Скачать в Excel</button>
+      </div></div>
+    <div id="hbody"><div class="empty">Загружаю историю…</div></div>
+  </section>
+
   <section id="tab-noprice" hidden>
+    <div class="sechead"><h2>Без цен</h2></div>
     <p class="lead">Нет цены на сайте или не получилось подгрузить в таблицу.</p>
     <div class="tbl-wrap" style="max-height:none"><table id="noprice"></table></div>
   </section>
 
 </main>
+<dialog class="mh" id="mh" aria-labelledby="mh-title"><div class="in" id="mh-in"></div></dialog>
 
 <script>
 (() => {
-const S = { data: null, base: 'inflow', tab: 'matrix', view: 'table', sort: { key: 'rel', dir: 1 }, cls: '', comp: '' };
+const S = { data: null, hist: null, period: 'all', hcls: '1', hcomp: '', hdir: '', hlimit: 30, base: 'inflow', tab: 'matrix', view: 'scale', sort: { key: 'rel', dir: 1 }, cls: '', comp: '' };
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const rub = (n) => n == null ? '—' : n.toLocaleString('ru-RU').replace(/ /g, ' ') + ' ₽';
@@ -352,11 +410,12 @@ function checkedCell(i) {
   return `<span class="chk bad" title="Последняя автопроверка ${a.at ? fmtDT(a.at) : ''}: ${esc(why)}">${fmtDate(i.checked)}</span>`;
 }
 function deltaBadge(i) {
-  if (!i.hist || i.hist.length < 2) return '';
-  const prev = i.hist[i.hist.length - 2][1], cur = i.price;
-  if (prev === cur) return '';
+  const rec = S.hist && S.hist.items[i.id];
+  if (!rec || rec.p.length < 2) return '';
+  const [date, cur] = rec.p[rec.p.length - 1], prev = rec.p[rec.p.length - 2][1];
+  if (daysBetween(date, today()) > 60) return '';
   const d = (cur - prev) / prev;
-  return `<span class="delta ${d > 0 ? 'up' : 'down'}" title="Было ${rub(prev)} до ${fmtDate(i.changed)}">${d > 0 ? '▲' : '▼'}${Math.abs(Math.round(d * 100))}%</span>`;
+  return `<span class="delta ${d > 0 ? 'up' : 'down'}" title="${fmtDate(date)}: было ${rub(view(i.c, prev))}">${d > 0 ? '▲' : '▼'}${Math.abs(Math.round(d * 100))}%</span>`;
 }
 function renderTable() {
   const q = $('#q').value.trim().toLowerCase();
@@ -388,13 +447,14 @@ function renderTable() {
     const relTitle = b ? `${base}: ${b.model}, ${rub(b.price)}` : 'нет кабины этого класса для сравнения';
     return `<tr class="${i.own ? 'own' : ''}">
       <td class="comp"><a href="${esc(c.site)}" target="_blank" rel="noopener">${esc(c.name)}</a><small>${esc(c.city || '')}</small></td>
-      <td class="model">${esc(i.model)}<a class="go" href="${esc(i.url)}" target="_blank" rel="noopener" title="Открыть страницу с ценой">↗</a>${i.dealer ? `<small>у дилера: ${esc(i.dealer)}</small>` : ''}${i.sitePrice ? `<small>на сайте ${rub(i.sitePrice)} без НДС, здесь +22% НДС</small>` : ''}${i.note ? `<small>${esc(i.note)}</small>` : ''}</td>
+      <td class="model"><button type="button" class="mlink" data-id="${esc(i.id)}" title="История цены">${esc(i.model)}</button><a class="go" href="${esc(i.url)}" target="_blank" rel="noopener" title="Открыть страницу с ценой">↗</a>${i.dealer ? `<small>у дилера: ${esc(i.dealer)}</small>` : ''}${i.sitePrice ? `<small>на сайте ${rub(i.sitePrice)} без НДС, здесь +22% НДС</small>` : ''}${i.note ? `<small>${esc(i.note)}</small>` : ''}</td>
       <td class="cls">${esc(clsName(i.cls))}</td>
       <td>${esc(i.dims || '—')}</td>
       <td class="num"><span class="price ${i.own ? '' : rc}">${i.frm ? '<span class="frm">от</span>' : ''}${rub(i.price)}</span>${deltaBadge(i)}</td>
       <td class="num"><span class="rel ${i.own ? 'e0' : rc}" title="${esc(relTitle)}">${b && b.id === i.id ? 'база' : pct(r)}</span></td>
       <td>${checkedCell(i)}</td></tr>`;
   }).join('') || `<tr><td colspan="7" class="na" style="padding:20px">Под эти фильтры моделей нет. Сбросьте поиск или выберите «Все классы».</td></tr>`;
+  $('#tbl tbody').querySelectorAll('.mlink').forEach((b) => b.addEventListener('click', () => openModel(b.dataset.id)));
 }
 
 /* ---------- По конкурентам ---------- */
@@ -461,6 +521,360 @@ function renderNoPrice() {
     S.data.no_price.map((n) => `<tr><td class="comp"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.name)}</a> ↗</td></tr>`).join('') + '</tbody>';
 }
 
+/* ---------- История цен ---------- */
+const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const today = () => iso(new Date());
+const toDate = (s) => new Date(s + 'T12:00:00');
+const addDays = (s, n) => { const d = toDate(s); d.setDate(d.getDate() + n); return iso(d); };
+const daysBetween = (a, b) => Math.round((toDate(b) - toDate(a)) / 864e5);
+const dm = (s) => toDate(s).toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit' });
+const dmy = (s) => toDate(s).toLocaleDateString('ru-RU');
+// цена так, как её показывает таблица (для тех, кто пишет цены без НДС, прибавляем 22%)
+const view = (c, p) => p == null ? null : S.vatExcl && S.vatExcl.has(c) ? Math.round(p * 1.22 / 100) * 100 : p;
+const isOwn = (c) => (S.data.competitors.find((x) => x.id === c) || {}).own;
+function priceAt(rec, date) {
+  if (rec.removed && date >= rec.removed) return null;
+  let v = null;
+  for (const [d, p] of rec.p) { if (d <= date) v = p; else break; }
+  return v;
+}
+const median = (a) => { if (!a.length) return null; const s = [...a].sort((x, y) => x - y), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+const quant = (a, q) => { if (!a.length) return null; const s = [...a].sort((x, y) => x - y), i = (s.length - 1) * q, lo = Math.floor(i); return s[lo] + (s[Math.ceil(i)] - s[lo]) * (i - lo); };
+const sgnPct = (r) => r == null ? '—' : (r > 0 ? '+' : r < 0 ? '−' : '') + Math.abs(r * 100).toLocaleString('ru-RU', { maximumFractionDigits: 1 }) + '%';
+
+function hRange() {
+  const to = today(), start = S.hist.start;
+  const from = S.period === 'all' ? start : (() => { const f = addDays(to, -Number(S.period)); return f < start ? start : f; })();
+  return { from, to };
+}
+// все изменения цен за период (первая точка модели — это начало наблюдения, а не изменение)
+function hChanges(from, to) {
+  const out = [];
+  for (const [id, rec] of Object.entries(S.hist.items)) {
+    for (let i = 1; i < rec.p.length; i++) {
+      const [d, p] = rec.p[i];
+      if (d > from && d <= to) {
+        const was = view(rec.c, rec.p[i - 1][1]), now = view(rec.c, p);
+        out.push({ id, date: d, c: rec.c, model: rec.model, cls: rec.cls, url: rec.url, from: was, to: now, r: (now - was) / was });
+      }
+    }
+  }
+  return out.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : b.r - a.r));
+}
+// сдвиг цены моделей, которые были в таблице и в начале, и в конце периода
+function hShift(from, to, filter) {
+  const rs = [];
+  for (const rec of Object.values(S.hist.items)) {
+    if (!filter(rec)) continue;
+    const a = priceAt(rec, from), b = priceAt(rec, to);
+    if (a && b) rs.push(b / a - 1);
+  }
+  return rs.length ? rs.reduce((x, y) => x + y, 0) / rs.length : null;
+}
+function benchId(cls, base) { const m = base === 'inflow' ? S.data.bench : S.data.bench_introvert; return m[cls]; }
+// рынок класса на дату: цены конкурентов (без своих брендов)
+function classSnapshot(cls, date) {
+  const ps = [];
+  for (const rec of Object.values(S.hist.items)) {
+    if (rec.cls !== cls || isOwn(rec.c)) continue;
+    const p = priceAt(rec, date);
+    if (p) ps.push(view(rec.c, p));
+  }
+  return ps;
+}
+function chartDates(from, to, recs) {
+  const set = new Set([from, to]);
+  for (const rec of recs) for (const [d] of rec.p) if (d > from && d <= to) set.add(d);
+  return [...set].sort();
+}
+
+// ступенчатый график: series = [{name, color, width, dash, pts:[[date, value]], band:[[date, lo, hi]]}]
+function stepChart(series, from, to, opts = {}) {
+  const W = opts.w || 1000, H = opts.h || 280, L = 70, R = 170, T = 14, B = 30;
+  const x1 = to > from ? to : addDays(from, 1);
+  const span = Math.max(1, daysBetween(from, x1));
+  const X = (d) => L + (daysBetween(from, d) / span) * (W - L - R);
+  const vals = [];
+  for (const s of series) { for (const p of s.pts || []) if (p[1] != null) vals.push(p[1]); for (const b of s.band || []) if (b[1] != null) vals.push(b[1], b[2]); }
+  if (!vals.length) return '<p class="hint">Нет данных за этот период.</p>';
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  const pad = (hi - lo) * 0.12 || hi * 0.08;
+  lo = Math.max(0, lo - pad); hi = hi + pad;
+  const Y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+  const step = (pts) => {
+    let d = '', prev = null;
+    for (const [dt, v] of pts) {
+      if (v == null) { prev = null; continue; }
+      const x = X(dt).toFixed(1), y = Y(v).toFixed(1);
+      d += prev == null ? `M${x},${y}` : `H${x}V${y}`;
+      prev = v;
+    }
+    if (prev != null) d += `H${X(x1).toFixed(1)}`;
+    return d;
+  };
+  let g = '<g class="grid">';
+  const nice = (v) => { const e = Math.pow(10, Math.floor(Math.log10(v))); return [1, 2, 2.5, 5, 10].map((m) => m * e).find((m) => v / m <= 5); };
+  const st = nice((hi - lo) || hi);
+  for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) g += `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text x="${L - 8}" y="${Y(v) + 4}" text-anchor="end">${k(v)}</text>`;
+  const nt = Math.min(6, span);
+  for (let i = 0; i <= nt; i++) { const d = addDays(from, Math.round((span * i) / nt)); g += `<text x="${X(d)}" y="${H - 8}" text-anchor="middle">${dm(d)}</text>`; }
+  g += '</g>';
+  let body = '', ends = [];
+  for (const s of series) {
+    if (s.band && s.band.length) {
+      const pts = s.band.filter((b) => b[1] != null);
+      if (pts.length) {
+        let top = '', bot = '';
+        pts.forEach(([d, a, b], i) => {
+          const xa = X(d), xb = i + 1 < pts.length ? X(pts[i + 1][0]) : X(x1);
+          top += `${i ? 'L' : 'M'}${xa.toFixed(1)},${Y(b).toFixed(1)}L${xb.toFixed(1)},${Y(b).toFixed(1)}`;
+          bot = `L${xb.toFixed(1)},${Y(a).toFixed(1)}L${xa.toFixed(1)},${Y(a).toFixed(1)}` + bot;
+        });
+        body += `<path d="${top}${bot}Z" fill="${s.bandColor || s.color}" opacity="${s.bandColor ? 1 : 0.18}"/>`;
+      }
+    }
+    if (s.pts && s.pts.length) {
+      const path = step(s.pts);
+      if (path) body += `<path d="${path}" fill="none" stroke="${s.color}" stroke-width="${s.width || 2}" ${s.dash ? 'stroke-dasharray="6 5"' : ''}/>`;
+      const last = [...s.pts].reverse().find((p) => p[1] != null);
+      if (last && s.name) ends.push({ y: Y(last[1]), t: `${s.name} ${k(last[1])}`, c: s.color });
+    }
+  }
+  ends.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+  const lab = ends.map((e) => `<text x="${W - R + 8}" y="${e.y + 4}" fill="${e.c}" style="fill:${e.c}">${esc(e.t)}</text>`).join('');
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.label || 'График цен')}">${g}${body}<g class="end">${lab}</g></svg>`;
+}
+
+function classChart(cls, from, to) {
+  const recs = Object.values(S.hist.items).filter((r) => r.cls === cls);
+  const dates = chartDates(from, to, recs);
+  const band = [], med = [];
+  for (const d of dates) { const ps = classSnapshot(cls, d); band.push([d, quant(ps, 0.25), quant(ps, 0.75)]); med.push([d, median(ps)]); }
+  const series = [{ name: 'Медиана рынка', color: '#16232A', bandColor: '#E3E9E7', width: 2.5, pts: med, band }];
+  const add = (base, name, color, dash) => {
+    const id = benchId(cls, base), rec = id && S.hist.items[id];
+    if (rec) series.push({ name, color, width: 2.5, dash, pts: dates.map((d) => [d, view(rec.c, priceAt(rec, d))]) });
+  };
+  add('inflow', 'Inflow', '#3F33C8'); add('introvert', 'INTROVERT', '#7A71E0', true);
+  return { svg: stepChart(series, from, to, { label: 'Цены класса ' + clsName(cls) }), first: med[0][1], last: med[med.length - 1][1] };
+}
+
+function renderHistory() {
+  const el = $('#hbody');
+  if (S.hist === null) { el.innerHTML = '<div class="empty">Загружаю историю…</div>'; return; }
+  if (S.hist === false || !S.data) { el.innerHTML = '<div class="err">Не удалось загрузить history.json. Обновите страницу.</div>'; $('#xlsx').disabled = true; return; }
+  $('#xlsx').disabled = false;
+  const { from, to } = hRange();
+  const ch = hChanges(from, to);
+  const chComp = ch.filter((x) => !isOwn(x.c));
+  const up = chComp.filter((x) => x.r > 0), down = chComp.filter((x) => x.r < 0);
+  const avg = (a) => a.length ? a.reduce((s, x) => s + x.r, 0) / a.length : null;
+  const shiftMarket = hShift(from, to, (r) => !isOwn(r.c));
+  const shiftInflow = hShift(from, to, (r) => r.c === 'inflow');
+  const days = daysBetween(from, to);
+  const lastCheck = (S.hist.checks || []).slice(-1)[0];
+
+  const kpi = (v, l, cls = '') => `<div class="kpi"><div class="v ${cls}">${v}</div><div class="l">${l}</div></div>`;
+  let h = `<p class="lead">С ${dmy(from)} по ${dmy(to)} (${plural(days, 'день', 'дня', 'дней')}). История ведётся с ${dmy(S.hist.start)}: цены проверяются каждый день, в истории — дни, когда цена на сайте поменялась.</p>`;
+  h += `<div class="kpis">
+    ${kpi(chComp.length, 'изменений цен у конкурентов')}
+    ${kpi(up.length + (up.length ? ` <small style="font-size:14px">${sgnPct(avg(up))}</small>` : ''), 'моделей подорожали', up.length ? 'up' : '')}
+    ${kpi(down.length + (down.length ? ` <small style="font-size:14px">${sgnPct(avg(down))}</small>` : ''), 'моделей подешевели', down.length ? 'down' : '')}
+    ${kpi(sgnPct(shiftMarket), 'средний сдвиг цен конкурентов')}
+    ${kpi(sgnPct(shiftInflow), 'сдвиг цен Inflow за период')}
+  </div>`;
+
+  // график по классу
+  const classes = S.data.classes.filter((c) => Object.values(S.hist.items).some((r) => r.cls === c.id && !isOwn(r.c)));
+  if (!classes.some((c) => c.id === S.hcls)) S.hcls = classes[0]?.id;
+  const cc = classChart(S.hcls, from, to);
+  const medShift = cc.first && cc.last ? cc.last / cc.first - 1 : null;
+  h += `<div class="panel"><h3>Цены класса: ${esc(clsName(S.hcls))}</h3>
+    <p class="sub">Линия — медианная цена конкурентов, заливка — средняя половина рынка (от 25-го до 75-го процентиля). Медиана за период: ${sgnPct(medShift)}.</p>
+    <div class="chips" id="hcls">${classes.map((c) => `<button class="chip" data-cls="${c.id}" aria-pressed="${c.id === S.hcls}">${esc(c.name)}</button>`).join('')}</div>
+    <div class="chartbox">${cc.svg}</div></div>`;
+
+  // кто двигал цены
+  const comps = S.data.competitors.filter((c) => Object.values(S.hist.items).some((r) => r.c === c.id && !r.removed));
+  const crow = comps.map((c) => {
+    const own = ch.filter((x) => x.c === c.id);
+    const n = Object.values(S.hist.items).filter((r) => r.c === c.id && !r.removed).length;
+    return { c, n, all: own.length, up: own.filter((x) => x.r > 0).length, down: own.filter((x) => x.r < 0).length, shift: hShift(from, to, (r) => r.c === c.id), last: own[0]?.date };
+  }).sort((a, b) => b.all - a.all || (b.c.own ? -1 : 0) - (a.c.own ? -1 : 0) || a.c.name.localeCompare(b.c.name));
+  const pill = (r) => r == null || Math.abs(r) < 0.0005 ? '<span class="na">0%</span>' : `<span class="pill ${r > 0 ? 'up' : 'down'}">${sgnPct(r)}</span>`;
+  h += `<div class="panel"><h3>Кто менял цены</h3><p class="sub">Сдвиг — среднее изменение цен моделей, которые были в таблице и в начале, и в конце периода.</p>
+    <div class="tbl-wrap" style="max-height:none"><table><thead><tr><th>Компания</th><th class="num">Моделей</th><th class="num">Изменений</th><th class="num">Подорожали</th><th class="num">Подешевели</th><th class="num">Сдвиг цен</th><th>Последнее изменение</th></tr></thead><tbody>
+    ${crow.map((x) => `<tr class="${x.c.own ? 'own' : ''}"><td class="comp"><a href="${esc(x.c.site)}" target="_blank" rel="noopener">${esc(x.c.name)}</a></td><td class="num">${x.n}</td><td class="num">${x.all || '<span class="na">—</span>'}</td><td class="num ${x.up ? 'up' : ''}">${x.up || ''}</td><td class="num ${x.down ? 'down' : ''}">${x.down || ''}</td><td class="num">${pill(x.shift)}</td><td>${x.last ? dmy(x.last) : '<span class="na">—</span>'}</td></tr>`).join('')}
+    </tbody></table></div></div>`;
+
+  // журнал
+  let list = ch.filter((x) => (!S.hcomp || x.c === S.hcomp) && (!S.hdir || (S.hdir === 'up' ? x.r > 0 : x.r < 0)));
+  const shown = list.slice(0, S.hlimit);
+  h += `<div class="panel"><h3>Журнал изменений</h3>
+    <div class="filters" style="margin-top:8px">
+      <select id="hcomp" aria-label="Компания"><option value="">Все компании</option>${comps.map((c) => `<option value="${c.id}" ${c.id === S.hcomp ? 'selected' : ''}>${esc(c.name)}</option>`).join('')}</select>
+      <select id="hdir" aria-label="Направление"><option value="">Подорожание и снижение</option><option value="up" ${S.hdir === 'up' ? 'selected' : ''}>Только подорожание</option><option value="down" ${S.hdir === 'down' ? 'selected' : ''}>Только снижение</option></select>
+    </div>
+    ${list.length ? `<div class="tbl-wrap" style="max-height:none"><table><thead><tr><th>Дата</th><th>Компания</th><th>Модель</th><th>Класс</th><th class="num">Было</th><th class="num">Стало</th><th class="num">Изменение</th></tr></thead><tbody>
+      ${shown.map((x) => `<tr class="${isOwn(x.c) ? 'own' : ''}"><td>${dmy(x.date)}</td><td class="comp">${esc(compById(x.c).name)}</td><td class="model"><button type="button" class="mlink" data-id="${esc(x.id)}">${esc(x.model)}</button></td><td class="cls">${esc(clsName(x.cls))}</td><td class="num">${rub(x.from)}</td><td class="num">${rub(x.to)}</td><td class="num">${pill(x.r)}</td></tr>`).join('')}
+      </tbody></table></div>${list.length > shown.length ? `<p><button class="btn" id="hmore">Показать ещё (${list.length - shown.length})</button></p>` : ''}`
+      : `<div class="empty">${ch.length ? 'Под этот фильтр изменений нет.' : 'За этот период цены не менялись.'}</div>`}
+    ${lastCheck ? `<p class="hint">Последняя проверка ${dmy(lastCheck[0])}: прочитано ${lastCheck[1]} из ${lastCheck[2]} цен. Если сайт конкурента в какой-то день не открылся, в истории остаётся прошлая цена.</p>` : ''}
+  </div>`;
+  el.innerHTML = h;
+
+  el.querySelectorAll('#hcls .chip').forEach((b) => b.addEventListener('click', () => { S.hcls = b.dataset.cls; renderHistory(); }));
+  $('#hcomp').addEventListener('input', (e) => { S.hcomp = e.target.value; S.hlimit = 30; renderHistory(); });
+  $('#hdir').addEventListener('input', (e) => { S.hdir = e.target.value; S.hlimit = 30; renderHistory(); });
+  $('#hmore')?.addEventListener('click', () => { S.hlimit += 100; renderHistory(); });
+  el.querySelectorAll('.mlink').forEach((b) => b.addEventListener('click', () => openModel(b.dataset.id)));
+}
+
+/* ---------- история одной модели ---------- */
+function openModel(id) {
+  const rec = S.hist && S.hist.items[id];
+  const item = S.items.find((i) => i.id === id);
+  const c = compById((rec || item).c);
+  const box = $('#mh-in');
+  let body;
+  if (!rec) body = '<p class="hint">История по этой модели появится после следующей проверки цен.</p>';
+  else {
+    const from = rec.p[0][0], to = today();
+    const pts = rec.p.map(([d, p]) => [d, view(rec.c, p)]);
+    const series = [{ name: 'Цена', color: '#B4530A', width: 2.5, pts }];
+    const bid = benchId(rec.cls, S.base), brec = bid && bid !== id && S.hist.items[bid];
+    if (brec) series.push({ name: S.base === 'inflow' ? 'Inflow' : 'INTROVERT', color: '#3F33C8', width: 2, dash: true, pts: chartDates(from, to, [rec, brec]).map((d) => [d, view(brec.c, priceAt(brec, d))]) });
+    const rows = [...pts].reverse().map(([d, p], i, a) => {
+      const prev = a[i + 1] && a[i + 1][1];
+      return `<tr><td>${dmy(d)}</td><td class="num">${rub(p)}</td><td class="num">${prev ? `<span class="pill ${p > prev ? 'up' : 'down'}">${sgnPct(p / prev - 1)}</span>` : '<span class="na">начало наблюдения</span>'}</td></tr>`;
+    }).join('');
+    body = `<div class="chartbox">${stepChart(series, from, to, { w: 720, h: 240, label: 'История цены ' + rec.model })}</div>
+      ${rec.removed ? `<p class="hint">Модель убрана из таблицы ${dmy(rec.removed)}.</p>` : ''}
+      ${S.vatExcl.has(rec.c) ? '<p class="hint">На сайте компании цены без НДС, здесь к ним прибавлено 22%.</p>' : ''}
+      <table><thead><tr><th>С даты</th><th class="num">Цена</th><th class="num">Изменение</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }
+  const name = (rec || item).model, url = (item || rec).url;
+  box.innerHTML = `<header><div><h3 id="mh-title">${esc(name)}</h3><div class="sub">${esc(c.name)} · ${esc(clsName((rec || item).cls))}${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">страница с ценой ↗</a>` : ''}</div></div><button class="x" aria-label="Закрыть" onclick="this.closest('dialog').close()">×</button></header>${body}`;
+  $('#mh').showModal();
+}
+
+/* ---------- выгрузка в Excel (.xlsx без сторонних библиотек) ---------- */
+function exportXlsx() {
+  const { from, to } = hRange();
+  const recs = Object.entries(S.hist.items);
+  const compName = (c) => compById(c).name;
+  const span = daysBetween(from, to);
+  // точки для листа «Динамика»: до месяца — по дням, до полугода — по неделям, дальше — по месяцам
+  let cols = [];
+  if (span <= 31) for (let d = from; d <= to; d = addDays(d, 1)) cols.push(d);
+  else if (span <= 183) { for (let d = from; d <= to; d = addDays(d, 7)) cols.push(d); if (cols[cols.length - 1] !== to) cols.push(to); }
+  else { const d = toDate(from); cols.push(from); d.setDate(1); for (d.setMonth(d.getMonth() + 1); iso(d) <= to; d.setMonth(d.getMonth() + 1)) cols.push(iso(d)); if (cols[cols.length - 1] !== to) cols.push(to); }
+  const ch = hChanges(from, to);
+  const now = recs.filter(([, r]) => !r.removed);
+  const sortRec = (a, b) => (isOwn(a[1].c) === isOwn(b[1].c) ? 0 : isOwn(a[1].c) ? -1 : 1) || compName(a[1].c).localeCompare(compName(b[1].c)) || S.data.classes.findIndex((c) => c.id === a[1].cls) - S.data.classes.findIndex((c) => c.id === b[1].cls) || a[1].model.localeCompare(b[1].model);
+  now.sort(sortRec);
+  const itemOf = (id) => S.items.find((i) => i.id === id) || {};
+
+  const sheets = [];
+  sheets.push({ name: 'Цены сейчас', widths: [22, 44, 22, 18, 13, 11, 13, 15, 50],
+    rows: [['Компания', 'Модель', 'Класс', 'Размер, мм', 'Цена, ₽', 'К Inflow', 'Изменение за период', 'Последнее изменение', 'Страница'],
+      ...now.map(([id, r]) => {
+        const p = view(r.c, priceAt(r, to)), b = S.hist.items[benchId(r.cls, 'inflow')], bp = b && view(b.c, priceAt(b, to));
+        const a = priceAt(r, from), lastCh = r.p.length > 1 ? r.p[r.p.length - 1][0] : null;
+        return [compName(r.c), r.model, clsName(r.cls), itemOf(id).dims || '', p, isOwn(r.c) || !bp ? null : { v: p / bp - 1, f: 'pct' }, a && p ? { v: view(r.c, priceAt(r, to)) / view(r.c, a) - 1, f: 'pct' } : null, lastCh ? { v: lastCh, f: 'date' } : '', r.url || ''];
+      })] });
+  sheets.push({ name: 'Динамика', widths: [22, 44, 22, ...cols.map(() => 12), 13],
+    rows: [['Компания', 'Модель', 'Класс', ...cols.map((d) => ({ v: d, f: 'date' })), 'Изменение'],
+      ...recs.filter(([, r]) => r.p[0][0] <= to && !(r.removed && r.removed <= from)).sort(sortRec).map(([, r]) => {
+        const vs = cols.map((d) => view(r.c, priceAt(r, d)));
+        const f = vs.find((v) => v), l = [...vs].reverse().find((v) => v);
+        return [compName(r.c), r.model, clsName(r.cls), ...vs, f && l ? { v: l / f - 1, f: 'pct' } : null];
+      })] });
+  const mk = [];
+  for (const c of S.data.classes) {
+    const has = recs.some(([, r]) => r.cls === c.id && !isOwn(r.c));
+    if (!has) continue;
+    const snap = cols.map((d) => classSnapshot(c.id, d));
+    const benchRow = (base, label) => { const r = S.hist.items[benchId(c.id, base)]; return r ? [c.name, label, ...cols.map((d) => view(r.c, priceAt(r, d)))] : null; };
+    mk.push([c.name, 'Медиана конкурентов', ...snap.map((s) => s.length ? Math.round(median(s)) : null)]);
+    mk.push([c.name, 'Минимум', ...snap.map((s) => s.length ? Math.min(...s) : null)]);
+    mk.push([c.name, 'Максимум', ...snap.map((s) => s.length ? Math.max(...s) : null)]);
+    mk.push([c.name, 'Моделей конкурентов', ...snap.map((s) => s.length)]);
+    const a = benchRow('inflow', 'Inflow'), b = benchRow('introvert', 'INTROVERT');
+    if (a) mk.push(a); if (b) mk.push(b);
+  }
+  sheets.push({ name: 'Рынок по классам', widths: [26, 22, ...cols.map(() => 12)], rows: [['Класс', 'Показатель', ...cols.map((d) => ({ v: d, f: 'date' }))], ...mk] });
+  sheets.push({ name: 'Журнал изменений', widths: [12, 22, 44, 22, 13, 13, 13, 12, 50],
+    rows: [['Дата', 'Компания', 'Модель', 'Класс', 'Было, ₽', 'Стало, ₽', 'Разница, ₽', 'Изменение', 'Страница'],
+      ...ch.map((x) => [{ v: x.date, f: 'date' }, compName(x.c), x.model, clsName(x.cls), x.from, x.to, x.to - x.from, { v: x.r, f: 'pct' }, x.url || ''])] });
+  sheets.push({ name: 'Проверки', widths: [12, 14, 14, 12],
+    rows: [['Дата', 'Прочитано цен', 'Всего моделей', 'Доля'], ...(S.hist.checks || []).filter((x) => x[0] >= from && x[0] <= to).map(([d, ok, n]) => [{ v: d, f: 'date' }, ok, n, { v: ok / n, f: 'pct' }])] });
+  sheets.push({ name: 'Пояснения', widths: [28, 100], rows: [
+    ['Период', `${dmy(from)} – ${dmy(to)}`],
+    ['Цены', 'Как на сайтах компаний. Для Qubius и Quiet Store (цены на сайте без НДС) прибавлено 22% НДС.'],
+    ['Цены сейчас', 'Текущие цены и изменение за выбранный период. «К Inflow» — разница с кабиной Inflow того же класса.'],
+    ['Динамика', span <= 31 ? 'Цена каждой модели на каждый день периода.' : span <= 183 ? 'Цена каждой модели раз в неделю.' : 'Цена каждой модели на 1-е число каждого месяца.'],
+    ['Рынок по классам', 'Медиана, минимум и максимум цен конкурентов в каждом классе на те же даты; рядом цены Inflow и INTROVERT.'],
+    ['Журнал изменений', 'Каждое изменение цены за период: дата, было, стало.'],
+    ['Проверки', 'Сколько цен удалось прочитать в каждый день. Если сайт не открылся, остаётся прошлая цена.'],
+    ['Источник', location.href.split('#')[0]],
+  ] });
+  const blob = xlsx(sheets);
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `Цены конкурентов ${dmy(from)}–${dmy(to)}.xlsx`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+
+function xlsx(sheets) {
+  const enc = new TextEncoder();
+  const x = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '');
+  const colL = (n) => { let s = ''; for (n++; n; n = Math.floor((n - 1) / 26)) s = String.fromCharCode(65 + ((n - 1) % 26)) + s; return s; };
+  const serial = (d) => Math.round((Date.UTC(+d.slice(0, 4), +d.slice(5, 7) - 1, +d.slice(8, 10)) - Date.UTC(1899, 11, 30)) / 864e5);
+  // стили: 0 обычный, 1 заголовок, 2 деньги, 3 проценты, 4 дата
+  const cell = (v, r, c, head) => {
+    const ref = colL(c) + (r + 1);
+    if (v == null || v === '') return '';
+    if (head && typeof v === 'string') return `<c r="${ref}" s="1" t="inlineStr"><is><t>${x(v)}</t></is></c>`;
+    if (typeof v === 'object') {
+      if (v.f === 'pct') return `<c r="${ref}" s="3"><v>${v.v}</v></c>`;
+      if (v.f === 'date') return `<c r="${ref}" s="${head ? 5 : 4}"><v>${serial(v.v)}</v></c>`;
+    }
+    if (typeof v === 'number') return `<c r="${ref}" s="2"><v>${v}</v></c>`;
+    return `<c r="${ref}" t="inlineStr"><is><t xml:space="preserve">${x(v)}</t></is></c>`;
+  };
+  const sheetXml = (sh) => `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0">${sh.rows.length > 1 && sh.name !== 'Пояснения' ? '<pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/>' : ''}</sheetView></sheetViews><cols>${sh.widths.map((w, i) => `<col min="${i + 1}" max="${i + 1}" width="${w}" customWidth="1"/>`).join('')}</cols><sheetData>${sh.rows.map((row, r) => `<row r="${r + 1}">${row.map((v, c) => cell(v, r, c, r === 0 && sh.name !== 'Пояснения')).join('')}</row>`).join('')}</sheetData>${sh.rows.length > 1 && sh.name !== 'Пояснения' ? `<autoFilter ref="A1:${colL(sh.rows[0].length - 1)}${sh.rows.length}"/>` : ''}</worksheet>`;
+  const files = [
+    ['[Content_Types].xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>${sheets.map((_, i) => `<Override PartName="/xl/worksheets/sheet${i + 1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')}</Types>`],
+    ['_rels/.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`],
+    ['xl/workbook.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>${sheets.map((s, i) => `<sheet name="${x(s.name)}" sheetId="${i + 1}" r:id="rId${i + 1}"/>`).join('')}</sheets></workbook>`],
+    ['xl/_rels/workbook.xml.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${sheets.map((_, i) => `<Relationship Id="rId${i + 1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i + 1}.xml"/>`).join('')}<Relationship Id="rId${sheets.length + 1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`],
+    ['xl/styles.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="3"><numFmt numFmtId="164" formatCode="#,##0"/><numFmt numFmtId="165" formatCode="+0.0%;\\-0.0%;0.0%"/><numFmt numFmtId="166" formatCode="dd.mm.yyyy"/></numFmts><fonts count="2"><font><sz val="10"/><name val="Arial"/></font><font><b/><sz val="10"/><name val="Arial"/></font></fonts><fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFE3E8E6"/></patternFill></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="6"><xf/><xf fontId="1" fillId="2" applyFont="1" applyFill="1"><alignment wrapText="1" vertical="center"/></xf><xf numFmtId="164" applyNumberFormat="1"/><xf numFmtId="165" applyNumberFormat="1"/><xf numFmtId="166" applyNumberFormat="1"/><xf numFmtId="166" fontId="1" fillId="2" applyNumberFormat="1" applyFont="1" applyFill="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`],
+    ...sheets.map((s, i) => [`xl/worksheets/sheet${i + 1}.xml`, sheetXml(s)]),
+  ];
+  return new Blob([zip(files.map(([n, t]) => [enc.encode(n), enc.encode(t)]))], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+}
+// ZIP без сжатия (store): Excel открывает такие файлы как обычные
+function zip(files) {
+  const crcT = zip.t || (zip.t = Array.from({ length: 256 }, (_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; }));
+  const crc = (b) => { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = crcT[(c ^ b[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; };
+  const parts = [], central = [];
+  let off = 0;
+  const u16 = (v) => [v & 255, (v >>> 8) & 255], u32 = (v) => [v & 255, (v >>> 8) & 255, (v >>> 16) & 255, (v >>> 24) & 255];
+  for (const [name, data] of files) {
+    const c = crc(data);
+    const local = new Uint8Array([...u32(0x04034b50), ...u16(20), ...u16(0x0800), ...u16(0), ...u16(0), ...u16(0x21), ...u32(c), ...u32(data.length), ...u32(data.length), ...u16(name.length), ...u16(0)]);
+    parts.push(local, name, data);
+    central.push(new Uint8Array([...u32(0x02014b50), ...u16(20), ...u16(20), ...u16(0x0800), ...u16(0), ...u16(0), ...u16(0x21), ...u32(c), ...u32(data.length), ...u32(data.length), ...u16(name.length), ...u16(0), ...u16(0), ...u16(0), ...u16(0), ...u32(0), ...u32(off)]), name);
+    off += local.length + name.length + data.length;
+  }
+  const cdSize = central.reduce((s, p) => s + p.length, 0);
+  const end = new Uint8Array([...u32(0x06054b50), ...u16(0), ...u16(0), ...u16(files.length), ...u16(files.length), ...u32(cdSize), ...u32(off), ...u16(0)]);
+  return new Blob([...parts, ...central, end]);
+}
+
 /* ---------- каркас ---------- */
 function setView(v) {
   S.view = v;
@@ -473,15 +887,18 @@ function openTab(name) {
   document.querySelectorAll('nav.tabs [role=tab]').forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === name));
   document.querySelectorAll('main > section').forEach((s) => (s.hidden = s.id !== 'tab-' + name));
   if (name === 'all') { chips(); renderTable(); }
+  if (name === 'history') renderHistory();
   history.replaceState(null, '', '#' + name);
   window.scrollTo({ top: 0 });
 }
 function renderAll() {
   legend($('#legend-all')); legend($('#legend-comps')); legend($('#legend-matrix'));
   renderLadder(); chips(); renderTable(); renderComps(); renderMatrix(); renderNoPrice();
+  if (S.tab === 'history') renderHistory();
 }
 function init(data) {
   S.data = data;
+  S.vatExcl = new Set(data.competitors.filter((c) => c.vat_excl).map((c) => c.id));
   const ownIds = new Set(data.competitors.filter((c) => c.own).map((c) => c.id));
   const vatExcl = new Set(data.competitors.filter((c) => c.vat_excl).map((c) => c.id));
   S.items = data.items.map((i) => vatExcl.has(i.c)
@@ -491,7 +908,7 @@ function init(data) {
   sel.innerHTML = '<option value="">Все конкуренты</option>' + data.competitors.filter((c) => S.items.some((i) => i.c === c.id)).map((c) => `<option value="${c.id}">${esc(c.name)}</option>`).join('');
   renderAll();
   const h = location.hash.slice(1);
-  if (h === 'ladder' || h === 'scale') { openTab('matrix'); setView('scale'); }
+  if (h === 'table') { openTab('matrix'); setView('table'); }
   else if (h && document.getElementById('tab-' + h)) openTab(h);
 }
 
@@ -509,8 +926,19 @@ document.querySelectorAll('#tbl thead th[data-sort]').forEach((th) => th.addEven
   renderTable();
 }));
 
+document.querySelectorAll('[data-period]').forEach((b) => b.addEventListener('click', () => {
+  S.period = b.dataset.period; S.hlimit = 30;
+  document.querySelectorAll('[data-period]').forEach((x) => x.setAttribute('aria-pressed', x === b));
+  renderHistory();
+}));
+$('#xlsx').addEventListener('click', exportXlsx);
+$('#mh').addEventListener('click', (e) => { if (e.target.id === 'mh') $('#mh').close(); });
+
+const getJson = (f) => fetch(f + '?v=' + Date.now()).then((r) => { if (!r.ok) throw new Error(f + ': ' + r.status); return r.json(); });
+getJson('history.json').then((h) => { S.hist = h; if (S.data) { renderTable(); if (S.tab === 'history') renderHistory(); } })
+  .catch(() => { S.hist = false; if (S.tab === 'history') renderHistory(); });
 if (window.__DATA__) init(window.__DATA__);
-else fetch('prices.json?v=' + Date.now()).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(init).catch((e) => {
+else getJson('prices.json').then(init).catch((e) => {
   $('#meta').innerHTML = `<div class="err">Не удалось загрузить prices.json (${esc(e.message)}). Обновите страницу; если не помогло — файл с ценами не выложен рядом с этой страницей.</div>`;
 });
 })();
