@@ -3,52 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Сравнительная таблица цен — акустические кабины</title>
+<title>Цены на акустические кабины</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F3F5F6; --surface:#FFFFFF; --ink:#1F2B33; --muted:#5E6B73; --line:#DDE3E6; --soft:#F6F8F9;
-  --inflow:#315D7C; --inflow-dark:#24475F; --inflow-tint:#EAF0F4; --accent:#07D645;
+  --bg:#DCE7EE; --surface:#FFFFFF; --ink:#17222A; --muted:#566670; --line:#C9D8E2; --soft:#EEF3F7;
+  --inflow:#315D7C; --inflow-dark:#24475F; --inflow-tint:#E3ECF2;
   --introvert:#629293; --quitebox:#A9C3C4;
   --cheap:#B4530A; --cheap-fill:#F7DFC2; --cheap-strong:#E9A15C;
   --dear:#2B6385; --dear-fill:#D9E7F0; --dear-strong:#8DB6D1;
   --even:#E6EAEC;
-  --r-s:6px; --r-m:8px;
+  --r-s:6px; --r-m:10px; --shadow:0 1px 2px rgba(36,71,95,.08),0 6px 18px rgba(36,71,95,.07);
   --font:"Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--font);font-variant-numeric:tabular-nums}
+body{margin:0;background:linear-gradient(180deg,#C7D9E5 0,#DCE7EE 380px,#E7EEF3 100%) fixed;color:var(--ink);font:15px/1.5 var(--font);font-variant-numeric:tabular-nums}
 a{color:inherit}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--inflow);outline-offset:2px;border-radius:4px}
 .wrap{max-width:1280px;margin:0 auto;padding:0 20px}
 
 /* шапка */
-header.top{padding:22px 0 16px;background:var(--surface);border-top:4px solid var(--accent)}
-h1{font-weight:700;font-size:clamp(22px,2.6vw,28px);line-height:1.2;margin:0 0 6px;color:var(--inflow)}
+header.top{padding:30px 0 26px;background:var(--inflow);color:#fff}
+h1{font-weight:700;font-size:clamp(26px,3.2vw,36px);line-height:1.15;margin:0;letter-spacing:-.01em}
 .meta:empty{display:none}
-.meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:14px}
-.meta b{color:var(--ink);font-weight:600}
-.meta .ok{color:var(--dear)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:#C9DBE7;font-size:14px;margin-top:10px}
+.meta b{color:#fff;font-weight:600}
 
 /* вкладки */
-nav.tabs{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
-nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
-nav.tabs button{appearance:none;border:0;background:none;font:500 15px var(--font);color:var(--muted);padding:12px 12px 11px;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent}
-nav.tabs button[aria-selected="true"]{color:var(--inflow);border-bottom-color:var(--accent)}
-nav.tabs button:hover{color:var(--ink)}
-.switch{margin-left:auto;display:flex;align-items:center;gap:6px;padding-left:16px;font-size:13px;color:var(--muted);white-space:nowrap}
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--inflow-dark)}
+nav.tabs .wrap{display:flex;gap:6px;padding-top:8px;overflow-x:auto;scrollbar-width:none}
+nav.tabs button{appearance:none;border:0;background:none;font:500 15px var(--font);color:#B9CEDC;padding:11px 16px;cursor:pointer;white-space:nowrap;border-radius:10px 10px 0 0}
+nav.tabs button[aria-selected="true"]{background:#DCE7EE;color:var(--inflow-dark);font-weight:600}
+nav.tabs button:hover{color:#fff;background:rgba(255,255,255,.08)}
+nav.tabs button[aria-selected="true"]:hover{color:var(--inflow-dark);background:#DCE7EE}
+.switch{margin-left:auto;display:flex;align-items:center;gap:6px;padding:0 0 6px 16px;font-size:13px;color:#B9CEDC;white-space:nowrap}
 .seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:2px}
-nav.tabs .seg button{border:0;background:none;font:500 13px var(--font);padding:5px 11px;border-radius:999px;color:var(--muted);cursor:pointer;border-bottom:0}
-nav.tabs .seg button[aria-pressed="true"]{background:var(--inflow);color:#fff}
+nav.tabs .seg{background:rgba(255,255,255,.12);border-color:transparent}
+nav.tabs .seg button{border:0;background:none;font:500 13px var(--font);padding:5px 11px;border-radius:999px;color:#D5E3EC;cursor:pointer}
+nav.tabs .seg button:hover{background:none;color:#fff}
+nav.tabs .seg button[aria-pressed="true"]{background:#fff;color:var(--inflow-dark)}
 
 main{padding:26px 0 60px}
 section[hidden]{display:none}
-.lead{color:var(--muted);max-width:75ch;margin:0 0 18px}
-h2{font-weight:600;font-size:19px;margin:0 0 6px}
+h2{font-weight:600;font-size:22px;margin:0 0 6px;color:var(--inflow-dark)}
 
 /* легенда */
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:13px;color:var(--muted);margin:0 0 14px}
@@ -56,7 +57,7 @@ h2{font-weight:600;font-size:19px;margin:0 0 6px}
 .mk{display:inline-block;width:3px;height:14px;vertical-align:-2px;margin-right:6px;border-radius:2px}
 
 /* логарифмическая шкала */
-.ladder{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m)}
+.ladder{background:var(--surface);border-radius:var(--r-m);box-shadow:var(--shadow)}
 .lrow{display:grid;grid-template-columns:190px 1fr 250px;gap:18px;align-items:center;padding:12px 18px;border-top:1px solid var(--line);cursor:pointer}
 .lrow:first-child{border-top:0}
 .lrow:hover{background:var(--soft)}
@@ -69,7 +70,6 @@ h2{font-weight:600;font-size:19px;margin:0 0 6px}
 .stripbox{position:relative;padding-top:16px}
 .stripbox .lbl{position:absolute;top:0;transform:translateX(-50%);font:600 12px var(--font);color:var(--inflow);white-space:nowrap}
 svg.strip{width:100%;height:40px;display:block;overflow:visible}
-svg.strip .tick{shape-rendering:crispEdges}
 svg.strip .axis text{font:11px var(--font);fill:var(--muted)}
 svg.strip .own text{font:600 11px var(--font)}
 .axisrow{display:grid;grid-template-columns:190px 1fr 250px;gap:18px;padding:8px 18px 0}
@@ -86,7 +86,7 @@ svg.strip .own text{font:600 11px var(--font)}
 .chip[aria-pressed="true"] .n{color:#c9d3d1}
 label.tog{display:inline-flex;gap:6px;align-items:center;font-size:14px;color:var(--muted);cursor:pointer}
 .count{font-size:13px;color:var(--muted);margin:0 0 8px}
-.tbl-wrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);overflow:auto;max-height:calc(100vh - 150px)}
+.tbl-wrap{background:var(--surface);box-shadow:var(--shadow);border-radius:var(--r-m);overflow:auto;max-height:calc(100vh - 150px)}
 table{border-collapse:separate;border-spacing:0;width:100%;font-size:14px}
 th,td{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
 thead th{position:sticky;top:0;background:var(--soft);font-weight:600;font-size:13px;color:var(--muted);z-index:2;white-space:nowrap}
@@ -106,9 +106,6 @@ td.num,th.num{text-align:right;white-space:nowrap}
 .price{display:inline-block;padding:2px 7px;border-radius:5px;font-weight:600;white-space:nowrap}
 .price .frm{font-weight:400;color:var(--muted);margin-right:3px;font-size:12px}
 .rel{display:inline-block;min-width:58px;text-align:center;padding:2px 6px;border-radius:5px;font-weight:600;font-size:13px;white-space:nowrap}
-.c2{background:var(--cheap-strong);color:#3d1b00}.c1{background:var(--cheap-fill);color:var(--cheap)}
-.e0{background:var(--even);color:var(--muted)}
-.d1{background:var(--dear-fill);color:var(--dear)}.d2{background:var(--dear-strong);color:#00281f}
 .na{color:var(--muted)}
 .chk{font-size:12px;color:var(--muted);white-space:nowrap}
 .chk.ok::before{content:"●";color:var(--dear);margin-right:4px}
@@ -119,15 +116,16 @@ td.num,th.num{text-align:right;white-space:nowrap}
 
 /* конкуренты */
 .clist{display:grid;gap:10px}
-.crow{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:14px 18px;display:grid;grid-template-columns:minmax(220px,1.1fr) 2fr auto;gap:18px;align-items:start}
-.crow.own{border-color:#BCCDD9;background:#F7FAFC}
+.crow{background:var(--surface);box-shadow:var(--shadow);border-left:5px solid var(--inflow);border-radius:var(--r-m);padding:14px 18px;display:grid;grid-template-columns:minmax(220px,1.1fr) 2fr auto;gap:18px;align-items:start}
+.crow.own{border-left-color:var(--introvert)}
+.gname{margin:14px 0 -4px;font:600 13px var(--font);color:var(--inflow-dark);text-transform:uppercase;letter-spacing:.04em}
 .crow h3{margin:0;font-size:17px;font-weight:600}
 .crow h3 a{text-decoration:none;border-bottom:1px solid var(--line)}
 .crow h3 a:hover{border-bottom-color:currentColor}
 .crow .sub{color:var(--muted);font-size:13px}
 .crow p{margin:6px 0 0;font-size:14px;color:#33434A;max-width:70ch}
 .mins{display:flex;flex-wrap:wrap;gap:6px}
-.mins span{font-size:13px;border-radius:6px;padding:4px 9px;white-space:nowrap;line-height:1.3}
+.mins span{background:var(--even);color:var(--ink);font-size:13px;border-radius:6px;padding:4px 9px;white-space:nowrap;line-height:1.3}
 .mins span small{display:block;font-size:11px;opacity:.75}
 .mins em{display:block;font-style:normal;color:inherit;opacity:.75;font-size:12px}
 .btn{font:500 14px var(--font);border:1px solid var(--line);background:var(--surface);border-radius:var(--r-s);padding:7px 12px;cursor:pointer;color:var(--ink);white-space:nowrap}
@@ -159,11 +157,11 @@ td.num,th.num{text-align:right;white-space:nowrap}
 
 /* история */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:0 0 18px}
-.kpi{background:var(--surface);border-radius:var(--r-m);padding:12px 14px}
-.kpi .v{font:600 24px/1.2 var(--font)}
+.kpi{background:var(--surface);box-shadow:var(--shadow);border-radius:var(--r-m);padding:12px 14px}
+.kpi .v{font:600 28px/1.2 var(--font)}
 .kpi .l{font-size:13px;color:var(--muted)}
 .kpi .v{color:var(--inflow)}.kpi .v.up{color:var(--dear)}.kpi .v.down{color:var(--cheap)}
-.panel{background:var(--surface);border-radius:var(--r-m);padding:16px 18px;margin:0 0 18px}
+.panel{background:var(--surface);box-shadow:var(--shadow);border-radius:var(--r-m);padding:16px 18px;margin:0 0 18px}
 .panel h3{margin:0 0 4px;font-size:16px;font-weight:600}
 .panel .sub{color:var(--muted);font-size:13px;margin:0 0 10px}
 .chartbox{overflow-x:auto}
@@ -195,14 +193,11 @@ dialog.mh::backdrop{background:rgba(22,35,42,.35)}
   .switch{display:none}
   .sechead .right{margin-left:0}
 }
-@media (prefers-reduced-motion:no-preference){
-  svg.strip .tick{transition:opacity .15s}
-}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <h1>Сравнительная таблица цен</h1>
+  <h1>Цены на акустические кабины</h1>
   <div class="meta" id="meta"></div>
 </div></header>
 
@@ -253,7 +248,6 @@ dialog.mh::backdrop{background:rgba(22,35,42,.35)}
 
   <section id="tab-comps" hidden>
     <div class="sechead"><h2>Конкуренты</h2></div>
-    <p class="lead">Диапазон цен в каждом классе, под ценой — сколько моделей. Цвет — средняя цена класса относительно Inflow или INTROVERT. Название открывает сайт конкурента, кнопка — все его модели в таблице.</p>
     <div class="legend" id="legend-comps"></div>
     <div class="clist" id="clist"></div>
   </section>
@@ -269,7 +263,6 @@ dialog.mh::backdrop{background:rgba(22,35,42,.35)}
       <div class="tbl-wrap"><table class="matrix" id="matrix"></table></div>
     </div>
     <div id="mx-scale">
-      <p class="lead">Шкала логарифмическая.</p>
       <div class="legend" id="legend-ladder"></div>
       <div class="ladder" id="ladder"></div>
       <div class="axisrow" aria-hidden="true"><div class="sp"></div><svg class="strip" id="axis" viewBox="0 0 1000 18" preserveAspectRatio="none"></svg><div class="sp"></div></div>
@@ -287,12 +280,11 @@ dialog.mh::backdrop{background:rgba(22,35,42,.35)}
         </span>
         <button type="button" class="btn primary" id="xlsx">Скачать в Excel</button>
       </div></div>
-    <div id="hbody"><div class="empty">Загружаю историю…</div></div>
+    <div id="hbody"><div class="empty">Загрузка…</div></div>
   </section>
 
   <section id="tab-noprice" hidden>
     <div class="sechead"><h2>Без цен</h2></div>
-    <p class="lead">Нет цены на сайте или не получилось подгрузить в таблицу.</p>
     <div class="tbl-wrap" style="max-height:none"><table id="noprice"></table></div>
   </section>
 
@@ -323,23 +315,19 @@ function rel(item) {
   if (!b || !item.price) return null;
   return (item.price - b.price) / b.price;
 }
-function relClass(r) {
-  if (r == null) return 'na';
-  if (r <= -0.15) return 'c2';
-  if (r < -0.03) return 'c1';
-  if (r <= 0.03) return 'e0';
-  if (r < 0.15) return 'd1';
-  return 'd2';
+function relStyle(r) {
+  if (r == null) return '';
+  const t = Math.min(Math.abs(r) / 0.4, 1), al = (0.15 + 0.65 * t).toFixed(2);
+  const rgb = r < 0 ? '233,161,92' : '120,169,200';
+  return ` style="background:rgba(${rgb},${al});color:var(--ink)"`;
 }
 const pct = (r) => r == null ? '—' : (r > 0 ? '+' : r < 0 ? '−' : '') + Math.abs(Math.round(r * 100)) + '%';
 
 function legend(el) {
   el.innerHTML =
-    `<span><i class="sw" style="background:var(--cheap-strong)"></i>дешевле больше чем на 15%</span>` +
-    `<span><i class="sw" style="background:var(--cheap-fill)"></i>дешевле на 3–15%</span>` +
-    `<span><i class="sw" style="background:var(--even)"></i>±3%</span>` +
-    `<span><i class="sw" style="background:var(--dear-fill)"></i>дороже на 3–15%</span>` +
-    `<span><i class="sw" style="background:var(--dear-strong)"></i>дороже больше чем на 15%</span>`;
+    `<span><i class="sw" style="background:rgba(233,161,92,.8)"></i>дешевле</span>` +
+    `<span><i class="sw" style="background:rgba(120,169,200,.8)"></i>дороже</span>` +
+    `<span>чем сильнее цвет, тем больше разница</span>`;
 }
 
 /* ---------- Шкала ---------- */
@@ -348,7 +336,7 @@ const X = (p) => Math.max(0, Math.min(1000, ((Math.log(p) - LMIN) / (LMAX - LMIN
 function renderLadder() {
   const L = $('#legend-ladder');
   L.innerHTML = `<span><i class="mk" style="background:var(--inflow)"></i>Inflow</span><span><i class="mk" style="background:var(--introvert)"></i>INTROVERT</span><span><i class="mk" style="background:var(--quitebox)"></i>QuiteBox</span>` +
-    `<span><i class="sw" style="background:var(--cheap-strong)"></i>дешевле</span><span><i class="sw" style="background:var(--dear-strong)"></i>дороже</span><span><i class="sw" style="background:#9AA6A4"></i>нет кабины для сравнения</span>`;
+    `<span><i class="sw" style="background:#9DB7C9"></i>половина конкурентов</span><span><i class="sw" style="height:2px;vertical-align:3px;background:#7C97AA"></i>весь диапазон</span><span><i class="sw" style="width:3px;background:var(--ink)"></i>медиана</span><span>шкала логарифмическая</span>`;
   const rows = [];
   for (const c of S.data.classes) {
     const all = S.items.filter((i) => i.cls === c.id);
@@ -358,12 +346,12 @@ function renderLadder() {
     const prices = comp.map((i) => i.price).sort((a, z) => a - z);
     const med = prices[Math.floor(prices.length / 2)];
     const cheaper = b ? comp.filter((i) => i.price < b.price).length : null;
-    let svg = '';
-    for (const i of comp) {
-      const r = rel(i);
-      const col = r == null ? '#9AA6A4' : r < -0.03 ? 'var(--cheap-strong)' : r > 0.03 ? 'var(--dear-strong)' : '#9AA6A4';
-      svg += `<rect class="tick" x="${X(i.price).toFixed(1)}" y="8" width="2.2" height="26" fill="${col}"><title>${esc(compById(i.c).name)}: ${esc(i.model)} — ${rub(i.price)}</title></rect>`;
-    }
+    const q = (f) => prices[Math.min(prices.length - 1, Math.floor((prices.length - 1) * f))];
+    const q1 = q(0.25), q3 = q(0.75);
+    const tip = `${plural(comp.length, 'модель', 'модели', 'моделей')}: от ${rub(prices[0])} до ${rub(prices[prices.length - 1])}; половина — от ${rub(q1)} до ${rub(q3)}; медиана ${rub(med)}`;
+    let svg = `<g><title>${esc(tip)}</title><rect x="${X(prices[0]).toFixed(1)}" y="19" width="${Math.max(2, X(prices[prices.length - 1]) - X(prices[0])).toFixed(1)}" height="2" fill="#7C97AA"/>` +
+      `<rect x="${X(q1).toFixed(1)}" y="11" width="${Math.max(3, X(q3) - X(q1)).toFixed(1)}" height="18" rx="3" fill="#9DB7C9"/>` +
+      `<rect x="${(X(med) - 1.5).toFixed(1)}" y="8" width="3" height="24" fill="var(--ink)"/></g>`;
     const own = [['introvert', 'var(--introvert)'], ['quitebox', 'var(--quitebox)'], ['inflow', 'var(--inflow)']];
     let labels = [];
     for (const [cid, col] of own) {
@@ -373,7 +361,7 @@ function renderLadder() {
       const best = (bmap[c.id] && S.items.find((i) => i.id === bmap[c.id])) || mine.reduce((a, z) => (z.price < a.price ? z : a));
       const x = X(best.price);
       const w = cid === S.base ? 4 : 3;
-      svg += `<g class="own"><rect x="${(x - w / 2).toFixed(1)}" y="2" width="${w}" height="38" rx="1.5" fill="${col}"><title>${esc(best.model)} — ${rub(best.price)}</title></rect></g>`;
+      svg += `<g class="own"><rect x="${(x - w / 2).toFixed(1)}" y="0" width="${w}" height="40" rx="1.5" fill="${col}"><title>${esc(best.model)} — ${rub(best.price)}</title></rect></g>`;
       if (cid === S.base) labels.push(`<span class="lbl" style="left:${(Math.min(960, Math.max(40, x)) / 10).toFixed(1)}%;color:${col}">${cid === 'inflow' ? 'Inflow' : 'INTROVERT'} ${k(best.price)}</span>`);
     }
     const stat = b
@@ -426,7 +414,7 @@ function renderTable() {
     if (S.comp && i.c !== S.comp) return false;
     if (i.own && !fown) return false;
     if (!i.own && fsrc && (i.src || 'official') !== fsrc) return false;
-    if (fcheap) { const r = rel(i); if (i.own || r == null || r >= -0.03) return false; }
+    if (fcheap) { const r = rel(i); if (i.own || r == null || r >= 0) return false; }
     if (q && !(`${i.model} ${compById(i.c).name} ${i.dims || ''} ${i.dealer || ''}`.toLowerCase().includes(q))) return false;
     return true;
   });
@@ -442,7 +430,7 @@ function renderTable() {
   const nComp = rows.filter((i) => !i.own).length;
   $('#count').textContent = `Показано моделей конкурентов: ${nComp}` + (S.cls ? ` · класс «${clsName(S.cls)}»` : '') + (S.comp ? ` · ${compById(S.comp).name}` : '');
   $('#tbl tbody').innerHTML = rows.map((i) => {
-    const c = compById(i.c), r = rel(i), rc = relClass(r);
+    const c = compById(i.c), r = rel(i), rs = i.own ? '' : relStyle(r);
     const b = benchFor(i.cls);
     const relTitle = b ? `${base}: ${b.model}, ${rub(b.price)}` : 'нет кабины этого класса для сравнения';
     return `<tr class="${i.own ? 'own' : ''}">
@@ -450,8 +438,8 @@ function renderTable() {
       <td class="model"><button type="button" class="mlink" data-id="${esc(i.id)}" title="История цены">${esc(i.model)}</button><a class="go" href="${esc(i.url)}" target="_blank" rel="noopener" title="Открыть страницу с ценой">↗</a>${i.dealer ? `<small>у дилера: ${esc(i.dealer)}</small>` : ''}${i.sitePrice ? `<small>на сайте ${rub(i.sitePrice)} без НДС, здесь +22% НДС</small>` : ''}${i.note ? `<small>${esc(i.note)}</small>` : ''}</td>
       <td class="cls">${esc(clsName(i.cls))}</td>
       <td>${esc(i.dims || '—')}</td>
-      <td class="num"><span class="price ${i.own ? '' : rc}">${i.frm ? '<span class="frm">от</span>' : ''}${rub(i.price)}</span>${deltaBadge(i)}</td>
-      <td class="num"><span class="rel ${i.own ? 'e0' : rc}" title="${esc(relTitle)}">${b && b.id === i.id ? 'база' : pct(r)}</span></td>
+      <td class="num"><span class="price"${rs}>${i.frm ? '<span class="frm">от</span>' : ''}${rub(i.price)}</span>${deltaBadge(i)}</td>
+      <td class="num"><span class="rel"${rs} title="${esc(relTitle)}">${b && b.id === i.id ? 'база' : pct(r)}</span></td>
       <td>${checkedCell(i)}</td></tr>`;
   }).join('') || `<tr><td colspan="7" class="na" style="padding:20px">Под эти фильтры моделей нет. Сбросьте поиск или выберите «Все классы».</td></tr>`;
   $('#tbl tbody').querySelectorAll('.mlink').forEach((b) => b.addEventListener('click', () => openModel(b.dataset.id)));
@@ -474,17 +462,22 @@ function relPrice(cls, price) {
 const th = (n) => Math.round(n / 1000).toLocaleString('ru-RU');
 const rangeK = (st) => st.min === st.max ? k(st.min) : (st.max >= 1e6 && st.min < 1e6 ? k(st.min) + ' – ' + k(st.max) : k(st.min).replace(/\s(тыс\.|млн)$/, '') + '–' + k(st.max));
 function renderComps() {
-  const html = S.data.competitors.map((c) => {
+  const order = [...S.data.competitors].sort((a, z) => (a.group ? 0 : 1) - (z.group ? 0 : 1) || 0);
+  let lastGroup = null;
+  const html = order.map((c) => {
     const list = S.items.filter((i) => i.c === c.id);
     if (!list.length) return '';
     const ps = list.map((i) => i.price).sort((a, b) => a - b);
     const st = statsByClass(list);
     const chipsH = S.data.classes.filter((cl) => st[cl.id]).map((cl) => {
       const x = st[cl.id], r = c.own ? null : relPrice(cl.id, x.med);
-      return `<span class="${c.own ? 'e0' : relClass(r)}"><em>${esc(cl.name)}</em>${rangeK(x)}<small>${plural(x.n, 'модель', 'модели', 'моделей')}</small></span>`;
+      const rs = c.own ? '' : relStyle(r);
+      return `<span${rs}><em>${esc(cl.name)}</em>${rangeK(x)}<small>${plural(x.n, 'модель', 'модели', 'моделей')}</small></span>`;
     }).join('');
-    return `<div class="crow ${c.own ? 'own' : ''}">
-      <div><h3><a href="${esc(c.site)}" target="_blank" rel="noopener">${esc(c.name)}</a> ↗</h3><div class="sub">${esc(c.kind)}, ${esc(c.city)}. ${plural(list.length, 'модель', 'модели', 'моделей')}, ${k(ps[0])} – ${k(ps[ps.length - 1])}</div><p>${esc(c.note || '')}</p></div>
+    const head = c.group && c.group !== lastGroup ? `<div class="gname">${esc(c.group)}</div>` : '';
+    lastGroup = c.group || null;
+    return head + `<div class="crow ${c.own ? 'own' : ''}">
+      <div><h3><a href="${esc(c.site)}" target="_blank" rel="noopener">${esc(c.name)}</a> ↗</h3><div class="sub">${[c.kind, c.city].filter((x) => x && x !== '—').map(esc).join(', ')}. ${plural(list.length, 'модель', 'модели', 'моделей')}, ${k(ps[0])} – ${k(ps[ps.length - 1])}</div>${c.note ? `<p>${esc(c.note)}</p>` : ''}</div>
       <div class="mins">${chipsH}</div>
       <div><button class="btn" data-comp="${c.id}">Все модели</button></div></div>`;
   }).join('');
@@ -508,7 +501,7 @@ function renderMatrix() {
       const x = st[cl.id];
       if (!x) { h += '<td class="na">·</td>'; continue; }
       const r = c.own ? null : relPrice(cl.id, x.med);
-      h += `<td class="cell ${c.own ? '' : relClass(r)}" data-comp="${c.id}" data-cls="${cl.id}" title="${rub(x.min)} – ${rub(x.max)}${r != null ? ', средняя ' + pct(r) : ''}">${x.min === x.max ? th(x.min) : th(x.min) + '–' + th(x.max)}<small>${plural(x.n, 'модель', 'модели', 'моделей')}</small></td>`;
+      h += `<td class="cell"${c.own ? '' : relStyle(r)} data-comp="${c.id}" data-cls="${cl.id}" title="${rub(x.min)} – ${rub(x.max)}${r != null ? ', средняя ' + pct(r) : ''}">${x.min === x.max ? th(x.min) : th(x.min) + '–' + th(x.max)}<small>${plural(x.n, 'модель', 'модели', 'моделей')}</small></td>`;
     }
     h += '</tr>';
   }
@@ -648,7 +641,7 @@ function stepChart(series, from, to, opts = {}) {
 
 function renderHistory() {
   const el = $('#hbody');
-  if (S.hist === null) { el.innerHTML = '<div class="empty">Загружаю историю…</div>'; return; }
+  if (S.hist === null) { el.innerHTML = '<div class="empty">Загрузка…</div>'; return; }
   if (S.hist === false || !S.data) { el.innerHTML = '<div class="err">Не удалось загрузить history.json. Обновите страницу.</div>'; $('#xlsx').disabled = true; return; }
   $('#xlsx').disabled = false;
   const { from, to } = hRange();
@@ -662,7 +655,7 @@ function renderHistory() {
   const lastCheck = (S.hist.checks || []).slice(-1)[0];
 
   const kpi = (v, l, cls = '') => `<div class="kpi"><div class="v ${cls}">${v}</div><div class="l">${l}</div></div>`;
-  let h = `<p class="lead">С ${dmy(from)} по ${dmy(to)} (${plural(days, 'день', 'дня', 'дней')}). История ведётся с ${dmy(S.hist.start)}: цены проверяются каждый день, в истории — дни, когда цена на сайте поменялась.</p>`;
+  let h = `<p class="hint">С ${dmy(from)} по ${dmy(to)} (${plural(days, 'день', 'дня', 'дней')}). История ведётся с ${dmy(S.hist.start)}.</p>`;
   h += `<div class="kpis">
     ${kpi(chComp.length, 'изменений цен у конкурентов')}
     ${kpi(up.length + (up.length ? ` <small style="font-size:14px">${sgnPct(avg(up))}</small>` : ''), 'моделей подорожали', up.length ? 'up' : '')}
@@ -696,7 +689,7 @@ function renderHistory() {
       ${shown.map((x) => `<tr class="${isOwn(x.c) ? 'own' : ''}"><td>${dmy(x.date)}</td><td class="comp">${esc(compById(x.c).name)}</td><td class="model"><button type="button" class="mlink" data-id="${esc(x.id)}">${esc(x.model)}</button></td><td class="cls">${esc(clsName(x.cls))}</td><td class="num">${rub(x.from)}</td><td class="num">${rub(x.to)}</td><td class="num">${pill(x.r)}</td></tr>`).join('')}
       </tbody></table></div>${list.length > shown.length ? `<p><button class="btn" id="hmore">Показать ещё (${list.length - shown.length})</button></p>` : ''}`
       : `<div class="empty">${ch.length ? 'Под этот фильтр изменений нет.' : 'За этот период цены не менялись.'}</div>`}
-    ${lastCheck ? `<p class="hint">Последняя проверка ${dmy(lastCheck[0])}: прочитано ${lastCheck[1]} из ${lastCheck[2]} цен. Если сайт конкурента в какой-то день не открылся, в истории остаётся прошлая цена.</p>` : ''}
+    ${lastCheck ? `<p class="hint">Последняя проверка ${dmy(lastCheck[0])}: прочитано ${lastCheck[1]} из ${lastCheck[2]} цен.</p>` : ''}
   </div>`;
   el.innerHTML = h;
 
@@ -713,7 +706,7 @@ function openModel(id) {
   const c = compById((rec || item).c);
   const box = $('#mh-in');
   let body;
-  if (!rec) body = '<p class="hint">История по этой модели появится после следующей проверки цен.</p>';
+  if (!rec) body = '<p class="hint">Изменений цены пока не было.</p>';
   else {
     const from = rec.p[0][0], to = today();
     const pts = rec.p.map(([d, p]) => [d, view(rec.c, p)]);
@@ -785,16 +778,6 @@ function exportXlsx() {
       ...ch.map((x) => [{ v: x.date, f: 'date' }, compName(x.c), x.model, clsName(x.cls), x.from, x.to, x.to - x.from, { v: x.r, f: 'pct' }, x.url || ''])] });
   sheets.push({ name: 'Проверки', widths: [12, 14, 14, 12],
     rows: [['Дата', 'Прочитано цен', 'Всего моделей', 'Доля'], ...(S.hist.checks || []).filter((x) => x[0] >= from && x[0] <= to).map(([d, ok, n]) => [{ v: d, f: 'date' }, ok, n, { v: ok / n, f: 'pct' }])] });
-  sheets.push({ name: 'Пояснения', widths: [28, 100], rows: [
-    ['Период', `${dmy(from)} – ${dmy(to)}`],
-    ['Цены', 'Как на сайтах компаний. Для Qubius и Quiet Store (цены на сайте без НДС) прибавлено 22% НДС.'],
-    ['Цены сейчас', 'Текущие цены и изменение за выбранный период. «К Inflow» — разница с кабиной Inflow того же класса.'],
-    ['Динамика', span <= 31 ? 'Цена каждой модели на каждый день периода.' : span <= 183 ? 'Цена каждой модели раз в неделю.' : 'Цена каждой модели на 1-е число каждого месяца.'],
-    ['Рынок по классам', 'Медиана, минимум и максимум цен конкурентов в каждом классе на те же даты; рядом цены Inflow и INTROVERT.'],
-    ['Журнал изменений', 'Каждое изменение цены за период: дата, было, стало.'],
-    ['Проверки', 'Сколько цен удалось прочитать в каждый день. Если сайт не открылся, остаётся прошлая цена.'],
-    ['Источник', location.href.split('#')[0]],
-  ] });
   const blob = xlsx(sheets);
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
