@@ -105,11 +105,12 @@ const perComp = {};
 for (const [u, items] of byUrl) {
   const page = pages.get(u);
   if (page.ok) stats.pagesOk++;
+  else console.log(`  ✗ ${u} — ${page.reason}${page.error ? ' (' + page.error + ')' : ''}`);
   for (const it of items) {
     stats.items++;
     perComp[it.c] ??= { ok: 0, fail: 0 };
     if (!page.ok) {
-      it.auto = { ok: false, reason: page.reason, at: now.toISOString(), by: RUNNER };
+      it.auto = { ok: false, reason: page.reason, ...(page.error ? { error: page.error } : {}), at: now.toISOString(), by: RUNNER };
       stats.failed++;
       perComp[it.c].fail++;
       continue;
