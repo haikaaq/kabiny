@@ -6,6 +6,10 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
       - name: адрес раннера
         run: curl -s --max-time 10 https://ipinfo.io/json | grep -E '"(ip|country|org)"' || true
       - name: curl
@@ -33,4 +37,10 @@ jobs:
           for h in tuttiho.ru acousticmos.ru; do
             echo "== $h"
             timeout 20 openssl s_client -connect $h:443 -servername $h </dev/null 2>&1 | grep -E "depth|verify|Verify return|CONNECTED|errno" | head -12 || true
+          done
+      - name: скрипт обновления по этим сайтам
+        run: |
+          for c in mutemark moodular cubiroom cube; do
+            echo "== $c"
+            node update.mjs --check --only=$c || true
           done
