@@ -90,7 +90,13 @@ async function crawl(list, gap) {
   }
   await Promise.all(Array.from({ length: LIMIT }, worker));
 }
-await crawl(urls, GAP_MS);
+// страницы, которые уже скачала задача dealers (см. pages.mjs)
+const PRE = new URL('./pages/pages.json', import.meta.url);
+if (fs.existsSync(PRE)) {
+  for (const [u, r] of Object.entries(JSON.parse(fs.readFileSync(PRE, 'utf8')))) if (byUrl.has(u)) pages.set(u, r);
+  console.log(`Готовых страниц: ${pages.size}`);
+}
+await crawl(urls.filter((u) => !pages.has(u)), GAP_MS);
 // второй заход по страницам, которые не открылись: через минуту и медленнее
 const again = urls.filter((u) => !pages.get(u).ok && RETRY.includes(pages.get(u).reason));
 if (again.length) {
