@@ -17,59 +17,42 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # tuttiho.ru и acousticmos.ru пускают не все машины GitHub: пробуем по очереди, пока одна не скачает страницы
-  dealers:
+  # часть сайтов не пускает некоторые машины GitHub: машины берутся по очереди,
+  # цены обновляются на первой, где прошла проверка probe.mjs (на последней попытке — в любом случае)
+  update:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 25
     strategy:
       max-parallel: 1
       fail-fast: false
       matrix:
-        try: [1, 2, 3, 4, 5, 6]
+        try: [1, 2, 3, 4, 5]
     steps:
-      - id: have
+      - id: done
         uses: actions/download-artifact@v4
         with:
-          name: dealer-pages
-          path: pages
+          name: prices-updated
+          path: /tmp/done
         continue-on-error: true
-      - if: steps.have.outcome != 'success'
+      - if: steps.done.outcome != 'success'
         uses: actions/checkout@v4
-      - if: steps.have.outcome != 'success'
+      - if: steps.done.outcome != 'success'
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - id: get
-        if: steps.have.outcome != 'success'
-        run: node pages.mjs
-      - if: steps.have.outcome != 'success' && steps.get.outputs.ok == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: dealer-pages
-          path: pages
-          retention-days: 1
-
-  update:
-    needs: dealers
-    if: always() && github.event_name != 'push'
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - uses: actions/download-artifact@v4
-        with:
-          name: dealer-pages
-          path: pages
-        continue-on-error: true
-      - name: Перечитать цены на сайтах
+      - id: probe
+        if: steps.done.outcome != 'success'
+        name: Пускают ли сайты эту машину
+        run: node probe.mjs
+      - id: go
+        if: steps.done.outcome != 'success' && (steps.probe.outputs.ok == 'true' || matrix.try == 5)
+        name: Перечитать цены на сайтах
         run: node update.mjs
         env:
           RUNNER_NAME_RU: ежедневная проверка
       - name: Сохранить изменения
+        if: steps.go.outcome == 'success'
         run: |
           git config user.name "price-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -81,6 +64,13 @@ jobs:
             git pull --rebase
             git push
           fi
+          date -u > /tmp/updated.txt
+      - if: steps.go.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: prices-updated
+          path: /tmp/updated.txt
+          retention-days: 1
 
   deploy:
     needs: update
