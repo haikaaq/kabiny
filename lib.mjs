@@ -135,7 +135,7 @@ export async function fetchText(url, { timeoutMs = 25000, raw = false, keepScrip
     if (!r.ok) return { ok: false, status: r.status, reason: 'http_' + r.status };
     return { ok: true, status: r.status, text: raw ? body : htmlToText(body, { keepScripts }) };
   } catch (e) {
-    return { ok: false, reason: 'fetch_failed', error: String(e.cause?.code || e.message || e) };
+    return { ok: false, reason: 'fetch_failed', error: e.name === 'AbortError' ? 'timeout' : String(e.cause?.code || e.message || e) };
   } finally {
     clearTimeout(timer);
   }

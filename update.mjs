@@ -63,8 +63,8 @@ const LIMIT = 6; // всего одновременно
 const PER_HOST = 1;
 const GAP_MS = 1500;
 const RETRY = ['fetch_failed', 'http_403', 'timeout', 'http_429', 'http_500', 'http_502', 'http_503', 'http_504'];
-// сайт не отвечает на уровне соединения: остальные его страницы в этом проходе не ждём
-const NO_ANSWER = ['ETIMEDOUT', 'ECONNRESET', 'ECONNREFUSED', 'EHOSTUNREACH', 'ENETUNREACH', 'UND_ERR_CONNECT_TIMEOUT'];
+// если страница не открылась ни с одной попытки (нет соединения или ошибка сервера 5xx),
+// остальные страницы этого сайта в текущем проходе не запрашиваем: во втором проходе сайт пробуем снова
 const dead = new Set();
 const busy = {};
 const lastHit = {};
@@ -79,7 +79,7 @@ async function crawl(list, gap) {
       if (i < 0) { await sleep(200); continue; }
       const u = queue.splice(i, 1)[0];
       const h = host(u);
-      if (dead.has(h)) { pages.set(u, { ok: false, reason: 'fetch_failed', error: 'no_answer' }); continue; }
+      if (dead.has(h)) { pages.set(u, { ok: false, reason: 'fetch_failed', error: 'skipped' }); continue; }
       busy[h] = (busy[h] || 0) + 1;
       let r;
       for (let attempt = 0; attempt < 3; attempt++) {
@@ -87,7 +87,10 @@ async function crawl(list, gap) {
         if (r.ok || !RETRY.includes(r.reason)) break;
         await sleep(5000 * (attempt + 1));
       }
-      if (!r.ok && NO_ANSWER.includes(r.error)) dead.add(h);
+      if (!r.ok) {
+        console.log(`  ✗ ${u} — ${r.reason}${r.error ? ' (' + r.error + ')' : ''}`);
+        if (r.reason === 'fetch_failed' || /^http_5/.test(r.reason)) dead.add(h);
+      }
       lastHit[h] = Date.now();
       busy[h]--;
       pages.set(u, r);
@@ -111,7 +114,6 @@ const perComp = {};
 for (const [u, items] of byUrl) {
   const page = pages.get(u);
   if (page.ok) stats.pagesOk++;
-  else console.log(`  ✗ ${u} — ${page.reason}${page.error ? ' (' + page.error + ')' : ''}`);
   for (const it of items) {
     stats.items++;
     perComp[it.c] ??= { ok: 0, fail: 0 };
