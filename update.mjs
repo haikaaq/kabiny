@@ -63,6 +63,9 @@ const LIMIT = 6; // всего одновременно
 const PER_HOST = 1;
 const GAP_MS = 1500;
 const RETRY = ['fetch_failed', 'http_403', 'timeout', 'http_429', 'http_500', 'http_502', 'http_503', 'http_504'];
+// сайт не отвечает на уровне соединения: остальные его страницы в этом проходе не ждём
+const NO_ANSWER = ['ETIMEDOUT', 'ECONNRESET', 'ECONNREFUSED', 'EHOSTUNREACH', 'ENETUNREACH', 'UND_ERR_CONNECT_TIMEOUT'];
+const dead = new Set();
 const busy = {};
 const lastHit = {};
 const host = (u) => new URL(u).hostname;
@@ -76,6 +79,7 @@ async function crawl(list, gap) {
       if (i < 0) { await sleep(200); continue; }
       const u = queue.splice(i, 1)[0];
       const h = host(u);
+      if (dead.has(h)) { pages.set(u, { ok: false, reason: 'fetch_failed', error: 'no_answer' }); continue; }
       busy[h] = (busy[h] || 0) + 1;
       let r;
       for (let attempt = 0; attempt < 3; attempt++) {
@@ -83,6 +87,7 @@ async function crawl(list, gap) {
         if (r.ok || !RETRY.includes(r.reason)) break;
         await sleep(5000 * (attempt + 1));
       }
+      if (!r.ok && NO_ANSWER.includes(r.error)) dead.add(h);
       lastHit[h] = Date.now();
       busy[h]--;
       pages.set(u, r);
@@ -90,18 +95,13 @@ async function crawl(list, gap) {
   }
   await Promise.all(Array.from({ length: LIMIT }, worker));
 }
-// страницы, которые уже скачала задача dealers (см. pages.mjs)
-const PRE = new URL('./pages/pages.json', import.meta.url);
-if (fs.existsSync(PRE)) {
-  for (const [u, r] of Object.entries(JSON.parse(fs.readFileSync(PRE, 'utf8')))) if (byUrl.has(u)) pages.set(u, r);
-  console.log(`Готовых страниц: ${pages.size}`);
-}
-await crawl(urls.filter((u) => !pages.has(u)), GAP_MS);
+await crawl(urls, GAP_MS);
 // второй заход по страницам, которые не открылись: через минуту и медленнее
 const again = urls.filter((u) => !pages.get(u).ok && RETRY.includes(pages.get(u).reason));
 if (again.length) {
   console.log(`Повторная попытка: ${again.length} страниц`);
   await sleep(60000);
+  dead.clear();
   await crawl(again, 4000);
 }
 
