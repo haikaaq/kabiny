@@ -17,8 +17,42 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update:
+  # tuttiho.ru и acousticmos.ru пускают не все машины GitHub: пробуем по очереди, пока одна не скачает страницы
+  dealers:
     if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        try: [1, 2, 3, 4, 5, 6]
+    steps:
+      - id: have
+        uses: actions/download-artifact@v4
+        with:
+          name: dealer-pages
+          path: pages
+        continue-on-error: true
+      - if: steps.have.outcome != 'success'
+        uses: actions/checkout@v4
+      - if: steps.have.outcome != 'success'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: get
+        if: steps.have.outcome != 'success'
+        run: node pages.mjs
+      - if: steps.have.outcome != 'success' && steps.get.outputs.ok == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dealer-pages
+          path: pages
+          retention-days: 1
+
+  update:
+    needs: dealers
+    if: always() && github.event_name != 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -26,6 +60,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          name: dealer-pages
+          path: pages
+        continue-on-error: true
       - name: Перечитать цены на сайтах
         run: node update.mjs
         env:
