@@ -5,26 +5,14 @@ on: workflow_dispatch
 jobs:
   check:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        n: [1, 2, 3, 4, 5, 6, 7, 8]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: acousticmos сначала скриптом
+      - name: проверка
         run: |
-          node --input-type=module -e '
-          import { fetchText } from "./lib.mjs";
-          const u = process.argv[1];
-          const t = Date.now(); const r = await fetchText(u, { raw: true });
-          console.log(r.ok ? "ok" : r.reason + " " + (r.error || ""), Date.now() - t, "мс");
-          ' "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-1x-odnostoronnee-osteklenie/"
-      - name: подряд с паузой 1,5 с
-        run: |
-          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-          probe() { curl -sS -o /dev/null --connect-timeout 10 --max-time 25 -A "$UA" -H "Accept-Language: ru-RU,ru;q=0.9" -w "%{http_code} соединение %{time_connect} с, всего %{time_total} с" "$1" 2>&1 | tr -d '\n' | tail -c 140; echo; }
-          for set in "https://tuttiho.ru/product/akusticheskaya-ofisnaya-kabina-izobox-office-solo-tsveta--chernyyzheltyy/ https://tuttiho.ru/product/kabina-izoroom-lite/ https://tuttiho.ru/product/moodular-uno/ https://tuttiho.ru/product/zvukoizolyatsionnaya-kabina-ofisnaya-mutemark-one-tsveta-rozovyy-rozovyy_1/ https://tuttiho.ru/product/zvukoizolyatsionnaya-kabina-ofisnaya-mutemark-two-tsveta-rozovyy-rozovyy_1/ https://tuttiho.ru/product/zvukoizolyatsionnaya-kabina-ofisnaya-mutemark-two-plus-tsveta-seryy-oranzhevyy_1/ https://tuttiho.ru/product/zvukoizolyatsionnaya-kabina-moodular-duo/ https://tuttiho.ru/product/akusticheskaya-ofisnaya-kabina-call-ot-cubiroom_1/ https://tuttiho.ru/product/akusticheskaya-ofisnaya-kabina-focus-ot-cubiroom/" "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-1x-odnostoronnee-osteklenie/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-1x-dvuhstoronnee-osteklenie/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-2x-odnostoronnee-osteklenie/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-4x-odnostoronnee-osteklenie/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-2x-dvuhstoronnee-osteklenie/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-4x-dvuhstoronnee-osteklenie/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-glass-1x-smooth/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-glass-2x-smooth/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/akusticheskie-kabiny-dlya-peregovorov/cube-office-glass-4x-smooth/"; do
-            echo "== $(echo $set | cut -d/ -f3)"
-            n=0
-            for u in $set; do n=$((n+1)); echo -n "$(date +%T) #$n "; probe "$u"; sleep 1.5; done
-            echo "-- через 60 с"; sleep 60; echo -n "$(date +%T) "; probe "$(echo $set | cut -d' ' -f1)"
-          done
+          ip=$(curl -s --max-time 10 https://api.ipify.org)
+          t=$(curl -s -o /dev/null --connect-timeout 10 -w "%{http_code}" "https://tuttiho.ru/product/akusticheskaya-ofisnaya-kabina-izobox-office-solo-tsveta--chernyyzheltyy/" || true)
+          a=$(curl -s -o /dev/null --connect-timeout 10 -w "%{http_code}" "https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-1x-odnostoronnee-osteklenie/" || true)
+          echo "РЕЗУЛЬТАТ ${ip%.*}.x tuttiho $t acousticmos $a"
