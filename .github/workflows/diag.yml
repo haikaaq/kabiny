@@ -1,0 +1,23 @@
+name: диагностика
+
+on: workflow_dispatch
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        n: [1, 2, 3, 4, 5, 6, 7, 8]
+    steps:
+      - name: проверка
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+          ip=$(curl -s --max-time 10 https://api.ipify.org)
+          line="${ip%.*}.x"
+          for u in https://inflow-office.ru/ https://inflowcabines.ru/catalog https://quitebox.ru/one https://www.str-ltd.ru/catalog/shumoizolyatsionnye_kabiny/mobilnaya_kabina_gos/ https://qs-store.ru/catalog/series/simple-air/ https://lwop.ru/cabines https://officepro54.ru/product/akusticheskaya-kabina-bazis-950h1100h2260 https://tuttiho.ru/product/akusticheskaya-ofisnaya-kabina-izobox-office-solo-tsveta--chernyyzheltyy/ https://echo-design.ru/collection/kabiny_zvukoizolyatsiya/ofisnaya_peregovornaya_kabina_echoton_cab_speaker/ https://acousticmos.ru/zvukoizolyaciya/akusticheskie-kabiny/cube-office-double-glass-1x-odnostoronnee-osteklenie/ https://imperialwood.ru/portfolio/mebel-dlya-biznesa/akusticheskie-kabiny/1099/ https://qubius.com/ru https://acucab.ru/ https://alex-acoustics.ru/product/akusticheskaja-peregovornaja-kapsula-alex-acoustics-meetpod-2400-1400-2300-mm/ https://www.lamercanti.ru/brand/framery https://talkspace.su/; do
+            h=$(echo $u | cut -d/ -f3)
+            c=$(curl -s -o /dev/null --connect-timeout 8 --max-time 20 -A "$UA" -H "Accept-Language: ru-RU,ru;q=0.9" -w "%{http_code}" "$u" || true)
+            line="$line $h=$c"
+          done
+          echo "РЕЗУЛЬТАТ $line"
